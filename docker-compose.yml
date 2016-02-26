@@ -3,10 +3,6 @@ services:
     web:
         image: skilgarriff/alpine_nginx
         ports:
-            -   "8080:80"
-        volumes_from:
-            - data:ro
-    data:
-        image: skilgarriff/alpine_nginx
+            -   "80:8080"
         volumes:
-            - ./seankilgarriff.com
+            - ./seankilgarriff.com/public:/var/www/html:ro
