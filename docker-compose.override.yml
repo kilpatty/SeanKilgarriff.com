@@ -1,0 +1,13 @@
+version: '2'
+services:
+    developer:
+        build: ./compose/developer
+        container_name: dev
+        volumes:
+            -   ./seankilgarriff.com:/usr/src/app:rw
+        working_dir: /usr/src/app
+        ports:
+            -   3000:3000
+            -   3001:3001
+        links:
+            - web
