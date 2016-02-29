@@ -1,0 +1,109 @@
+// Animations
+@-webkit-keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+@-moz-keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+@keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+// Mouse & Message Styles
+
+// The Scroll Link
+.mouse-scroll {
+  display: inline-block;
+  line-height: 18px;
+  font-size: 13px;
+  font-weight: normal;
+  color: $dark-gray;
+  letter-spacing: 2px;
+  margin-top: 10%;
+  text-decoration: none;
+  overflow: hidden;
+
+  // The Mouse
+  .mouse {
+    position: relative;
+    display: block;
+    width: 31px;
+    height: 50px;
+    margin: 0 auto 20px;
+    box-sizing: border-box;
+    border: 1px solid $dark-gray;
+    border-radius: 23px;
+
+    // Scroll Indicator
+    .mouse-movement {
+      position: absolute;
+      display: block;
+      top: 29%;
+      left: 58%;
+      width: 3px;
+      height: 3px;
+      margin: -4px 0 0 -4px;
+      background: $dark-gray;
+      border-radius: 50%;
+      animation: scroll-ani 4s linear infinite;
+    }
+
+  }
+
+  // The Scroll Message
+  .mouse-message {
+      float: left;
+      //margin: -200px 0 0 7px;
+      padding: 0;
+      animation: scroll-ani 4s linear infinite;
+  }
+
+
+}
