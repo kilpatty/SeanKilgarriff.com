@@ -10,6 +10,7 @@
   cursor:pointer;
   border-radius:5px;
   border: solid 1px $dark-gray;
+  transition:.25s ease-in-out;
 
   span {
     display:block;

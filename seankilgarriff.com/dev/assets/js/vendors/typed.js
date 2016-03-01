@@ -1,7 +1,7 @@
 // The MIT License (MIT)
 
 // Typed.js | Copyright (c) 2014 Matt Boldt | www.mattboldt.com
- 
+
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
@@ -270,9 +270,9 @@
                 // on the first string, only delete one word
                 // the stopNum actually represents the amount of chars to
                 // keep in the current string. In my case it's 14.
-                // if (self.arrayPos == 1){
-                //  self.stopNum = 14;
-                // }
+                if (self.arrayPos >= 2){
+                    self.stopNum = 7;
+                 }
                 //every other time, delete the whole typed string
                 // else{
                 //  self.stopNum = 0;

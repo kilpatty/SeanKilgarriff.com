@@ -8,6 +8,12 @@
 $welcome-font: 'Josefin Slab', serif;
 //Welcome Container for the front page. Should take up 100%
 
+.delayed {
+    animation-duration: 3s;
+    animation-delay: 7s;
+}
+
+
 .landing-page {
     @include outer-container(100%);
     //Make this span the entire page.
@@ -17,8 +23,26 @@ $welcome-font: 'Josefin Slab', serif;
     font-family: $welcome-font;
     font-size: 2em;
 
-    .welcome {
+    .logoRow {
+        @include row();
         padding-top: 100px;
+
+        #logo {
+            float:left;
+            margin-left: 10%;
+            font-size: 2em;
+            font-family: $logo-font;
+            user-select: none;
+            cursor: default;
+
+            @include media($medium-screen) {
+                font-size: 3em;
+            }
+        }
+    }
+
+    .welcome {
+        @include row();
     }
 
     //Scale up the font for bigger screens.
