@@ -18,38 +18,88 @@ db   8D 88      88 `88.
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!--Favicon Links-->
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/main.min.css">
+
+        <!--  Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet" type="text/css">
+
     </head>
     <body>
+        <!-- Navigation !!! :) -->
+        <nav>
+            <div id="menu-button">
+                <div id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="cross">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <!-- Front Landing Page-->
         <div class="landing-page">
             <div class="welcome">
-                <p>
-                    Hi.
-                </p>
-                <p>
-                    Welcome to my website.
-                </p>
-                <p>
-                    I'm Sean.
-                </p>
-                <p>
-                    I like to build things
-                </p>
+                <span id="welcome-text">
+                </span>
             </div>
+
+            <div class="scroll-icon">
+                <a class="mouse-scroll" href="#">
+                    <span class="mouse">
+                        <span class="mouse-movement">
+                        </span>
+                    </span>
+                    <span class="mouse-message fadeIn">scroll</span>
+                </a>
+            </div>
+
         </div>
 
-
+        <!-- Browser Sync -->
+        <script type="text/javascript" id="__bs_script__">//<![CDATA[
+        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));
+        //]]></script>
 
         <!--Scripts :) -->
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/main.min.js"></script>
 
         <script>
             $(function(){
-                $(".welcome").typed({
-                    strings: ["Hi. ^1000 <br>Welcome to my website. ^1000 <br>I'm Sean ^1000 <br>I build things"]
-                })
-            })
+                $("#welcome-text").typed({
+                    strings: ["Hi.", "Welcome to my website.", "I'm Sean", "I like to build things.^300.^300.^500 oh, and coffee."],
+                    startDelay: 1000,
+                    backDelay: 1000,
+                    typeSpeed: 20,
+                    callback: function() {$(".typed-cursor").hide();},
+                });
+            });
         </script>
 
 
