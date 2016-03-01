@@ -43,11 +43,12 @@ db   8D 88      88 `88.
 
         <!--  Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 
     </head>
     <body>
         <!-- Navigation !!! :) -->
-        <nav>
+        <nav class="animated fadeIn delayed">
             <div id="menu-button">
                 <div id="hamburger">
                     <span></span>
@@ -62,12 +63,15 @@ db   8D 88      88 `88.
         </nav>
         <!-- Front Landing Page-->
         <div class="landing-page">
+            <div class="logoRow">
+                <h1 class="animated fadeIn delayed" id="logo">K</h1>
+            </div>
             <div class="welcome">
                 <span id="welcome-text">
                 </span>
             </div>
 
-            <div class="scroll-icon">
+            <div class="scroll-icon animated fadeIn delayed">
                 <a class="mouse-scroll" href="#">
                     <span class="mouse">
                         <span class="mouse-movement">
@@ -93,15 +97,13 @@ db   8D 88      88 `88.
         <script>
             $(function(){
                 $("#welcome-text").typed({
-                    strings: ["Hi.", "Welcome to my website.", "I'm Sean", "I like to build things.^300.^300.^500 oh, and coffee."],
+                    strings: ["Hi.", "I'm Sean", "I build businesses", "I build brands", "I build ideas"],
                     startDelay: 1000,
-                    backDelay: 1000,
-                    typeSpeed: 20,
+                    backDelay: 500,
                     callback: function() {$(".typed-cursor").hide();},
                 });
             });
         </script>
-
 
         <!--SEANYE TRACKING -->
     <script>
