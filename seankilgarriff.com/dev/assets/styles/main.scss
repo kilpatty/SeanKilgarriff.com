@@ -16,9 +16,13 @@
 
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/frontNavbar';
 
 /* Components */
 @import 'components/buttons';
+@import 'components/typedjs';
+@import 'components/hamburgerMenu';
+@import 'components/scrollicon';
 
 /* Page-specific styles */
 @import

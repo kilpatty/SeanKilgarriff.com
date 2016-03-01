@@ -1,3 +1,36 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+
+
+//Page specific Fonts
+$welcome-font: 'Josefin Slab', serif;
+//Welcome Container for the front page. Should take up 100%
+
+.landing-page {
+    @include outer-container(100%);
+    //Make this span the entire page.
+    height: 100vh;
+    //Center the typed text.
+    text-align:center;
+    font-family: $welcome-font;
+    font-size: 2em;
+
+    .welcome {
+        padding-top: 100px;
+    }
+
+    //Scale up the font for bigger screens.
+    @include media($medium-screen) {
+      font-size: 3em;
+    }
+
+    //Scroll Icon at bottom of the page
+    .scroll-icon{
+        position: absolute;
+        bottom: 10px;
+        left: 48.5%;
+        font-family: $welcome-font;
+    }
+}
