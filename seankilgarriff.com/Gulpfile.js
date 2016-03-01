@@ -109,7 +109,7 @@ gulp.task('move-extras', function () {
 */
 gulp.task('html', function () {
     return gulp.src(paths.html.input)
-        .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
+        .pipe(htmlmin({collapseWhitespace: false, removeComments: false}))
         .pipe(gulp.dest(paths.html.output));
 });
 
@@ -185,7 +185,11 @@ gulp.task('watch', function () {
     //Watch Sass files
     gulp.watch(paths.styles.input, ['sass']);
 
+    gulp.watch(paths.scripts.input, ['js']);
+
 });
 
 //Default Task. - Clean, then recompile every asset on startup, then start watch
-gulp.task('default', ['move', 'browser-sync', 'sass', 'imagemin', 'js', 'watch']);
+gulp.task('default', ['html', 'move', 'browser-sync', 'sass', 'imagemin', 'js', 'watch']);
+
+//Add production task
