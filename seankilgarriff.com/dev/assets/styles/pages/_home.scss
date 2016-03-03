@@ -58,3 +58,14 @@ $welcome-font: 'Josefin Slab', serif;
         font-family: $welcome-font;
     }
 }
+
+.about-me {
+    height: 100vh;
+    font-family: $welcome-font;
+    text-align: center;
+    font-size: 2.5em;
+
+    .content {
+        width: 80vw;
+    }
+}
