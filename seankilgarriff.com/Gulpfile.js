@@ -185,7 +185,11 @@ gulp.task('watch', function () {
     //Watch Sass files
     gulp.watch(paths.styles.input, ['sass']);
 
+    //Watch JS files
     gulp.watch(paths.scripts.input, ['js']);
+
+    //Watch Images
+    gulp.watch(paths.images.input, ['imagemin']);
 
 });
 
