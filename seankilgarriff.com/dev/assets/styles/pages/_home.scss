@@ -59,13 +59,62 @@ $welcome-font: 'Josefin Slab', serif;
     }
 }
 
-.about-me {
+.about-me, .contact-me {
     height: 100vh;
     font-family: $welcome-font;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 1.3em;
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+
+    @include media($medium-screen) {
+        font-size:2em;
+    }
+
+    #my-links {
+        p {
+            font-size: .7em;
+
+            @include media($medium-screen){
+                font-size: .8em;
+            }
+        }
+    }
+    #Zzrot {
+        float: left;
+        padding-left: 10%;
+    }
+
+    #GiN {
+        float:right;
+        padding-right: 10%;
+    }
 
     .content {
         width: 80vw;
+
+        h1 {
+            font-family: $welcome-font;
+        }
     }
+}
+
+footer {
+    text-align:center;
+    font-family: $welcome-font;
+}
+
+//This is used to make the svgs clickable. Should put this somewhere into the base.
+a.svg {
+  position: relative;
+  display: inline-block;
+}
+a.svg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
 }
