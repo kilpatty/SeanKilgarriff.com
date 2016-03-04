@@ -1,109 +1,39 @@
-// Animations
-@-webkit-keyframes scroll-ani {
+.scroll-icon,
+.scroll-icon:before {
+    position: absolute;
+    left: 50%;
+ }
+
+.scroll-icon {
+  width: 30px;
+  height: 50px;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px $dark-gray;
+  border-radius: 25px;
+
+ }
+
+.scroll-icon:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: $dark-gray;
+  margin-left: -3px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+ }
+
+@keyframes scroll {
   0% {
     opacity: 1;
-    top: 29%;
-  }
-  15% {
-    opacity: 1;
-    top: 50%;
-  }
-  50% {
-    opacity: 0;
-    top: 50%;
-  }
+}
   100% {
     opacity: 0;
-    top: 29%;
-  }
+    transform: translateY(25px);
 }
-
-@-moz-keyframes scroll-ani {
-  0% {
-    opacity: 1;
-    top: 29%;
-  }
-  15% {
-    opacity: 1;
-    top: 50%;
-  }
-  50% {
-    opacity: 0;
-    top: 50%;
-  }
-  100% {
-    opacity: 0;
-    top: 29%;
-  }
-}
-
-@keyframes scroll-ani {
-  0% {
-    opacity: 1;
-    top: 29%;
-  }
-  15% {
-    opacity: 1;
-    top: 50%;
-  }
-  50% {
-    opacity: 0;
-    top: 50%;
-  }
-  100% {
-    opacity: 0;
-    top: 29%;
-  }
-}
-
-// Mouse & Message Styles
-
-// The Scroll Link
-.mouse-scroll {
-  display: inline-block;
-  line-height: 18px;
-  font-size: 13px;
-  font-weight: normal;
-  color: $dark-gray;
-  letter-spacing: 2px;
-  margin-top: 10%;
-  text-decoration: none;
-  overflow: hidden;
-
-  // The Mouse
-  .mouse {
-    position: relative;
-    display: block;
-    width: 31px;
-    height: 50px;
-    margin: 0 auto 20px;
-    box-sizing: border-box;
-    border: 1px solid $dark-gray;
-    border-radius: 23px;
-
-    // Scroll Indicator
-    .mouse-movement {
-      position: absolute;
-      display: block;
-      top: 29%;
-      left: 58%;
-      width: 3px;
-      height: 3px;
-      margin: -4px 0 0 -4px;
-      background: $dark-gray;
-      border-radius: 50%;
-      animation: scroll-ani 4s linear infinite;
-    }
-
-  }
-
-  // The Scroll Message
-  .mouse-message {
-      float: left;
-      //margin: -200px 0 0 7px;
-      padding: 0;
-      animation: scroll-ani 4s linear infinite;
-  }
-
-
 }

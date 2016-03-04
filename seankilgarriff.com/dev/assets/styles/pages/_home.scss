@@ -51,11 +51,10 @@ $welcome-font: 'Josefin Slab', serif;
     }
 
     //Scroll Icon at bottom of the page
-    .scroll-icon{
+    .scroll-wrapper{
         position: absolute;
-        bottom: 10px;
-        left: 48.5%;
-        font-family: $welcome-font;
+        bottom: 50px;
+        left: 50%;
     }
 }
 
