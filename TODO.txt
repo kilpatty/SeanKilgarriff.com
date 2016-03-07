@@ -1,6 +1,4 @@
 #Figure out if you can run Nginx Proxy as non-root and still have access to the ssl certs.
 #Seperate out the SSL params into a seperate file like that dude from reddit
-#Cssmap for gulpfile
 #Review the nginx compose folder and build
-#Add production task for gulpfile
 #Custom Error Pages
