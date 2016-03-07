@@ -8,9 +8,4 @@ RUN apk add --update --no-cache nginx
 #Add custom nginx config file.
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
-#add the SSL certs
-COPY ./certs/ /certs/
-
-#USER nobody
-
 CMD ["nginx", "-g", "daemon off;"]
