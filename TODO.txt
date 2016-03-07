@@ -2,5 +2,5 @@
 #Seperate out the SSL params into a seperate file like that dude from reddit
 #Cssmap for gulpfile
 #Review the nginx compose folder and build
-#clean up app code
 #Add production task for gulpfile
+#Custom Error Pages
