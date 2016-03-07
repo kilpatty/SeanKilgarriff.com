@@ -6,7 +6,6 @@
 * is run on startup of the docker-developer container. Further tasks
 * can be run by using the command docker run dev gulp (task).
 *
-*
 */
 
 /*
@@ -58,6 +57,7 @@ var flatten = require('gulp-flatten');
 //Html Plugins
 var htmlmin = require('gulp-htmlmin');
 var sitemap = require('gulp-sitemap');
+var htmlbuild = require('gulp-htmlbuild');
 
 //Sass plugins
 var sass = require('gulp-sass');
@@ -77,6 +77,9 @@ var uglify = require('gulp-uglify');
 var browserSync = require("browser-sync").create();
 
 
+/*
+* Extra Variables Go Here
+*/
 
 /*
 *
@@ -118,10 +121,22 @@ gulp.task('html', function () {
 gulp.task('sitemap', function () {
     gulp.src(paths.html.input)
         .pipe(sitemap({
-            siteUrl: 'http://www.example.com'
+            siteUrl: 'http://www.seankilgarriff.com'
         }))
         .pipe(gulp.dest(paths.extras.output));
 });
+
+/* Task to edit html - currently adding browserSync*/
+gulp.task('htmlbuild', function () {
+    return gulp.src(paths.html.input)
+        .pipe(htmlbuild({
+            bs: function (block) {
+                block.end();
+            }
+        }))
+        .pipe(gulp.dest(paths.html.output));
+});
+
 
 /*
 *
@@ -204,6 +219,4 @@ gulp.task('watch', function () {
 });
 
 //Default Task. - Clean, then recompile every asset on startup, then start watch
-gulp.task('default', ['html', 'move', 'browser-sync', 'sass', 'imagemin', 'js', 'watch']);
-
-//Add production task
+gulp.task('default', ['html', 'move', 'browser-sync', 'sass', 'imagemin', 'js', 'watch', 'sitemap']);
