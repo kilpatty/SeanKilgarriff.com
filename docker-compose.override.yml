@@ -1,5 +1,8 @@
 version: '2'
 services:
+    seankilgarriff.com:
+        ports:
+            -   80:8080
     developer:
         build: ./compose/developer
         container_name: dev

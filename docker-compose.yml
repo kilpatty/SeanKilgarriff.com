@@ -1,21 +1,9 @@
 version: '2'
 services:
-    proxy:
-        build: ./compose/proxy
-        ports:
-            -   "80:8080"
-            -   "443:8888"
-        volumes:
-            - ./compose/proxy/vhosts:/etc/nginx/sites-enabled/:ro
-        networks:
-            - frontend
-
     seankilgarriff.com:
         build: ./compose/nginx
         volumes:
             - ./seankilgarriff.com/public:/var/www/html:ro
-        expose:
-            - 8080
         networks:
             - frontend
 networks:

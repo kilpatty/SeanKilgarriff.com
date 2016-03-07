@@ -1,0 +1,24 @@
+version: '2'
+services:
+    proxy:
+        build: ./compose/proxy
+        ports:
+            -   "80:8080"
+            -   "443:4433"
+        volumes:
+            - ./compose/proxy/vhosts:/etc/nginx/sites-enabled/:ro
+            - ./compose/lencrypt/well-known:/var/www/letsencrypt/
+            - ./compose/lencrypt/config/live:/certs
+        networks:
+            - frontend
+
+    lencrypt:
+        build: ./compose/lencrypt
+        volumes:
+            - ./compose/lencrypt/well-known:/var/www/letsencrypt/
+            - ./compose/lencrypt/config:/etc/letsencrypt
+
+    seankilgarriff.com:
+        expose:
+            -   8080
+            -   4433
