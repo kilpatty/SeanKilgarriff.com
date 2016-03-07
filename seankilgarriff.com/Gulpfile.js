@@ -63,8 +63,10 @@ var htmlbuild = require('gulp-htmlbuild');
 var sass = require('gulp-sass');
 var minifycss = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
 var bourbon = require('node-bourbon').includePaths;
 var neat = require('node-neat').includePaths;
+
 
 //Image Plugins
 var imagemin = require('gulp-imagemin');
@@ -145,12 +147,14 @@ gulp.task('htmlbuild', function () {
 */
 gulp.task('sass', function () {
     return gulp.src(paths.styles.input)
+        .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: [].concat(bourbon, neat)
         }))
         .pipe(autoprefixer())
         .pipe(rename({ suffix: '.min' }))
         .pipe(minifycss())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.styles.output))
         .pipe(browserSync.reload({
             stream: true
@@ -220,3 +224,5 @@ gulp.task('watch', function () {
 
 //Default Task. - Clean, then recompile every asset on startup, then start watch
 gulp.task('default', ['html', 'move', 'browser-sync', 'sass', 'imagemin', 'js', 'watch', 'sitemap']);
+
+gulp.task('production', ['htmlbuild', 'sitemap', 'move', 'sass-production', 'imagemin', 'js']);
