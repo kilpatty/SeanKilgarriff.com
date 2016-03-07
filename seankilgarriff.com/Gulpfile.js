@@ -57,6 +57,7 @@ var flatten = require('gulp-flatten');
 
 //Html Plugins
 var htmlmin = require('gulp-htmlmin');
+var sitemap = require('gulp-sitemap');
 
 //Sass plugins
 var sass = require('gulp-sass');
@@ -111,6 +112,15 @@ gulp.task('html', function () {
     return gulp.src(paths.html.input)
         .pipe(htmlmin({collapseWhitespace: false, removeComments: false}))
         .pipe(gulp.dest(paths.html.output));
+});
+
+/* Task to build sitemap.*/
+gulp.task('sitemap', function () {
+    gulp.src(paths.html.input)
+        .pipe(sitemap({
+            siteUrl: 'http://www.example.com'
+        }))
+        .pipe(gulp.dest(paths.extras.output));
 });
 
 /*

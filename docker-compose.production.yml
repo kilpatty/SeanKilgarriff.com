@@ -21,4 +21,3 @@ services:
     seankilgarriff.com:
         expose:
             -   8080
-            -   4433
