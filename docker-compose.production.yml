@@ -8,7 +8,7 @@ services:
         volumes:
             - ./compose/proxy/vhosts:/etc/nginx/sites-enabled/:ro
             - ./compose/lencrypt/well-known:/var/www/letsencrypt/
-            - ./compose/lencrypt/config/live:/certs
+            - ./compose/lencrypt/config:/certs
         networks:
             - frontend
 

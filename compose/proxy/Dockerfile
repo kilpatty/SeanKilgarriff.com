@@ -11,6 +11,6 @@ COPY ./nginx.conf /etc/nginx/nginx.conf
 #add the SSL certs
 COPY ./certs/ /certs/
 
-USER nobody
+#USER nobody
 
 CMD ["nginx", "-g", "daemon off;"]
