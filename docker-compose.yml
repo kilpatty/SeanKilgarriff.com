@@ -1,7 +1,7 @@
 version: '2'
 services:
     seankilgarriff.com:
-        build: ./compose/nginx
+        image: skilgarriff/alpine-nginx
         volumes:
             - ./seankilgarriff.com/public:/var/www/html:ro
         networks:
