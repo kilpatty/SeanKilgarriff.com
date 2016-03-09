@@ -1,4 +1,3 @@
-
 ssl_dhparam /etc/nginx/dhparam4096.pem;
 ssl_protocols TLSv1.2 TLSv1.1 TLSv1;
 ssl_ciphers EECDH+AESGCM:EDH+AESGCM:EECDH:EDH:!MD5:!RC4:!LOW:!MEDIUM:!CAMELLIA:!ECDSA:!DES:!DSS:!3DES:!NULL;
