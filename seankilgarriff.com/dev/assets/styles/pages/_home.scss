@@ -8,6 +8,7 @@
 $welcome-font: 'Josefin Slab', serif;
 //Welcome Container for the front page. Should take up 100%
 
+//Time delay for Animation
 .delayed {
     animation-duration: 3s;
     animation-delay: 7s;
@@ -23,22 +24,20 @@ $welcome-font: 'Josefin Slab', serif;
     font-family: $welcome-font;
     font-size: 2em;
 
-    .logoRow {
-        @include row();
-        padding-top: 100px;
+    #logo {
+        height:80vh;
+        width:80vw;
+    }
 
-        #logo {
-            float:left;
-            margin-left: 10%;
-            font-size: 2em;
-            font-family: $logo-font;
-            user-select: none;
-            cursor: default;
-
-            @include media($medium-screen) {
-                font-size: 3em;
-            }
-        }
+    .hair:hover {
+        fill: black;
+    }
+    .glasses:hover {
+        fill: black;
+        cursor: pointer;
+    }
+    .beard:hover {
+        fill: black;
     }
 
     .welcome {
@@ -49,54 +48,6 @@ $welcome-font: 'Josefin Slab', serif;
     @include media($medium-screen) {
       font-size: 3em;
     }
-
-    //Scroll Icon at bottom of the page
-    .scroll-wrapper{
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-    }
-}
-
-.about-me, .contact-me {
-    height: 100vh;
-    font-family: $welcome-font;
-    text-align: center;
-    font-size: 1.3em;
-    @include display(flex);
-    @include align-items(center);
-    @include justify-content(center);
-
-    @include media($medium-screen) {
-        font-size:2em;
-    }
-
-    #my-links {
-        p {
-            font-size: .7em;
-
-            @include media($medium-screen){
-                font-size: .8em;
-            }
-        }
-    }
-    #Zzrot {
-        float: left;
-        padding-left: 10%;
-    }
-
-    #GiN {
-        float:right;
-        padding-right: 10%;
-    }
-
-    .content {
-        width: 80vw;
-
-        h1 {
-            font-family: $welcome-font;
-        }
-    }
 }
 
 footer {
@@ -105,21 +56,15 @@ footer {
 }
 
 //This is used to make the svgs clickable. Should put this somewhere into the base.
-a.svg {
+a {
   position: relative;
   display: inline-block;
 }
-a.svg:after {
+a:after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left:0;
-}
-
-#icons {
-    a {
-        padding-left: 20px;
-    }
 }

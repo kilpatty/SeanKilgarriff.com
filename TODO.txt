@@ -1,4 +1,5 @@
-#Figure out if you can run Nginx Proxy as non-root and still have access to the ssl certs.
 #Custom Error Pages
 #Clean up some of the SASS
 #Revamp the look
+#save text in a div so that google can read it.
+#
