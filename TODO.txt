@@ -1,5 +1,3 @@
 #Custom Error Pages
-#Clean up some of the SASS
-#Revamp the look
 #save text in a div so that google can read it.
 #

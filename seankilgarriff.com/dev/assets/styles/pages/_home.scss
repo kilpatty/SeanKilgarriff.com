@@ -40,10 +40,6 @@ $welcome-font: 'Josefin Slab', serif;
         fill: black;
     }
 
-    .welcome {
-        @include row();
-    }
-
     //Scale up the font for bigger screens.
     @include media($medium-screen) {
       font-size: 3em;
