@@ -11,6 +11,9 @@ COPY ./nginx.conf /etc/nginx/nginx.conf
 #Add SSL parameters.
 COPY ./ssl_params /etc/nginx/ssl_params
 
+#Add Secure Headers
+COPY ./headers /etc/nginx/headers
+
 #ADD DHParams
 COPY ./dhparam4096.pem /etc/nginx/dhparam4096.pem
 
