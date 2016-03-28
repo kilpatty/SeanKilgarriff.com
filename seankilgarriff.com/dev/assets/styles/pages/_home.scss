@@ -16,7 +16,7 @@ $welcome-font: 'Josefin Slab', serif;
 
 .delayed-logo {
     animation-duration: 3s;
-    animation-delay: 10s;
+    animation-delay: 7s;
 }
 
 
@@ -34,6 +34,10 @@ $welcome-font: 'Josefin Slab', serif;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .logoRow {
+        margin-top: -50px;
     }
 
 
@@ -81,6 +85,7 @@ footer {
 
         a {
             color: #323232;
+            cursor: pointer;
 
             &:hover {
                 color: green;
