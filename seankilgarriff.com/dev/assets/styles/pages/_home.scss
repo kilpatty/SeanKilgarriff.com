@@ -78,6 +78,20 @@ footer {
 
     .social {
         float: right;
+
+        a {
+            color: #323232;
+
+            &:hover {
+                color: green;
+            }
+        }
+
+
+    }
+
+    .copyright {
+        margin-top: 10px;
     }
 }
 
