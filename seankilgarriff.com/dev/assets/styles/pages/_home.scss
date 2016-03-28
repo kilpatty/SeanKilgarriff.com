@@ -10,19 +10,32 @@ $welcome-font: 'Josefin Slab', serif;
 
 //Time delay for Animation
 .delayed {
+    animation-duration: 1.5s;
+    animation-delay: 6s;
+}
+
+.delayed-logo {
     animation-duration: 3s;
-    animation-delay: 7s;
+    animation-delay: 10s;
 }
 
 
 .landing-page {
     @include outer-container(100%);
     //Make this span the entire page.
-    height: 100vh;
+    height: 90vh;
     //Center the typed text.
     text-align:center;
     font-family: $welcome-font;
     font-size: 2em;
+
+    .welcome, .logoRow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 
     #logo {
         height:80vh;
@@ -44,11 +57,28 @@ $welcome-font: 'Josefin Slab', serif;
     @include media($medium-screen) {
       font-size: 3em;
     }
+
+
 }
 
 footer {
-    text-align:center;
+    @include outer-container(100%);
     font-family: $welcome-font;
+
+    height: 10vh;
+
+    .copyright, .social {
+        @include span-columns(12);
+        text-align: center;
+
+        @include media($medium-screen) {
+            @include span-columns(6);
+        }
+    }
+
+    .social {
+        float: right;
+    }
 }
 
 //This is used to make the svgs clickable. Should put this somewhere into the base.
