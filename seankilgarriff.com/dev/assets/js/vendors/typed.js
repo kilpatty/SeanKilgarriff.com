@@ -432,3 +432,13 @@
 
 
 }(window.jQuery);
+
+// My Code
+    $(function(){
+        $("#welcome-text").typed({
+            strings: ["Entrepreneur", "Designer", "Developer", "Sean Kilgarriff"],
+            startDelay: 1000,
+            backDelay: 500,
+            callback: function() {$(".typed-cursor").hide();},
+        });
+    });
