@@ -51,7 +51,6 @@ $welcome-font: 'Josefin Slab', serif;
     }
     .glasses:hover {
         fill: black;
-        cursor: pointer;
     }
     .beard:hover {
         fill: black;
@@ -98,18 +97,4 @@ footer {
     .copyright {
         margin-top: 10px;
     }
-}
-
-//This is used to make the svgs clickable. Should put this somewhere into the base.
-a {
-  position: relative;
-  display: inline-block;
-}
-a:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left:0;
 }
