@@ -16,7 +16,7 @@ $welcome-font: 'Josefin Slab', serif;
 
 .delayed-logo {
     animation-duration: 3s;
-    animation-delay: 10s;
+    animation-delay: 7s;
 }
 
 
@@ -36,6 +36,10 @@ $welcome-font: 'Josefin Slab', serif;
         transform: translate(-50%, -50%);
     }
 
+    .logoRow {
+        margin-top: -50px;
+    }
+
 
     #logo {
         height:80vh;
@@ -47,7 +51,6 @@ $welcome-font: 'Josefin Slab', serif;
     }
     .glasses:hover {
         fill: black;
-        cursor: pointer;
     }
     .beard:hover {
         fill: black;
@@ -78,19 +81,20 @@ footer {
 
     .social {
         float: right;
-    }
-}
 
-//This is used to make the svgs clickable. Should put this somewhere into the base.
-a {
-  position: relative;
-  display: inline-block;
-}
-a:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left:0;
+        a {
+            color: #323232;
+            cursor: pointer;
+
+            &:hover {
+                color: green;
+            }
+        }
+
+
+    }
+
+    .copyright {
+        margin-top: 10px;
+    }
 }
