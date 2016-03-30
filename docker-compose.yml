@@ -1,14 +1,10 @@
   version: '2'
   services:
-    caddy:
+    seankilgarriff.com:
       image: skilgarriff/alpine-caddy
-      ports:
-        -   80:80
-        -   443:443
       volumes:
         -   ./Caddyfile:/etc/Caddyfile
         -   ./seankilgarriff.com/public:/var/www/html
-        -   ./.caddy:/root/.caddy
       networks:
         -   frontend
   networks:
