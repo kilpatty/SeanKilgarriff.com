@@ -15,6 +15,8 @@
 * if extra paths are needed for the project, add them here.
 *
 */
+
+//TODO:30 See if I can only add Google Analytics on Production Build.
 var paths = {
     scripts: {
         input: 'dev/assets/js/**/*.js',

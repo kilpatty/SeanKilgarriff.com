@@ -433,7 +433,7 @@
 
 }(window.jQuery);
 
-// My Code
+// My Code TODO:10 Mess with the timing to make it emphasis words more
     $(function(){
         $("#welcome-text").typed({
             strings: ["Entrepreneur", "Designer", "Developer", "Sean Kilgarriff"],

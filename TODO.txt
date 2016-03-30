@@ -1,3 +1,0 @@
-#Custom Error Pages
-#save text in a div so that google can read it.
-#
