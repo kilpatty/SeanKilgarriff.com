@@ -1,3 +1,42 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+footer {
+    @include outer-container(100%);
+    font-family: $welcome-font;
+
+    height: 10vh;
+
+    .copyright, .social {
+        @include span-columns(12);
+        text-align: center;
+
+        @include media($medium-screen) {
+            @include span-columns(6);
+        }
+    }
+
+    .social {
+        float: right;
+
+        a {
+            color: #323232;
+            cursor: pointer;
+
+            &:hover {
+                color: $blue-jelly;
+            }
+        }
+
+
+    }
+
+    .copyright {
+        margin-top: 10px;
+        a{
+            color: $base-font-color;
+        }
+
+    }
+}

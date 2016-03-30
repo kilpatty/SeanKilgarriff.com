@@ -3,11 +3,6 @@
 // -----------------------------------------------------------------------------
 
 
-
-//Page specific Fonts
-$welcome-font: 'Josefin Slab', serif;
-//Welcome Container for the front page. Should take up 100%
-
 //Time delay for Animation
 .delayed {
     animation-duration: 1.5s;
@@ -47,54 +42,17 @@ $welcome-font: 'Josefin Slab', serif;
     }
 
     .hair:hover {
-        fill: black;
+        fill: $face-color;
     }
     .glasses:hover {
-        fill: black;
+        fill: $face-color;
     }
     .beard:hover {
-        fill: black;
+        fill: $face-color;
     }
 
     //Scale up the font for bigger screens.
     @include media($medium-screen) {
       font-size: 3em;
-    }
-
-
-}
-
-footer {
-    @include outer-container(100%);
-    font-family: $welcome-font;
-
-    height: 10vh;
-
-    .copyright, .social {
-        @include span-columns(12);
-        text-align: center;
-
-        @include media($medium-screen) {
-            @include span-columns(6);
-        }
-    }
-
-    .social {
-        float: right;
-
-        a {
-            color: #323232;
-            cursor: pointer;
-
-            &:hover {
-                color: green;
-            }
-        }
-
-
-    }
-
-    .copyright {
-        margin-top: 10px;
     }
 }
