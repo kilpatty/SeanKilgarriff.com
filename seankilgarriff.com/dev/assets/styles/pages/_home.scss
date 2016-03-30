@@ -2,20 +2,7 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-
-//Time delay for Animation
-// TODO:0 Fix the Animation Delay
-.delayed {
-    animation-duration: 1.5s;
-    animation-delay: 6s;
-}
-
-.delayed-logo {
-    animation-duration: 3s;
-    animation-delay: 7s;
-}
-
-
+//TODO: Clean up the home.scss
 .landing-page {
     @include outer-container(100%);
     //Make this span the entire page.
@@ -34,6 +21,7 @@
 
     .logoRow {
         margin-top: -50px;
+				display: none;
     }
 
 
@@ -42,18 +30,25 @@
         width:80vw;
     }
 
-    .hair:hover {
+    #hair:hover {
         fill: $face-color;
+				cursor: pointer;
     }
-    .glasses:hover {
+    #glasses:hover {
         fill: $face-color;
+				cursor: pointer;
     }
-    .beard:hover {
+    #beard:hover {
         fill: $face-color;
+				cursor: pointer;
     }
 
     //Scale up the font for bigger screens.
     @include media($medium-screen) {
       font-size: 3em;
     }
+}
+
+.footer {
+	display:none;
 }

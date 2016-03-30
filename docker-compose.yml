@@ -9,3 +9,7 @@
         -   ./Caddyfile:/etc/Caddyfile
         -   ./seankilgarriff.com/public:/var/www/html
         -   ./.caddy:/root/.caddy
+      networks:
+        -   frontend
+  networks:
+      frontend:
