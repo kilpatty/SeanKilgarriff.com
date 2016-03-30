@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 
 //TODO: Clean up the home.scss
+//TODO: Figure out the best font
 .landing-page {
     @include outer-container(100%);
     //Make this span the entire page.
@@ -10,6 +11,7 @@
     //Center the typed text.
     text-align:center;
     font-family: $welcome-font;
+		//font-family: $monospace;
     font-size: 2em;
 
     .welcome, .logoRow {
