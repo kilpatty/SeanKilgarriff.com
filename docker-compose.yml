@@ -1,11 +1,11 @@
-  version: '2'
-  services:
-    seankilgarriff.com:
+version: '2'
+services:
+  seankilgarriff.com:
       image: skilgarriff/alpine-caddy
       volumes:
         -   ./Caddyfile:/etc/Caddyfile
         -   ./seankilgarriff.com/public:/var/www/html
       networks:
         -   frontend
-  networks:
+networks:
       frontend:

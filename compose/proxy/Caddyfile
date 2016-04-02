@@ -1,22 +1,15 @@
-0.0.0.0:80 {
-  log stdout
-  errors stderr
-  redir https://seankilgarriff.com{uri} 301
-}
-
 seankilgarriff.com {
 
-			proxy / seankilgarriff.com:80
+				proxy / seankilgarriff.com:80
 
-			header / {
-				X-Frame-Options DENY
-				X-Content-Type-Options nosniff
-				X-XSS-Protection "1; mode=block"
-				Strict-Transport-Security "max-age=7776000; includeSubDomains"
-				Content-Security-Policy "default-src 'none'; style-src 'self' https://maxcdn.bootstrapcdn.com https://fonts.googleapis.com; script-src 'self' https://code.jquery.com https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net; font-src 'self' https://maxcdn.bootstrapcdn.com https://fonts.gstatic.com; upgrade-insecure-requests; block-all-mixed-content; reflected-xss block; referrer no-referrer-when-downgrade; base-uri seankilgarriff.com www.seankilgarriff.com; report-uri https://seankilgarriff.report-uri.io/r/default/csp/enforce"
-			}
+				header / {
+					X-Frame-Options DENY
+					X-Content-Type-Options nosniff
+					X-XSS-Protection "1; mode=block"
+					Strict-Transport-Security "max-age=7776000; includeSubDomains"
+				}
 
-			gzip
+				gzip
 
-			tls seanpkilgarriff@gmail.com
+				tls seanpkilgarriff.com@gmail.com
 }
