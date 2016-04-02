@@ -93,6 +93,13 @@
 			font-size: 3em;
     }
 
+		h2 {
+			color: $base-font-color;
+      text-align: center;
+      text-transform: capitalize;
+			font-size: 2em;
+		}
+
     p {
       color: $base-font-color;
       line-height: $base-line-height;
