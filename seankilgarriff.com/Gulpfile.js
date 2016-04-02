@@ -17,6 +17,7 @@
 */
 
 //TODO:30 See if I can only add Google Analytics on Production Build.
+//TODO: Templating Baby
 var paths = {
     scripts: {
         input: 'dev/assets/js/**/*.js',
