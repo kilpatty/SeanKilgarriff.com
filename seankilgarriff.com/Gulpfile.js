@@ -29,7 +29,9 @@ var paths = {
     },
     html: {
         input: 'dev/**/*.html',
-        output: 'public/'
+        output: 'public/',
+				templates: 'dev/templates/**/*',
+				pages: 'dev/pages/**/*.html'
     },
     images: {
         input: 'dev/assets/images/**/*',
@@ -61,6 +63,7 @@ var flatten = require('gulp-flatten');
 var htmlmin = require('gulp-htmlmin');
 var sitemap = require('gulp-sitemap');
 var htmlbuild = require('gulp-htmlbuild');
+var nunjucksRender = require('gulp-nunjucks-render');
 
 //Sass plugins
 var sass = require('gulp-sass');
@@ -142,6 +145,14 @@ gulp.task('htmlbuild', function () {
         .pipe(gulp.dest(paths.html.output));
 });
 
+gulp.task('nunjucks', function() {
+
+	nunjucksRender.nunjucks.configure([paths.html.templates]);
+  return gulp.src(paths.html.pages)
+  .pipe(nunjucksRender())
+  .pipe(gulp.dest(paths.html.output))
+});
+
 
 /*
 *
@@ -212,7 +223,9 @@ gulp.task('browser-sync-reload', function () {
 gulp.task('watch', function () {
 
     //Watch HTML files
-    gulp.watch(paths.html.input, ['html', 'browser-sync-reload']);
+    gulp.watch(paths.html.templates, ['nunjucks', 'browser-sync-reload']);
+
+		gulp.watch(paths.html.pages, ['nunjucks', 'browser-sync-reload']);
 
     //Watch Sass files
     gulp.watch(paths.styles.input, ['sass']);
@@ -226,6 +239,6 @@ gulp.task('watch', function () {
 });
 
 //Default Task. - Clean, then recompile every asset on startup, then start watch
-gulp.task('default', ['html', 'move', 'browser-sync', 'sass', 'imagemin', 'js', 'watch', 'sitemap']);
+gulp.task('default', ['nunjucks', 'move', 'browser-sync', 'sass', 'imagemin', 'js', 'watch', 'sitemap']);
 
 gulp.task('production', ['htmlbuild', 'sitemap', 'move', 'sass', 'imagemin', 'js']);
