@@ -1,14 +1,17 @@
 version: '2'
 services:
+
     seankilgarriff.com:
         ports:
-          -   "80:80"
+            -   "80:80"
+    staging.seankilgarriff.com:
+        ports:
+            - "81:81"
     developer:
-        build: ./compose/developer
+        image: zzrot/lazycat
         container_name: dev
         volumes:
             -   ./seankilgarriff.com:/usr/src/app:rw
-        working_dir: /usr/src/app
         ports:
             -   "3000:3000"
             -   "3001:3001"
