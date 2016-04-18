@@ -4,9 +4,7 @@ services:
     seankilgarriff.com:
         ports:
             -   "80:80"
-    staging.seankilgarriff.com:
-        ports:
-            - "81:81"
+
     developer:
         image: zzrot/lazycat
         container_name: dev
