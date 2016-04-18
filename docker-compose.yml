@@ -1,11 +1,19 @@
 version: '2'
 services:
-  seankilgarriff.com:
-      image: skilgarriff/alpine-caddy
+    
+  staging.seankilgarriff.com:
+      image: zzrot/alpine-caddy
       volumes:
-        -   ./Caddyfile:/etc/Caddyfile
-        -   ./seankilgarriff.com/public:/var/www/html
+          - ./staging.seankilgarriff.com/public:/var/www/html
       networks:
-        -   frontend
+          - frontend
+
+  seankilgarriff.com:
+      image: zzrot/alpine-caddy
+      volumes:
+        - ./seankilgarriff.com/public:/var/www/html
+      networks:
+        - frontend
+
 networks:
       frontend:
