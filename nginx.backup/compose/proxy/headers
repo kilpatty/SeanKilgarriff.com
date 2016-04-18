@@ -1,5 +1,0 @@
-add_header X-Frame-Options DENY;
-add_header X-Content-Type-Options nosniff;
-add_header X-XSS-Protection "1; mode=block";
-add_header Strict-Transport-Security "max-age=7776000; includeSubDomains";
-add_header Content-Security-Policy "default-src 'none'; style-src 'self' https://maxcdn.bootstrapcdn.com https://fonts.googleapis.com; script-src 'self' https://code.jquery.com https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net; font-src 'self' https://maxcdn.bootstrapcdn.com https://fonts.gstatic.com; upgrade-insecure-requests; block-all-mixed-content; reflected-xss block; referrer no-referrer-when-downgrade; base-uri seankilgarriff.com www.seankilgarriff.com; report-uri https://seankilgarriff.report-uri.io/r/default/csp/enforce";
