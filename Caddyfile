@@ -1,3 +1,12 @@
-0.0.0.0:80
+www.seankilgarriff.com, seankilgarriff.com {
 
-root /var/www/html
+				proxy / seankilgarriff.com:80
+
+				header / {
+
+				}
+
+				gzip
+
+				tls seanpkilgarriff@gmail.com
+}
