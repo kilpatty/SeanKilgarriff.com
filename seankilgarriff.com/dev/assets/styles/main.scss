@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
 @import 'vendor/normalize';
 
@@ -12,17 +12,14 @@
 
 @import 'neat';
 
-@import 'vendor/animate';
-
-/* Layout-related sections */
+// Layout-related sections
 
 @import 'layout/header';
 @import 'layout/footer';
 
-/* Components */
+// Components
 @import 'components/typedjs';
 @import 'components/modal';
 
-/* Page-specific styles */
-@import
-  'pages/home';
+// Page-specific styles
+@import 'pages/home';
