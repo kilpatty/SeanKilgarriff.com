@@ -5,7 +5,7 @@
 //TODO: Clean up the home.scss
 //TODO: Figure out the best font
 .landing-page {
-    @include outer-container(100%);
+	@include outer-container(100%);
     //Make this span the entire page.
     height: 90vh;
     //Center the typed text.
