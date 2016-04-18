@@ -3,11 +3,3 @@
 node_modules
 #Ignore our public directory as it can just simply be built on dev container startup
 public
-
-#Lets Encrpy and Proxy ignores
-dhparam4096.pem
-compose/lencrypt/config/accounts
-compose/lencrypt/config/csr
-compose/lencrypt/config/keys
-compose/lencrypt/config/live
-compose/lencrypt/config/renewal
