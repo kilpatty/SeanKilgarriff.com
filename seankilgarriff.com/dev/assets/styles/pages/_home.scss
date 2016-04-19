@@ -52,16 +52,20 @@
     fill: $face-color;
   }
 
-  .zzrot-logo {
-    height: 200px;
-    width: 200px;
-	}
 
-  .gin-logo {
-    height: 200px;
-    width: 200px;
-	}
+}
 
+a.svg {
+  position: relative;
+  display: inline-block;
+}
+a.svg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
 }
 
 .footer {
