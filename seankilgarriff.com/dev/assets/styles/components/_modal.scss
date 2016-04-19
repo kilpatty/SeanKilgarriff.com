@@ -1,3 +1,4 @@
+// TODO: fix up this scss - Modal
 .modal {
   $base-border-color: #dcdcdc !default;
   $base-border-radius: 3px !default;
@@ -7,6 +8,7 @@
   $action-color: #477dca !default;
   $dark-gray: #333 !default;
   $light-gray: #ddd !default;
+  $modal-background-gray: rgba(#000, .85);
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
@@ -18,11 +20,11 @@
   $modal-trigger-image-width: 300px;
 
   .modal-fade-screen { // overlay
-    @include transition(opacity 0.25s ease);
+    @include transition(opacity .25s ease);
     @include position(fixed, 0);
-    background-color: rgba(#000, 0.85);
+    background-color: $modal-background-gray;
     opacity: 0;
-    padding-top: 0.6em;
+    padding-top: .6em;
     text-align: left;
     visibility: hidden;
     z-index: 1;
@@ -38,38 +40,38 @@
   }
 
   .modal-close {
-    @include position(absolute, ($modal-padding /2) ($modal-padding /2) null null);
+    @include position(absolute, ($modal-padding / 2) ($modal-padding / 2) null null);
     @include size(1.5em);
     background: $modal-background;
     cursor: pointer;
 
-    &:after,
+    ::&:after,
     &:before {
       @include position(absolute, 3px 3px 0 50%);
       @include transform(rotate(45deg));
-      @include size(0.15em 1.5em);
+      @include size(.15em 1.5em);
       background: $modal-close-color;
       content: '';
       display: block;
       margin: -3px 0 0 -1px;
     }
 
-    &:hover:after,
+    ::&:hover:after,
     &:hover:before {
       background: darken($modal-close-color, 10%);
     }
 
-    &:before {
+    ::&:before {
       @include transform(rotate(-45deg));
     }
   }
 
   .modal-inner {
-    @include transition(opacity 0.25s ease);
+    @include transition(opacity .25s ease);
     background: $modal-background;
     border-radius: $base-border-radius;
-    margin-top: 0;
     margin: auto;
+    margin-top: 0;
     max-height: 95%;
     overflow: auto;
     padding: $modal-padding / 2;
@@ -88,16 +90,17 @@
 
     h1 {
       color: $base-font-color;
+      font-size: 3em;
       text-align: center;
       text-transform: capitalize;
-			font-size: 3em;
+
     }
 
-		h2 {
-			color: $base-font-color;
+    h2 {
+      color: $base-font-color;
+      font-size: 2em;
       text-align: center;
       text-transform: capitalize;
-			font-size: 2em;
 		}
 
     p {
@@ -120,17 +123,20 @@
     a.cta {
       color: $base-background-color;
       display: inline-block;
-      margin-right: 0.5em;
+      margin-right: .5em;
       margin-top: 1em;
 
-      &:last-child {
+      ::&:last-child {
+
         padding: 0 2em;
       }
     }
   }
-	.active {
-		overflow: hidden;
-		opacity: 1;
-		visibility: visible;
+
+  .active {
+    opacity: 1;
+    overflow: hidden;
+    visibility: visible;
 	}
+
 }

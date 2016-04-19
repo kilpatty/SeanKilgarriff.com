@@ -5,52 +5,55 @@
 //TODO: Clean up the home.scss
 //TODO: Figure out the best font
 .landing-page {
-	@include outer-container(100%);
-    //Make this span the entire page.
-    height: 90vh;
-    //Center the typed text.
-    text-align:center;
-    font-family: $welcome-font;
-		//font-family: $monospace;
-    font-size: 2em;
+  @include outer-container(100%);
 
-    .welcome, .logoRow {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+  font-family: $welcome-font;
+  font-size: 2em;
+  //Make this span the entire page.
+  height: 90vh;
+  //Center the typed text.
+  text-align: center;
 
-    .logoRow {
-        margin-top: -50px;
-				display: none;
-    }
+	//Scale up the font for bigger screens.
+  @include media($medium-screen) {
+    font-size: 3em;
+  }
 
+  .welcome,
+	.logo-row {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    #logo {
-        height:80vh;
-        width:80vw;
-    }
-
-    #hair:hover {
-        fill: $face-color;
-				cursor: pointer;
-    }
-    #glasses:hover {
-        fill: $face-color;
-				cursor: pointer;
-    }
-    #beard:hover {
-        fill: $face-color;
-				cursor: pointer;
+  .logo-row {
+    display: none;
+    margin-top: -50px;
     }
 
-    //Scale up the font for bigger screens.
-    @include media($medium-screen) {
-      font-size: 3em;
-    }
+  .logo {
+    height: 80vh;
+    width: 80vw;
+  }
+
+  .hair:hover {
+    cursor: pointer;
+    fill: $face-color;
+  }
+
+  .glasses:hover {
+    cursor: pointer;
+    fill: $face-color;
+  }
+
+  .beard:hover {
+    cursor: pointer;
+    fill: $face-color;
+  }
+
 }
 
 .footer {
-	display:none;
+  display: none;
 }

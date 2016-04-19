@@ -28,9 +28,7 @@
   width: $width;
   height: $width;
   background: $color;
-  -webkit-border-radius: $width/2;
-     -moz-border-radius: $width/2;
-          border-radius: $width/2;
+  border-radius: $width / 2;
 }
 
 /// Make a context based selector a little more friendly

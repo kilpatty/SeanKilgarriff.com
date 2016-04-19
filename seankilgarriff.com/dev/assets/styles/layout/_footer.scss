@@ -2,37 +2,37 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 
-//#TODO:20 Cleanup the SCSS on the Footer. 
+$link-base-color: #323232;
+
 footer {
-    @include outer-container(100%);
-    font-family: $welcome-font;
+  @include outer-container(100%);
+  font-family: $welcome-font;
+  height: 10vh;
 
-    height: 10vh;
+  .copyright,
+	.social {
+    @include span-columns(12);
+    text-align: center;
+    }
 
-    .copyright, .social {
-        @include span-columns(12);
-        text-align: center;
+  .social {
+    a {
+      color: $link-base-color;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: $blue-jelly;
+    }
 
     }
 
-    .social {
-        a {
-            color: #323232;
-            cursor: pointer;
+  .copyright {
+    margin-top: 10px;
 
-            &:hover {
-                color: $blue-jelly;
-            }
-        }
-
-
+    a {
+      color: $base-font-color;
     }
-
-    .copyright {
-        margin-top: 10px;
-        a{
-            color: $base-font-color;
-        }
 
     }
 }
