@@ -1,8 +1,19 @@
 seankilgarriff.com {
 
-	proxy / seankilgarriff.com:80
+	proxy / seankilgarriff.com:80 {
+
+		proxy_header Host {host}
+		proxy_header X-Real-IP {remote}
+		proxy_header X-Forwarded-Proto {scheme}
+
+	}
 
 	header / {
+
+		X-Frame-Options SAMEORIGIN
+		X-Content-Type-Options nosniff
+		X-XSS-Protection "1; mode=block"
+		Strict-Transport-Security "max-age=7776000; includeSubDomains"
 
 	}
 
