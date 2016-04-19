@@ -45,8 +45,8 @@
     background: $modal-background;
     cursor: pointer;
 
-    ::&:after,
-    &:before {
+    &::after,
+    &::before {
       @include position(absolute, 3px 3px 0 50%);
       @include transform(rotate(45deg));
       @include size(.15em 1.5em);
@@ -56,12 +56,12 @@
       margin: -3px 0 0 -1px;
     }
 
-    ::&:hover:after,
-    &:hover:before {
+    &:hover::after,
+    &:hover::before {
       background: darken($modal-close-color, 10%);
     }
 
-    ::&:before {
+    &::before {
       @include transform(rotate(-45deg));
     }
   }
@@ -126,7 +126,7 @@
       margin-right: .5em;
       margin-top: 1em;
 
-      ::&:last-child {
+      &::last-child {
 
         padding: 0 2em;
       }
