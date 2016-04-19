@@ -1,7 +1,7 @@
 version: '2'
 services:
     proxy:
-        image: skilgarriff/alpine-caddy
+        image: zzrot/alpine-caddy
         ports:
             -   "80:80"
             -   "443:443"
@@ -9,7 +9,6 @@ services:
             -   ./Caddyfile:/etc/Caddyfile
             -   ./.caddy:/root/.caddy
         restart: always
-        mem_limit: 500m
         networks:
             - frontend
 
