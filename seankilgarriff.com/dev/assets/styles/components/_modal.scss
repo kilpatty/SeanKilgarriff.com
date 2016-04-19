@@ -76,7 +76,9 @@
     overflow: auto;
     padding: $modal-padding / 2;
     position: relative;
+    text-align: center;
     width: 95%;
+
 
     @include media($medium-screen) {
       max-height: 70%;
