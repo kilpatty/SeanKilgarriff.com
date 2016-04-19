@@ -1,4 +1,4 @@
-www.seankilgarriff.com, seankilgarriff.com {
+seankilgarriff.com {
 
 				proxy / seankilgarriff.com:80
 
@@ -9,4 +9,8 @@ www.seankilgarriff.com, seankilgarriff.com {
 				gzip
 
 				tls seanpkilgarriff@gmail.com
+}
+
+www.seankligarriff.com {
+	redir https://seankilgarriff.com
 }
