@@ -4,4 +4,5 @@
     K.parentNode.insertBefore(n,K)}(window,document,'ga');
 
     ga('create', 'UA-46649481-3', 'auto');
+	ga('require', 'outboundLinkTracker');
     ga('send', 'pageview');
