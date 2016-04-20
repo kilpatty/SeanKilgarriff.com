@@ -14,29 +14,13 @@ db   8D 88      88 `88.
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Sean Kilgarriff</title>
-        <meta name="description" content="The Official Website of the one and only Sean Patrick Kilgarriff">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<!--Social Meta Tags-->
+		{{> meta}}
+
         <!--Favicon Links-->
-        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
-        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-        <link rel="manifest" href="/manifest.json">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+        {{> favicons}}
 
         <!-- Styles -->
         <link rel="stylesheet" href="css/main.min.css">
@@ -52,72 +36,21 @@ db   8D 88      88 `88.
     <body>
         <!-- Front Landing Page -->
         <div class="landing-page">
-					
+
+			<nav>
+				{{> smallLogo}}
+			</nav>
 
         </div>
 
 
         <!-- Footer & Copywrite-->
-        <footer class="animated fadeIn delayed-logo">
-
-            <div class="social">
-                <a href="https://medium.com/@SKilgarriff" target="_blank">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                <a href="https://www.facebook.com/skilgarriff" target="_blank">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                <a href="https://twitter.com/SeanKilgarriff" target="_blank">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                <a href="https://github.com/Skilgarriff" target="_blank">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                <a href="mailto:seanpkilgarriff@gmail.com">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                <a href="https://www.linkedin.com/in/seankilgarriff" target="_blank">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                <a href="https://www.instagram.com/skilgarriff/" target="_blank">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-            </div>
-            <div class="copyright">
-                <p>
-                    &copy; Sean Kilgarriff 2016
-                </p>
-            </div>
-        </footer>
+        {{> footer}}
 
 
         <!-- htmlbuild:bs -->
 
-        <script type="text/javascript" id="__bs_script__">//<![CDATA[
-            document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));
-        //]]></script>
-
+        {{> bs}}
         <!-- endbuild -->
 
         <!--Scripts :) -->
