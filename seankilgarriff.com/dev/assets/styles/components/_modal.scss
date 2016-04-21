@@ -68,6 +68,7 @@
 
   .modal-inner {
     @include transition(opacity .25s ease);
+		@include outer-container();
     background: $modal-background;
     border-radius: $base-border-radius;
     margin: auto;
@@ -105,6 +106,13 @@
       text-transform: capitalize;
 		}
 
+		h3 {
+      color: $base-font-color;
+      font-size: 1.5em;
+      text-align: center;
+      text-transform: capitalize;
+		}
+
     p {
       color: $base-font-color;
       line-height: $base-line-height;
@@ -118,7 +126,7 @@
       color: $base-font-color;
 
       @include media($medium-screen) {
-        @include columns(2 8em);
+        @include span-columns(6);
       }
     }
 
