@@ -12,7 +12,12 @@ footer {
   .copyright,
 	.social {
     @include span-columns(12);
+		font-size: .8em;
     text-align: center;
+
+		@include media($medium-screen){
+			font-size: 1em;
+		}
     }
 
   .social {
@@ -21,14 +26,17 @@ footer {
       cursor: pointer;
     }
 
-    a:hover {
+    a::hover {
       color: $blue-jelly;
     }
 
     }
 
   .copyright {
-    margin-top: 10px;
+
+		@include media($medium-screen){
+			margin-top: 10px;
+		}
 
     a {
       color: $base-font-color;
