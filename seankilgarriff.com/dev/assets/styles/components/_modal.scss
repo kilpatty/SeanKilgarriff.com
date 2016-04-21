@@ -122,17 +122,6 @@
       }
     }
 
-    a.cta {
-      color: $base-background-color;
-      display: inline-block;
-      margin-right: .5em;
-      margin-top: 1em;
-
-      &::last-child {
-
-        padding: 0 2em;
-      }
-    }
   }
 
   .active {
