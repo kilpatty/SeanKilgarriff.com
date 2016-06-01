@@ -1,0 +1,10 @@
+{
+  "name": "calc-example",
+  "version": "1.0.0",
+  "description": "Calc test for Sezzle",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.6",
+    "underscore": "^1.8.3"
+  }
+}

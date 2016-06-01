@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sean Kilgarriff Calc</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="row headline">
+          <h1>Streaming Calculator</h1>
+      </div>
+      <div class="col-md-6 left-half">
+    <div id="calculator">
+      <div class="screen">0</div>
+
+      <div id="keypad">
+        <ul>
+          <li class="symbolTop">C</li>
+          <li class="symbolTop">+/-</li>
+          <li class="symbolTop">%</li>
+          <li class="symbol">/</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li class="symbol">x</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li class="symbol">-</li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li class="symbol">+</li>
+          <li class="extend">0</li>
+          <li>.</li>
+          <li class="symbol">=</li>
+        </ul>
+      </div>
+    </div>
+</div>
+    <div class="col-md-6 right-half">
+      <ul class="list-unstyled" id="messages"></ul>
+    </div>
+    <div class="row info">
+        <div class="col-md-12">
+            <h2>Key C = Clear</h2>
+            <h2>Enter or = for Equals</h2>
+        </div>
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
