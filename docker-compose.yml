@@ -8,5 +8,15 @@ services:
       networks:
         - frontend
 
+  calc.seankilgarriff.com:
+      image: zzrot/alpine-node
+      volumes:
+        - ./calc.seankilgarriff.com:/usr/src/app
+      working_dir: /usr/src/app
+      command: node index.js
+      networks:
+          - frontend
+
+
 networks:
       frontend:

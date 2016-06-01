@@ -15,3 +15,7 @@ services:
     seankilgarriff.com:
         expose:
             -   80
+
+    calc.seankilgarriff.com:
+        expose:
+            -   3000

@@ -5,6 +5,10 @@ services:
         ports:
             -   "80:80"
 
+    calc.seankilgarriff.com:
+        ports:
+            -   "81:3000"
+
     developer:
         image: zzrot/lazycat
         container_name: dev
