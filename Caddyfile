@@ -14,7 +14,6 @@ seankilgarriff.com {
 		X-Content-Type-Options nosniff
 		X-XSS-Protection "1; mode=block"
 		Strict-Transport-Security "max-age=7776000; includeSubDomains"
-
 	}
 
 	gzip
@@ -24,4 +23,19 @@ seankilgarriff.com {
 
 www.seankilgarriff.com {
 	redir https://seankilgarriff.com
+}
+
+calc.seankilgarriff.com {
+
+	proxy / calc.seankilgarriff.com:3000 {
+
+		proxy_header Host {host}
+		proxy_header X-Real-IP {remote}
+		proxy_header X-Forwarded-Proto {scheme}
+
+	}
+
+	gzip
+
+	tls sean@zzrot.com
 }
