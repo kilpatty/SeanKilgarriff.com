@@ -14,6 +14,17 @@ seankilgarriff.com {
 		X-Content-Type-Options nosniff
 		X-XSS-Protection "1; mode=block"
 		Strict-Transport-Security "max-age=7776000; includeSubDomains"
+		Content-Security-Policy "default-src 'none';
+             script-src 'self' https://www.google-analytics.com/ https://ajax.googleapis.com/;
+             img-src 'self' https://www.google-analytics.com/;
+             style-src 'self' https://maxcdn.bootstrapcdn.com/ https://fonts.googleapis.com;
+             font-src 'self' https://fonts.googleapis.com;
+             frame-src 'self';
+             upgrade-insecure-requests; block-all-mixed-content;
+             reflected-xss block; referrer no-referrer-when-downgrade;
+             frame-ancestors 'none'; form-action 'none';
+             base-uri seankilgarriff.com www.seankilgarriff.com;"
+
 	}
 
 	gzip
