@@ -21,25 +21,28 @@ footer {
     }
 
   .social {
-    a {
-      color: $link-base-color;
-      cursor: pointer;
-    }
+      a {
+        color: $link-base-color;
+        cursor: pointer;
+      }
 
-    a::hover {
-      color: $blue-jelly;
-    }
-
+      a:hover {
+        color: $blue-jelly;
+      }
     }
 
   .copyright {
-
 		@include media($medium-screen){
 			margin-top: 10px;
 		}
 
     a {
       color: $base-font-color;
+      display: inline-block;
+    }
+
+    #PGP {
+      margin-left: 20px;
     }
 
     }
