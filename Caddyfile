@@ -1,4 +1,4 @@
-seankilgarriff.com {
+seankilgarriff.com, pgp.seankilgarriff.com {
 
 	proxy / seankilgarriff.com:80 {
 
@@ -26,6 +26,8 @@ seankilgarriff.com {
              base-uri seankilgarriff.com www.seankilgarriff.com;"
 
 	}
+
+	rewrite pgp.seankilgarriff.com seankilgarriff.com/pgp.html
 
 	gzip
 
