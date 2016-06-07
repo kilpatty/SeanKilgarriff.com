@@ -14,13 +14,13 @@
   //Center the typed text.
   text-align: center;
 
-	//Scale up the font for bigger screens.
+  //Scale up the font for bigger screens.
   @include media($medium-screen) {
     font-size: 3em;
   }
 
   .welcome,
-	.logo-row {
+  .logo-row {
     left: 50%;
     position: absolute;
     top: 50%;
@@ -34,22 +34,22 @@
     .logo {
       height: 80vh;
       width: 80vw;
-	  }
+    }
 
     .hair:hover {
       cursor: pointer;
       fill: $face-color;
-	  }
+    }
 
     .glasses:hover {
       cursor: pointer;
       fill: $face-color;
-	  }
+    }
 
     .beard:hover {
       cursor: pointer;
       fill: $face-color;
-	  }
+    }
 
   }
 

@@ -14,7 +14,9 @@
     &:focus {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     &:hover,
     &:active,
     &:focus {
@@ -51,7 +53,7 @@
     @error 'No value found for `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
   }
 
-  @media #{if(type-of($query) == 'string', unquote($query), inspect($query))} {
+  @media #{if(type-of($query) = = 'string', unquote($query), inspect($query))} {
     @content;
   }
 }

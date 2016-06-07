@@ -7,7 +7,6 @@ $serif: 'Roboto Slab', serif;
 $logo-font: 'Lato';
 $welcome-font: 'Josefin Slab', serif;
 
-
 // Font Sizes
 $base-font-size: 1em;
 
@@ -26,7 +25,7 @@ $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
-$faded-black: rgba(#000, .06);
+$faded-black: rgba(#000, 0.06);
 
 //Front Page Colors
 $blue-jelly: #2574a9;
@@ -46,7 +45,7 @@ $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms
 $form-box-shadow: inset 0 1px 3px $faded-black;
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -.3);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
 // Animations
 $base-duration: 150ms;
