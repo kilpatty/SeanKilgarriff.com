@@ -9,9 +9,7 @@ services:
         - frontend
 
   casualmastery.com:
-      image: zzrot/alpine-caddy
-      volumes:
-        - ./casualmastery.com/public:/var/www/html
+      image: zzrot/alpine-ghost
       networks:
         - frontend
 
