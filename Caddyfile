@@ -13,7 +13,7 @@ seankilgarriff.com {
 		X-Frame-Options SAMEORIGIN
 		X-Content-Type-Options nosniff
 		X-XSS-Protection "1; mode=block"
-		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" 
+		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 		Content-Security-Policy "default-src 'none';
              script-src 'self' https://www.google-analytics.com/ https://ajax.googleapis.com/;
              img-src 'self' https://www.google-analytics.com/;
@@ -36,17 +36,25 @@ www.seankilgarriff.com {
 	redir https://seankilgarriff.com
 }
 
-calc.seankilgarriff.com {
+casualmastery.com {
+			proxy / casualmastery.com:2368 {
+				proxy_header Host {host}
+				proxy_header X-Real-IP {remote}
+				proxy_header X-Forwarded-Proto {scheme}
+			}
 
-	proxy / calc.seankilgarriff.com:3000 {
+			header / {
+				X-Frame-Options DENY
+				X-Content-Type-Options nosniff
+				X-XSS-Protection "1; mode=block"
+				Strict-Transport-Security "max-age=7776000; includeSubDomains"
+			}
 
-		proxy_header Host {host}
-		proxy_header X-Real-IP {remote}
-		proxy_header X-Forwarded-Proto {scheme}
+			gzip
 
-	}
+			tls sean@zzrot.com
+}
 
-	gzip
-
-	tls sean@zzrot.com
+www.casualmastery.com {
+	redir https://casualmastery.com
 }

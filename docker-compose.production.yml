@@ -16,6 +16,11 @@ services:
         expose:
             -   80
 
-    calc.seankilgarriff.com:
+    casualmastery.com:
+        environment:
+          PROD_DOMAIN: https://casualmastery.com
+          NODE_ENV: production
+        volumes:
+          - ./casualmastery.com/:/var/lib/ghost/
         expose:
-            -   3000
+            -   2368
