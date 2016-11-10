@@ -1,4 +1,6 @@
 .footer {
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,28 +10,24 @@
 .copyright {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   font-size: 0.8em;
+  width: 45vw;
 }
 
 .social {
   font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45vw;
 }
 
 @media screen and (min-width: 600px) {
-  .copyright {
-    margin-top: 10px;
+  .copyright, .social {
     font-size: 1em;
   }
-
-  .social {
-    font-size: 1em;
-  }
-}
-
-.pgp {
-  margin-left: 20px;
 }
 
 .socialLink {
