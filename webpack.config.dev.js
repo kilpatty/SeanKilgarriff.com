@@ -66,7 +66,6 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.GA_ID': JSON.stringify('xxxxxxxxxx'),
     }),
-    new ExtractTextPlugin('style.css'),
   ],
   devServer: {
     contentBase: './dist',

@@ -3,6 +3,9 @@ import { render } from 'react-dom';
 import { BrowserRouter, Match } from 'react-router';
 import ReactGA from 'react-ga';
 
+// This files styles - need to import before anything else to get the css first.
+import styles from './index.css';
+
 // Screens
 import Home from './Home';
 
@@ -13,7 +16,6 @@ import Footer from './Footer';
 // 404
 //
 
-import styles from './index.css';
 
 // Accept hot module reloading during development
 if (process.env.NODE_ENV !== 'production') {

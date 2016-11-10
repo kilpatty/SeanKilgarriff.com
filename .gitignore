@@ -1,5 +1,7 @@
 .DS_Store
+
 #No node Modules for us
 node_modules
-#Ignore our public directory as it can just simply be built on dev container startup
-seankilgarriff.com/public
+
+#Don't push up the distribution file
+dist
