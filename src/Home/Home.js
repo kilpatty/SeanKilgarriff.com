@@ -2,11 +2,13 @@
 
 import React from 'react';
 
-import Face from './Face';
+import Face from '../Face';
+
+import styles from './Home.css';
 
 const Home = () =>
    (
-     <div>
+     <div className={styles.container}>
        <Face />
      </div>
     );

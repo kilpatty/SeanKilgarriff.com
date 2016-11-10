@@ -1,0 +1,19 @@
+.face {
+  height: 80vh;
+  width: 80vw;
+}
+
+.hair:hover {
+  cursor: pointer;
+  fill: #bdc3c7;
+}
+
+.glasses:hover {
+  cursor: pointer;
+  fill: #bdc3c7;
+}
+
+.beard:hover {
+  cursor: pointer;
+  fill: #bdc3c7;
+}

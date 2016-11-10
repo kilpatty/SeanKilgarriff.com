@@ -30,27 +30,6 @@
   .logo-row {
     display: none;
     margin-top: -50px;
-
-    .logo {
-      height: 80vh;
-      width: 80vw;
-    }
-
-    .hair:hover {
-      cursor: pointer;
-      fill: $face-color;
-    }
-
-    .glasses:hover {
-      cursor: pointer;
-      fill: $face-color;
-    }
-
-    .beard:hover {
-      cursor: pointer;
-      fill: $face-color;
-    }
-
   }
 
 }
