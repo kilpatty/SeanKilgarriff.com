@@ -36,11 +36,12 @@ function logPageView() {
 render(
   <BrowserRouter onUpdate={logPageView}>
     <div className={styles.container}>
-      <div>
-        Hey
+      <div className={styles.content}>
+        <Match exactly pattern="/" component={Home} />
       </div>
-      <Match exactly pattern="/" component={Home} />
-      <Footer />
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </div>
   </BrowserRouter>,
 document.getElementById('app')
