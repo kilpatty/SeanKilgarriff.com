@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route } from 'react-router';
+import { BrowserRouter, Match } from 'react-router';
 import ReactGA from 'react-ga';
 
 // Screens
-import App from './App';
+import Home from './Home';
 
 //
 // 404
@@ -29,9 +29,13 @@ function logPageView() {
 // Main Render Statement. <IndexRoute component={CheckPhone} />
 // <Route path="*" component={NotFound} />
 render(
-  <Router onUpdate={logPageView}>
-    <Route path="/" component={App} />
-
-  </Router>,
+  <BrowserRouter onUpdate={logPageView}>
+    <div>
+      <div>
+        Hey
+      </div>
+      <Match exactly pattern="/" component={Home} />
+    </div>
+  </BrowserRouter>,
 document.getElementById('app')
 );
