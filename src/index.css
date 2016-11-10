@@ -5,6 +5,7 @@ body {
   color: #292B31;
   font-family: 'Josefin Slab', serif;
   font-size: 100%;
+  overflow-y:hidden;
 }
 
 a {
