@@ -34,7 +34,7 @@ function logPageView() {
 render(
   <BrowserRouter onUpdate={logPageView}>
     <div>
-      <div>
+      <div className="">
         Hey
       </div>
       <Match exactly pattern="/" component={Home} />
