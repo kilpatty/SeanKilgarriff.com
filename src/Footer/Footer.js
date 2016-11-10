@@ -8,8 +8,8 @@ import styles from './Footer.css';
 
 const Footer = () =>
   (
-    <footer>
-      <div>
+    <footer className={styles.footer}>
+      <div className={styles.social}>
         <a
           href="https://medium.com/@SKilgarriff"
           className={styles.socialLink}
@@ -163,7 +163,7 @@ const Footer = () =>
             &copy; Sean Kilgarriff 2016
           </p>
         </a>
-        <a href="https://seankilgarriff.com/pgp" id="PGP">
+        <a href="https://seankilgarriff.com/pgp" className={styles.pgp}>
           <p>
             PGP Key
           </p>

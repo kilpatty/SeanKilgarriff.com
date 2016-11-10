@@ -5,10 +5,6 @@
 $link-base-color: #323232;
 
 footer {
-  @include outer-container(100%);
-  font-family: $welcome-font;
-  height: 10vh;
-
   .copyright,
   .social {
     @include span-columns(12);
