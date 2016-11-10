@@ -1,11 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
-import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import ReactGA from 'react-ga';
 
 // Screens
-
+import {App} from './App'
 
 //
 // 404
@@ -29,12 +28,11 @@ function logPageView() {
   ReactGA.pageview(window.location.pathname);
 }
 
-// Main Render Statement.
+// Main Render Statement. <IndexRoute component={CheckPhone} />
 render(
   <Provider store={store}>
     <Router history={history} onUpdate={logPageView}>
       <Route path="/" component={App} onEnter={requireAuth}>
-        <IndexRoute component={CheckPhone} />
       </Route>
       <Route path="*" component={NotFound} />
     </Router>
