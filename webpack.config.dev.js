@@ -46,7 +46,6 @@ module.exports = {
                 return [
                   require('precss')({ /* ...options */ }),
                   require('autoprefixer')({ /* ...options */ }),
-                  require('postcss-normalize'),
                 ];
               },
             },

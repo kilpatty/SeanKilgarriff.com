@@ -20,17 +20,6 @@ footer {
     }
   }
 
-  .social {
-    a {
-      color: $link-base-color;
-      cursor: pointer;
-    }
-
-    a:hover {
-      color: $blue-jelly;
-    }
-  }
-
   .copyright {
     @include media($medium-screen) {
       margin-top: 10px;

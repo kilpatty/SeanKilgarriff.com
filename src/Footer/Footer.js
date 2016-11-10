@@ -9,8 +9,12 @@ import styles from './Footer.css';
 const Footer = () =>
   (
     <footer>
-      <div className={styles.social}>
-        <a href="https://medium.com/@SKilgarriff" target="_blank">
+      <div>
+        <a
+          href="https://medium.com/@SKilgarriff"
+          className={styles.socialLink}
+          target="_blank"
+        >
           <FontAwesome
             name="stack"
             size="lg"
@@ -27,7 +31,11 @@ const Footer = () =>
             />
           </FontAwesome>
         </a>
-        <a href="https://www.facebook.com/skilgarriff" target="_blank">
+        <a
+          href="https://www.facebook.com/skilgarriff"
+          target="_blank"
+          className={styles.socialLink}
+        >
           <FontAwesome
             name="stack"
             size="lg"
@@ -44,7 +52,11 @@ const Footer = () =>
             />
           </FontAwesome>
         </a>
-        <a href="https://twitter.com/SeanKilgarriff" target="_blank">
+        <a
+          href="https://twitter.com/SeanKilgarriff"
+          target="_blank"
+          className={styles.socialLink}
+        >
           <FontAwesome
             name="stack"
             size="lg"
@@ -61,7 +73,10 @@ const Footer = () =>
             />
           </FontAwesome>
         </a>
-        <a href="mailto:sean@zzrot.com">
+        <a
+          href="mailto:sean@zzrot.com"
+          className={styles.socialLink}
+        >
           <FontAwesome
             name="stack"
             size="lg"
@@ -78,7 +93,11 @@ const Footer = () =>
             />
           </FontAwesome>
         </a>
-        <a href="https://github.com/Skilgarriff" target="_blank">
+        <a
+          href="https://github.com/Skilgarriff"
+          target="_blank"
+          className={styles.socialLink}
+        >
           <FontAwesome
             name="stack"
             size="lg"
@@ -95,7 +114,11 @@ const Footer = () =>
             />
           </FontAwesome>
         </a>
-        <a href="https://www.linkedin.com/in/seankilgarriff" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/seankilgarriff"
+          target="_blank"
+          className={styles.socialLink}
+        >
           <FontAwesome
             name="stack"
             size="lg"
@@ -112,7 +135,11 @@ const Footer = () =>
             />
           </FontAwesome>
         </a>
-        <a href="https://www.instagram.com/skilgarriff/" target="_blank">
+        <a
+          href="https://www.instagram.com/skilgarriff/"
+          target="_blank"
+          className={styles.socialLink}
+        >
           <FontAwesome
             name="stack"
             size="lg"

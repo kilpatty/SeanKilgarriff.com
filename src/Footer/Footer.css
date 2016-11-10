@@ -1,11 +1,9 @@
 
-.social {
-  a {
+.socialLink {
     color: #323232;
     cursor: pointer;
-  }
+}
 
-  a:hover {
-    color: #2574a9;
-  }
+.socialLink:hover {
+  color: #2574a9;
 }
