@@ -30,6 +30,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -45,6 +46,7 @@ module.exports = {
                 return [
                   require('precss')({ /* ...options */ }),
                   require('autoprefixer')({ /* ...options */ }),
+                  require('postcss-normalize'),
                 ];
               },
             },

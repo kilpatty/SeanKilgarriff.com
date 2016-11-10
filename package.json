@@ -61,6 +61,7 @@
     "mocha": "^3.1.0",
     "object-assign": "^4.1.0",
     "postcss-loader": "1.1.0",
+    "postcss-normalize": "^0.3.0",
     "precss": "^1.4.0",
     "promise": "^7.1.1",
     "react-addons-test-utils": "^15.3.2",
@@ -83,18 +84,17 @@
       "react",
       "stage-0"
     ],
-    "plugins": ["add-module-exports"],
+    "plugins": [
+      "transform-flow-strip-types",
+      "react-hot-loader/babel"
+    ],
     "env": {
       "development": {
         "presets": [
           "react-hmre"
         ]
       }
-    },
-    "plugins": [
-      "transform-flow-strip-types",
-      "react-hot-loader/babel"
-    ]
+    }
   },
   "eslintConfig": {
     "parser": "babel-eslint",

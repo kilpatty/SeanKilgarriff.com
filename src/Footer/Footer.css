@@ -1,0 +1,11 @@
+
+.social {
+  a {
+    color: #323232;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: #2574a9;
+  }
+}
