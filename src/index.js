@@ -13,6 +13,8 @@ import Footer from './Footer';
 // 404
 //
 
+import styles from './index.css';
+
 // Accept hot module reloading during development
 if (process.env.NODE_ENV !== 'production') {
   if (module.hot) {
@@ -33,8 +35,8 @@ function logPageView() {
 // <Route path="*" component={NotFound} />
 render(
   <BrowserRouter onUpdate={logPageView}>
-    <div>
-      <div className="">
+    <div className={styles.container}>
+      <div>
         Hey
       </div>
       <Match exactly pattern="/" component={Home} />

@@ -2,10 +2,12 @@
 
 import React from 'react';
 
+import Face from './Face';
+
 const Home = () =>
    (
      <div>
-       <p>Hey</p>
+       <Face />
      </div>
     );
 
