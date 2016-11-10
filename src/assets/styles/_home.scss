@@ -1,0 +1,27 @@
+
+.landing-page {
+
+  font-size: 2em;
+  //Make this span the entire page.
+  height: 90vh;
+  //Center the typed text.
+  text-align: center;
+
+  //Scale up the font for bigger screens.
+  @include media($medium-screen) {
+    font-size: 3em;
+  }
+
+  .welcome,
+  .logo-row {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .logo-row {
+    display: none;
+    margin-top: -50px;
+  }
+}
