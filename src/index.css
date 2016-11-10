@@ -82,8 +82,9 @@ video {
 body {
   line-height: 1;
   color: #292B31;
-  /*Put font family here I think */
+  font-family: 'Josefin Slab', serif;
 }
+
 a {
   margin: 0;
   padding: 0;
@@ -100,9 +101,6 @@ a:visited {
 .container {
   min-height: 100vh;
   width: 100vw;
-  /*display: flex;
-  align-items: center;
-  justify-content: center;*/
 }
 
 .content {

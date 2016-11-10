@@ -1,13 +1,6 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
-// -----------------------------------------------------------------------------
 
-//TODO: Clean up the home.scss
-//TODO: Figure out the best font
 .landing-page {
-  @include outer-container(100%);
 
-  font-family: $welcome-font;
   font-size: 2em;
   //Make this span the entire page.
   height: 90vh;
@@ -31,9 +24,4 @@
     display: none;
     margin-top: -50px;
   }
-
-}
-
-.fade {
-  display: none;
 }
