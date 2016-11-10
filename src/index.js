@@ -1,16 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+import { Router, Route } from 'react-router';
 import ReactGA from 'react-ga';
 
 // Screens
-import {App} from './App'
+import App from './App';
 
 //
 // 404
 //
-
-import NotFound from './Shared/NotFound';
 
 // Accept hot module reloading during development
 if (process.env.NODE_ENV !== 'production') {
@@ -29,13 +27,11 @@ function logPageView() {
 }
 
 // Main Render Statement. <IndexRoute component={CheckPhone} />
+// <Route path="*" component={NotFound} />
 render(
-  <Provider store={store}>
-    <Router history={history} onUpdate={logPageView}>
-      <Route path="/" component={App} onEnter={requireAuth}>
-      </Route>
-      <Route path="*" component={NotFound} />
-    </Router>
-  </Provider>,
+  <Router onUpdate={logPageView}>
+    <Route path="/" component={App} />
+
+  </Router>,
 document.getElementById('app')
 );
