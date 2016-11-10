@@ -6,6 +6,9 @@ import ReactGA from 'react-ga';
 // Screens
 import Home from './Home';
 
+// Components
+import Footer from './Footer';
+
 //
 // 404
 //
@@ -35,6 +38,7 @@ render(
         Hey
       </div>
       <Match exactly pattern="/" component={Home} />
+      <Footer />
     </div>
   </BrowserRouter>,
 document.getElementById('app')
