@@ -10,9 +10,6 @@ import styles from './index.css';
 import Home from './Home';
 import Copyright from './Copyright';
 
-// Components
-import Footer from './Footer';
-
 //
 // 404
 //
@@ -34,18 +31,11 @@ function logPageView() {
   ReactGA.pageview(window.location.pathname);
 }
 
-// Main Render Statement. <IndexRoute component={CheckPhone} />
-// <Route path="*" component={NotFound} />
 render(
   <BrowserRouter onUpdate={logPageView}>
     <div className={styles.container}>
-      <div className={styles.content}>
-        <Match exactly pattern="/" component={Home} />
-        <Match pattern="/copyright" component={Copyright} />
-      </div>
-      <div className={styles.footer}>
-        <Footer />
-      </div>
+      <Match exactly pattern="/" component={Home} />
+      <Match pattern="/copyright" component={Copyright} />
     </div>
   </BrowserRouter>,
 document.getElementById('app')
