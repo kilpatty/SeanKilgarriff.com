@@ -1,9 +1,14 @@
-@import "normalize.css";
+/*@import "normalize.css";*/
+
+/*Import Variables*/
+@import "./variables.css";
+
+$welcome-font: 'Josefin Slab', serif;
 
 body {
   line-height: 1;
   color: #292B31;
-  font-family: 'Josefin Slab', serif;
+  font-family: $welcome-font;
   font-size: 100%;
   overflow-y:hidden;
 }
@@ -23,12 +28,4 @@ a:visited {
 .container {
   min-height: 100vh;
   width: 100vw;
-}
-
-.content {
-  height: 90vh;
-}
-
-.footer {
-  height: 10vh;
 }

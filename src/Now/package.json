@@ -1,6 +1,6 @@
 {
-  "name": "Typed",
+  "name": "Now",
   "version": "0.0.0",
   "private": true,
-  "main": "./Typed.js"
+  "main": "./Now.js"
 }

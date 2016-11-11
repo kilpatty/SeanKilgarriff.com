@@ -10,8 +10,8 @@
 .copyright {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: center;
+  padding-top: 5px;
   font-size: 0.8em;
   width: 45vw;
 }

@@ -158,8 +158,7 @@ const Footer = () =>
         </ReactGA.OutboundLink>
       </div>
       <div className={styles.copyright}>
-        <Link to="copyright">&copy; Sean Kilgarriff 2016</Link>
-        <Link to="pgp">PGP Key</Link>
+        <Link to="/copyright">&copy; Sean Kilgarriff 2016</Link>
       </div>
     </footer>
   );

@@ -1,0 +1,6 @@
+{
+  "name": "Copyright",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Copyright.js"
+}

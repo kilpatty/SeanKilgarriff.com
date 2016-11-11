@@ -4,7 +4,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = {
@@ -29,7 +28,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
+        loaders: [
           'style-loader',
           {
             loader: 'css-loader',
@@ -39,17 +38,7 @@ module.exports = {
               localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
             },
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins() {
-                return [
-                  require('precss')({ /* ...options */ }),
-                  require('autoprefixer')({ /* ...options */ }),
-                ];
-              },
-            },
-          },
+          'postcss-loader',
         ],
       },
     ],
