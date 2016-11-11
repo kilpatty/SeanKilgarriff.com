@@ -58,7 +58,7 @@ module.exports = {
       template: './src/index.html',
     }),
     new webpack.DefinePlugin({
-      'process.env.GA_ID': JSON.stringify('xxxxxxxxxx'),
+      'process.env.GA_ID': JSON.stringify('UA-46649481-3'),
     }),
     new CopyWebpackPlugin([
       { from: 'public/' },
