@@ -7,7 +7,7 @@ const Face = () =>
      <svg className={styles.face} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 500 500" xmlSpace="preserve" aria-labelledby="title desc">
        <title>Sean Kilgarriff Face Logo</title>
        <desc id="desc">A face with hair, glasses, and a beard to represent Sean Kilgarriff</desc>
-       <g>
+       <g className={styles.face}>
 
          <path className={styles.beard} fill="#323232" roll="button" d="M365.6,461.9c0-11.2,5.6-37.7,13.6-60.1c8-22.4-5.6-41.2-9.6-62.9c-4-21.7,6-51.7,0-55.2 c-9.6-5.6-11.2,11.9-15.1,33.5c-4,21.7-28.7,31.5-28.7,31.5s-12-13.3-25.5-21c-13.5-7.7-50.2-8.4-50.2-8.4s-36.7,0.7-50.2,8.4 c-13.5,7.7-25.5,21-25.5,21s-24.7-9.8-28.7-31.5c-4-21.7-5.6-39.1-15.1-33.5c-6,3.5,4,33.5,0,55.2c-4,21.7-17.5,40.5-9.6,62.9 c8,22.4,13.5,48.9,13.5,60.1c19.1,10.6,62.7,31.4,121.5,29.9C308,490.5,346.7,472.4,365.6,461.9z M250,529 M298.6,369 c-11.2,14-48.6,11.9-48.6,11.9s-37.5,2.1-48.6-11.9c-11.2-14,42.2,0.7,48.6-16.1C256.4,369.7,309.8,355,298.6,369z" />
 
