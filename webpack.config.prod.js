@@ -6,6 +6,13 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const SitemapPlugin = require('sitemap-webpack-plugin');
+
+// These are the paths that are located on my website.
+const paths = [
+  '/pgp',
+  '/bar/',
+];
 
 // Css Loader
 const cssLoaders = [
@@ -51,12 +58,13 @@ module.exports = {
       template: './src/index.html',
     }),
     new webpack.DefinePlugin({
-      'process.env.GA_ID': JSON.stringify('xxxxxxxxxx'),
+      'process.env.GA_ID': JSON.stringify('UA-46649481-3'),
     }),
     new CopyWebpackPlugin([
       { from: 'public/' },
     ]),
     new ExtractTextPlugin({ filename: 'style.css', disable: false, allChunks: true }),
+    new SitemapPlugin('https://seankilgarriff.com', paths, 'sitemap.xml'),
   ],
   module: {
     rules: [

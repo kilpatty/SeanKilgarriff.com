@@ -1,19 +1,19 @@
 // @flow
 
 import React from 'react';
-
 import FontAwesome from 'react-fontawesome';
-
+import { Link } from 'react-router';
+import ReactGA from 'react-ga';
 import styles from './Footer.css';
 
 const Footer = () =>
   (
     <footer className={styles.footer}>
       <div className={styles.social}>
-        <a
-          href="https://medium.com/@SKilgarriff"
+        <ReactGA.OutboundLink
+          eventLabel="Medium"
+          to="https://medium.com/@SKilgarriff"
           className={styles.socialLink}
-          target="_blank"
         >
           <FontAwesome
             name="stack"
@@ -30,10 +30,10 @@ const Footer = () =>
               stack="1x"
             />
           </FontAwesome>
-        </a>
-        <a
-          href="https://www.facebook.com/skilgarriff"
-          target="_blank"
+        </ReactGA.OutboundLink>
+        <ReactGA.OutboundLink
+          eventLabel="Facebook"
+          to="https://www.facebook.com/skilgarriff"
           className={styles.socialLink}
         >
           <FontAwesome
@@ -51,10 +51,10 @@ const Footer = () =>
               stack="1x"
             />
           </FontAwesome>
-        </a>
-        <a
-          href="https://twitter.com/SeanKilgarriff"
-          target="_blank"
+        </ReactGA.OutboundLink>
+        <ReactGA.OutboundLink
+          eventLabel="Twitter"
+          to="https://twitter.com/SeanKilgarriff"
           className={styles.socialLink}
         >
           <FontAwesome
@@ -72,7 +72,7 @@ const Footer = () =>
               stack="1x"
             />
           </FontAwesome>
-        </a>
+        </ReactGA.OutboundLink>
         <a
           href="mailto:sean@zzrot.com"
           className={styles.socialLink}
@@ -93,9 +93,9 @@ const Footer = () =>
             />
           </FontAwesome>
         </a>
-        <a
-          href="https://github.com/Skilgarriff"
-          target="_blank"
+        <ReactGA.OutboundLink
+          eventLabel="Github"
+          to="https://github.com/Skilgarriff"
           className={styles.socialLink}
         >
           <FontAwesome
@@ -113,10 +113,10 @@ const Footer = () =>
               stack="1x"
             />
           </FontAwesome>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/seankilgarriff"
-          target="_blank"
+        </ReactGA.OutboundLink>
+        <ReactGA.OutboundLink
+          eventLabel="LinkedIn"
+          to="https://www.linkedin.com/in/seankilgarriff"
           className={styles.socialLink}
         >
           <FontAwesome
@@ -134,10 +134,10 @@ const Footer = () =>
               stack="1x"
             />
           </FontAwesome>
-        </a>
-        <a
-          href="https://www.instagram.com/skilgarriff/"
-          target="_blank"
+        </ReactGA.OutboundLink>
+        <ReactGA.OutboundLink
+          eventLabel="Instagram"
+          to="https://www.instagram.com/skilgarriff/"
           className={styles.socialLink}
         >
           <FontAwesome
@@ -155,19 +155,11 @@ const Footer = () =>
               stack="1x"
             />
           </FontAwesome>
-        </a>
+        </ReactGA.OutboundLink>
       </div>
       <div className={styles.copyright}>
-        <a href="https://seankilgarriff.com/copyright">
-          <p>
-            &copy; Sean Kilgarriff 2016
-          </p>
-        </a>
-        <a href="https://seankilgarriff.com/pgp" className={styles.pgp}>
-          <p>
-            PGP Key
-          </p>
-        </a>
+        <Link to="copyright">&copy; Sean Kilgarriff 2016</Link>
+        <Link to="pgp">PGP Key</Link>
       </div>
     </footer>
   );
