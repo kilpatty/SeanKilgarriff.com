@@ -8,6 +8,7 @@ import styles from './index.css';
 
 // Screens
 import Home from './Home';
+import Copyright from './Copyright';
 
 // Components
 import Footer from './Footer';
@@ -40,6 +41,7 @@ render(
     <div className={styles.container}>
       <div className={styles.content}>
         <Match exactly pattern="/" component={Home} />
+        <Match pattern="/copyright" component={Copyright} />
       </div>
       <div className={styles.footer}>
         <Footer />
