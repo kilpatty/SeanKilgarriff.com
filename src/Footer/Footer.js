@@ -1,9 +1,8 @@
 // @flow
 
 import React from 'react';
-
 import FontAwesome from 'react-fontawesome';
-
+import { Link } from 'react-router';
 import styles from './Footer.css';
 
 const Footer = () =>
@@ -158,16 +157,8 @@ const Footer = () =>
         </a>
       </div>
       <div className={styles.copyright}>
-        <a href="https://seankilgarriff.com/copyright">
-          <p>
-            &copy; Sean Kilgarriff 2016
-          </p>
-        </a>
-        <a href="https://seankilgarriff.com/pgp" className={styles.pgp}>
-          <p>
-            PGP Key
-          </p>
-        </a>
+        <Link to="copyright">&copy; Sean Kilgarriff 2016</Link>
+        <Link to="pgp">PGP Key</Link>
       </div>
     </footer>
   );
