@@ -159,7 +159,6 @@ const Footer = () =>
       </div>
       <div className={styles.copyright}>
         <Link to="/copyright">&copy; Sean Kilgarriff 2016</Link>
-        <Link to="/pgp">PGP Key</Link>
       </div>
     </footer>
   );
