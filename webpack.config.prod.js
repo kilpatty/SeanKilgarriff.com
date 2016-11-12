@@ -24,17 +24,7 @@ const cssLoaders = [
       localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
     },
   },
-  {
-    loader: 'postcss',
-    query: {
-      plugins() {
-        return [
-          require('precss')({ /* ...options */ }),
-          require('autoprefixer')({ /* ...options */ }),
-        ];
-      },
-    },
-  },
+  'postcss',
 ];
 
 
