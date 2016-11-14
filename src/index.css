@@ -12,6 +12,7 @@ body {
   font-family: $welcome-font;
   font-size: 100%;
   overflow-y:hidden;
+  line-height: $base-line-height;
 }
 
 a {
