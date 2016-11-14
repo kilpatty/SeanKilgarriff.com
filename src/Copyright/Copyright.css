@@ -4,11 +4,6 @@
   justify-content: center;
 }
 
-.logo {
-  height: 25vh;
-  width: 25vh;
-}
-
 .content {
   display: flex;
   align-items: center;

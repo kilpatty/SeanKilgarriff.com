@@ -2,13 +2,17 @@ import React from 'react';
 
 import { Link } from 'react-router';
 
+import styles from './Now.css';
+
+import Face from '../Face';
+
 const Now = () =>
    (
      <div>
-       <nav>
+       <nav className={styles.logo}>
          <Link to="/">
-           Logo
-        </Link>
+           <Face />
+         </Link>
        </nav>
 
        <main>

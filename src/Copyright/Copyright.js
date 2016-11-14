@@ -1,21 +1,15 @@
 import React from 'react';
 
-import { Link } from 'react-router';
 import ReactGA from 'react-ga';
 import styles from './Copyright.css';
 
-import Face from '../Face';
+
+import Navigation from '../Navigation';
 
 const Copyright = () =>
    (
      <div>
-       <nav>
-         <div className={styles.logo}>
-           <Link to="/">
-             <Face />
-           </Link>
-         </div>
-       </nav>
+       <Navigation />
 
        <main className={styles.container}>
          <div className={styles.content}>
