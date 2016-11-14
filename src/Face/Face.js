@@ -4,7 +4,7 @@ import styles from './Face.css';
 
 const Face = () =>
    (
-     <svg className={styles.face} viewBox="14 24 348 619" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg">
+     <svg className={styles.face} viewBox="14 24 348 619" version="1.1" xmlns="http://www.w3.org/2000/svg">
        <desc>Sean Kilgarriff Face Logo</desc>
        <defs />
        <g id="Sean-Logo-with-Bowtie" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(14.000000, 24.000000)">

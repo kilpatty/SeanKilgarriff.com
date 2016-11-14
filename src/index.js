@@ -9,6 +9,7 @@ import styles from './index.css';
 // Screens
 import Home from './Home';
 import Copyright from './Copyright';
+import Now from './Now';
 
 //
 // 404
@@ -34,9 +35,9 @@ function logPageView() {
 render(
   <BrowserRouter onUpdate={logPageView}>
     <div className={styles.container}>
-      <p>hello</p>
       <Match exactly pattern="/" component={Home} />
       <Match pattern="/copyright" component={Copyright} />
+      <Match pattern="/now" component={Now} />
     </div>
   </BrowserRouter>,
 document.getElementById('app')

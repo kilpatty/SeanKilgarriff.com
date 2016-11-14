@@ -1,6 +1,7 @@
-/*@import "normalize.css";*/
+/*Normalize to reset all css*/
+@import "normalize.css";
 
-/*Import Variables*/
+/* Import Variables */
 @import "./variables.css";
 
 $welcome-font: 'Josefin Slab', serif;
