@@ -16,25 +16,9 @@
   width: 45vw;
 }
 
-.social {
-  font-size: 0.8em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 45vw;
-}
 
 @media screen and (min-width: 600px) {
-  .copyright, .social {
+  .copyright {
     font-size: 1em;
   }
-}
-
-.socialLink {
-    color: #323232;
-    cursor: pointer;
-}
-
-.socialLink:hover {
-  color: #2574a9;
 }

@@ -10,6 +10,7 @@ import styles from './index.css';
 import Home from './Home';
 import Copyright from './Copyright';
 import Now from './Now';
+import Footer from './Footer';
 
 //
 // 404
@@ -38,6 +39,7 @@ render(
       <Match exactly pattern="/" component={Home} />
       <Match pattern="/copyright" component={Copyright} />
       <Match pattern="/now" component={Now} />
+      <Footer />
     </div>
   </BrowserRouter>,
 document.getElementById('app')

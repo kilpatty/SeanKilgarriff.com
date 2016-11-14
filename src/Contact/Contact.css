@@ -1,0 +1,17 @@
+.socialLink {
+    color: #323232;
+    cursor: pointer;
+}
+
+.socialLink:hover {
+  color: #2574a9;
+}
+
+
+.social {
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45vw;
+}
