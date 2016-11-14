@@ -9,6 +9,7 @@ import styles from './index.css';
 // Screens
 import Home from './Home';
 import Copyright from './Copyright';
+import Now from './Now';
 
 //
 // 404
@@ -36,6 +37,7 @@ render(
     <div className={styles.container}>
       <Match exactly pattern="/" component={Home} />
       <Match pattern="/copyright" component={Copyright} />
+      <Match pattern="/now" component={Now} />
     </div>
   </BrowserRouter>,
 document.getElementById('app')
