@@ -1,14 +1,9 @@
 .footer {
   height: 100%;
   width: 100%;
+  font-size: .7em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-@media screen and (min-width: 600px) {
-  .footer {
-    font-size: 1em;
-  }
 }
