@@ -1,0 +1,12 @@
+.logo {
+  height: 25vh;
+  width: 25vh;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.3em;
+}
