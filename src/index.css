@@ -30,3 +30,13 @@ a:visited {
   min-height: 100vh;
   width: 100vw;
 }
+
+.content {
+  width: 100%;
+  height: 95vh;
+}
+
+.footer {
+  width: 100%;
+  height: 5vh;
+}
