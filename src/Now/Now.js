@@ -1,22 +1,17 @@
 import React from 'react';
 
-import { Link } from 'react-router';
 
 import styles from './Now.css';
 
-import Face from '../Face';
+import Navigation from '../Navigation';
 
 const Now = () =>
    (
      <div>
-       <nav className={styles.logo}>
-         <Link to="/">
-           <Face />
-         </Link>
-       </nav>
+       <Navigation />
 
-       <main>
-         <div className="content">
+       <main className={styles.container}>
+         <div className={styles.content}>
            <p>
           Hey everyone! Welcome to my now page! This is a pretty cool concept created by Derek
           Sivers over at nownownow.com. It lets anyone who is visiting my website know what
