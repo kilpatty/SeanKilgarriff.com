@@ -11,6 +11,7 @@ import Home from './Home';
 import Copyright from './Copyright';
 import Now from './Now';
 import Footer from './Footer';
+import Contact from './Contact';
 
 //
 // 404
@@ -40,6 +41,7 @@ render(
         <Match exactly pattern="/" component={Home} />
         <Match pattern="/copyright" component={Copyright} />
         <Match pattern="/now" component={Now} />
+        <Match pattern="/contact" component={Contact} />
       </div>
       <div className={styles.footer}>
         <Footer />
