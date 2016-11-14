@@ -13,10 +13,6 @@ import Now from './Now';
 import Footer from './Footer';
 import Contact from './Contact';
 
-//
-// 404
-//
-
 
 // Accept hot module reloading during development
 if (process.env.NODE_ENV !== 'production') {
