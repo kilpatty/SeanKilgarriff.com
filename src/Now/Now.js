@@ -25,12 +25,21 @@ const Now = () =>
            <p>
             What I&#39;m currently working on:
           </p>
+           <h2>Freelancing & Traveling</h2>
            <p>
-            Freelancing
-          </p>
+              I am currently traveling to as many places as I can, while also
+              doing some freelancing projects on the side.
+              If you want to follow me on my travels, checkout my
+              <strong><ReactGA.OutboundLink
+                eventLabel="Instagram-Now"
+                to="https://www.instagram.com/skilgarriff/"
+              > Instagram</ReactGA.OutboundLink></strong>, where I will regularly
+              post photos of where I am.
+           </p>
+           <h2>Blogging On This Site!</h2>
            <p>
-            Blogging @ blog.seankilgarriff.com
-          </p>
+             Over the past few years, I
+           </p>
            <p>
             Blogging at Casual Mastery
           </p>
