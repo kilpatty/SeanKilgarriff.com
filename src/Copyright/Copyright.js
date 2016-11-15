@@ -8,7 +8,7 @@ import Navigation from '../Navigation';
 
 const Copyright = () =>
    (
-     <div>
+     <div className={styles.wrapper}>
        <Navigation />
 
        <main className={styles.container}>

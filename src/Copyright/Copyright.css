@@ -1,3 +1,8 @@
+.wrapper {
+  height: 95vh;
+  overflow-y:hidden;
+}
+
 .container {
   display: flex;
   align-items: center;
