@@ -38,7 +38,10 @@ const Now = () =>
            </p>
            <h2>Blogging On This Site!</h2>
            <p>
-             Over the past few years, I
+             Over the past few years, I have had a lot that I have wanted to write about,
+             but I could never find a medium that I was completely satisfied with.
+             Creating my own blog has given me a place to write about all things that I
+             am interested in whether it&#39;s
            </p>
            <p>
             Blogging at Casual Mastery
