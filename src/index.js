@@ -12,6 +12,7 @@ import Copyright from './Copyright';
 import Now from './Now';
 import Footer from './Footer';
 import Contact from './Contact';
+import Resume from './Resume';
 import NotFound from './NotFound';
 
 
@@ -46,6 +47,7 @@ window.help = function () {
   console.log('Want to see the status of this website? Call status()');
   console.log('Want to see the code on Github? Call letMeSeeThisCode()');
   console.log('Check out the Heatmap of your current session! Call heatMap()');
+  console.log('Want to say hi? Call sayHi(\'name\', \'email\', \'message\' )');
 };
 
 window.howLongHaveIBeenHere = function () {
@@ -72,6 +74,10 @@ window.heatMap = function () {
   console.log('Work in Progress!');
 };
 
+window.sayHi = function () {
+  console.log('Work in Progress!');
+};
+
 devtoolsWelcome();
 
 render(
@@ -79,9 +85,10 @@ render(
     <div className={styles.container}>
       <div className={styles.content}>
         <Match exactly pattern="/" component={Home} />
-        <Match pattern="/copyright" component={Copyright} />
-        <Match pattern="/now" component={Now} />
-        <Match pattern="/contact" component={Contact} />
+        <Match pattern="/Copyright" component={Copyright} />
+        <Match pattern="/Now" component={Now} />
+        <Match pattern="/Contact" component={Contact} />
+        <Match pattern="/Resume" component={Resume}
         <Miss component={NotFound} />
       </div>
       <div className={styles.footer}>
