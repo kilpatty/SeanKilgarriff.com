@@ -38,6 +38,24 @@ function devtoolsWelcome() {
   console.log('Call help() in the console to see everything you can call!');
 }
 
+window.help = function () {
+  console.log('Curious how long you\'ve been browsing? Call howLongHaveIBeenHere()');
+  console.log('Need a breather? Call helpMeRelax()');
+  console.log('Want to check out my Resume? Call resume()');
+};
+
+window.howLongHaveIBeenHere = function () {
+  console.log('Work in Progress!');
+};
+
+window.helpMeRelax = function () {
+  console.log('Work in Progress!');
+};
+
+window.resume = function () {
+  console.log('Work in Progress!');
+};
+
 devtoolsWelcome();
 
 render(
