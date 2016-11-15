@@ -30,6 +30,16 @@ function logPageView() {
   ReactGA.pageview(window.location.pathname);
 }
 
+function devtoolsWelcome() {
+  console.log('Hey there!');
+  console.log('Welcome to my website! :)');
+  console.log('Since you are reading this you are probably a developer');
+  console.log('I have some cool functions that you might be interested in!');
+  console.log('Call help() in the console to see everything you can call!');
+}
+
+devtoolsWelcome();
+
 render(
   <BrowserRouter onUpdate={logPageView}>
     <div className={styles.container}>
