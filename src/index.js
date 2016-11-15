@@ -43,6 +43,8 @@ window.help = function () {
   console.log('Curious how long you\'ve been browsing? Call howLongHaveIBeenHere()');
   console.log('Need a breather? Call helpMeRelax()');
   console.log('Want to check out my Resume? Call resume()');
+  console.log('Want to see the status of this website? Call status()');
+  console.log('Want to see the code on Github? Call letMeSeeThisCode()');
 };
 
 window.howLongHaveIBeenHere = function () {
@@ -54,6 +56,14 @@ window.helpMeRelax = function () {
 };
 
 window.resume = function () {
+  console.log('Work in Progress!');
+};
+
+window.status = function () {
+  console.log('Work in Progress!');
+};
+
+window.letMeSeeThisCode = function () {
   console.log('Work in Progress!');
 };
 
