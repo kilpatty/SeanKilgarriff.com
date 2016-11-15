@@ -22,9 +22,9 @@ const Now = () =>
              It lets anyone who is visiting my website know what
              I&#39;m currently up to.
           </p>
-           <p>
+           <h1>
             What I&#39;m currently working on:
-          </p>
+           </h1>
            <h2>Freelancing & Traveling</h2>
            <p>
               I am currently traveling to as many places as I can, while also
@@ -36,16 +36,31 @@ const Now = () =>
               > Instagram</ReactGA.OutboundLink></strong>, where I will regularly
               post photos of where I am.
            </p>
-           <h2>Blogging On This Site!</h2>
+           <h2>
+            Casual Mastery
+           </h2>
+           <p>
+            I&#39;ve always been interested in learning and mastering new things everyday.
+            I&#39;ll spend hours reading about Japanese Mud-Ball shaping one day
+            (<strong><ReactGA.OutboundLink
+              eventLabel="Dorodango-Now"
+              to="https://en.wikipedia.org/wiki/Dorodango"
+            >Dorodango</ReactGA.OutboundLink></strong> for those interested),
+            and then Coffee grown by Monks the next day.
+            Casual Mastery is a place where I will post about my adventures in gaining
+            a casual mastery over certain subjects.
+            </p>
+           <h2>Blogging On This Site</h2>
            <p>
              Over the past few years, I have had a lot that I have wanted to write about,
              but I could never find a medium that I was completely satisfied with.
              Creating my own blog has given me a place to write about all things that I
-             am interested in whether it&#39;s
+             am interested in whether it&#39;s politics, programming, or just general lifestyle.
+             If you want to see my latest posts, head over to my <strong><ReactGA.OutboundLink
+               eventLabel="Blog-Now"
+               to="https://blog.seankilgarriff.com"
+             > blog</ReactGA.OutboundLink></strong> and signup for my newsletter!
            </p>
-           <p>
-            Blogging at Casual Mastery
-          </p>
            <p>
             If you want to know more about the now page head on over to
              <strong><ReactGA.OutboundLink
