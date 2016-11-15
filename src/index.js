@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Match } from 'react-router';
+import { BrowserRouter, Match, Miss } from 'react-router';
 import ReactGA from 'react-ga';
 
 // This files styles - need to import before anything else to get the css first.
@@ -12,6 +12,7 @@ import Copyright from './Copyright';
 import Now from './Now';
 import Footer from './Footer';
 import Contact from './Contact';
+import NotFound from './NotFound';
 
 
 // Accept hot module reloading during development
@@ -66,6 +67,7 @@ render(
         <Match pattern="/copyright" component={Copyright} />
         <Match pattern="/now" component={Now} />
         <Match pattern="/contact" component={Contact} />
+        <Miss component={NotFound} />
       </div>
       <div className={styles.footer}>
         <Footer />
