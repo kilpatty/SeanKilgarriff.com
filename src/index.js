@@ -45,6 +45,7 @@ window.help = function () {
   console.log('Want to check out my Resume? Call resume()');
   console.log('Want to see the status of this website? Call status()');
   console.log('Want to see the code on Github? Call letMeSeeThisCode()');
+  console.log('Check out the Heatmap of your current session! Call heatMap()');
 };
 
 window.howLongHaveIBeenHere = function () {
@@ -64,6 +65,10 @@ window.status = function () {
 };
 
 window.letMeSeeThisCode = function () {
+  console.log('Work in Progress!');
+};
+
+window.heatMap = function () {
   console.log('Work in Progress!');
 };
 
