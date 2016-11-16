@@ -33,11 +33,11 @@ function logPageView() {
 }
 
 function devtoolsWelcome() {
-  console.log('Hey there!');
-  console.log('Welcome to my website! :)');
-  console.log('Since you are reading this you are probably a developer');
-  console.log('I have some cool functions that you might be interested in!');
-  console.log('Call help() in the console to see everything you can call!');
+  setTimeout(console.log.bind(console, 'Hey there!'), 0);
+  setTimeout(console.log.bind(console, 'Welcome to my website! :)'), 0);
+  setTimeout(console.log.bind(console, 'Since you are reading this you are probably a developer'), 0);
+  setTimeout(console.log.bind(console, 'I have some cool functions that you might be interested in!'), 0);
+  setTimeout(console.log.bind(console, 'Call help() in the console to see what you can do!'), 0);
 }
 
 window.help = function () {
