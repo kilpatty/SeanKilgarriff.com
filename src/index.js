@@ -48,34 +48,43 @@ window.help = function () {
   console.log('Want to see the code on Github? Call letMeSeeThisCode()');
   console.log('Check out the Heatmap of your current session! Call heatMap()');
   console.log('Want to say hi? Call sayHi(\'name\', \'email\', \'message\' )');
+
+  return '-----------------------------------------';
 };
 
 window.howLongHaveIBeenHere = function () {
   console.log('Work in Progress!');
+  return '-----------------------------------------';
 };
 
 window.helpMeRelax = function () {
   console.log('Work in Progress!');
+  return '-----------------------------------------';
 };
 
 window.resume = function () {
   console.log('Work in Progress!');
+  return '-----------------------------------------';
 };
 
 window.status = function () {
   console.log('Work in Progress!');
+  return '-----------------------------------------';
 };
 
 window.letMeSeeThisCode = function () {
   console.log('Work in Progress!');
+  return '-----------------------------------------';
 };
 
 window.heatMap = function () {
   console.log('Work in Progress!');
+  return '-----------------------------------------';
 };
 
 window.sayHi = function () {
   console.log('Work in Progress!');
+  return '-----------------------------------------';
 };
 
 devtoolsWelcome();
