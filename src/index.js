@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Match, Miss } from 'react-router';
-import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import ReactGA from 'react-ga';
 import ifvisible from 'ifvisible.js';
 
