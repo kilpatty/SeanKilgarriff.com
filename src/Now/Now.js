@@ -17,7 +17,7 @@ const Now = () =>
              Hey everyone! Welcome to my Now page! This is a pretty cool concept created by Derek
              Sivers over at <strong><ReactGA.OutboundLink
                eventLabel="NowNowNow"
-               to="nownownow.com"
+               to="https://nownownow.com"
              >nownownow.com</ReactGA.OutboundLink></strong>.
              It lets anyone who is visiting my website know what
              I&#39;m currently up to.

@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 
 import styles from './Face.css';
 
+
 const Face = () =>
    (
      <svg className={styles.face} viewBox="14 24 348 619" version="1.1" xmlns="http://www.w3.org/2000/svg">

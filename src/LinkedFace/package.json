@@ -1,0 +1,6 @@
+{
+  "name": "LinkedFace",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./LinkedFace.js"
+}
