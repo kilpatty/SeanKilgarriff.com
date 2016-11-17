@@ -12,7 +12,7 @@ import Copyright from './Copyright';
 import Now from './Now';
 import Footer from './Footer';
 import Contact from './Contact';
-import Resume from './Resume';
+import Portfolio from './Portfolio';
 import NotFound from './NotFound';
 
 
