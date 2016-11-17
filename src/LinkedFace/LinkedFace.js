@@ -2,7 +2,7 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import { Link } from 'react-router';
 
-import styles from './Face.css';
+import styles from './LinkedFace.css';
 
 
 const Face = () =>
