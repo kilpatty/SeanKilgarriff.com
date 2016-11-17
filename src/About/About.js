@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactGA from 'react-ga';
+import { Link } from 'react-router';
 
 
 import styles from './About.css';
@@ -26,14 +26,14 @@ const About = () =>
           </p>
            <div className={styles.threeSelections}>
              <p>
-             Portfolio
-           </p>
+               <strong><Link to="/Portfolio">Portfolio</Link></strong>
+             </p>
              <p>
-             What I'm up to
-           </p>
+               <strong><Link to="/Now">What I&#39;m Doing Now</Link></strong>
+             </p>
              <p>
-             Contact Me
-            </p>
+               <strong><Link to="/Contact">Contact Me</Link></strong>
+             </p>
            </div>
 
 

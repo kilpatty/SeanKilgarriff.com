@@ -1,3 +1,5 @@
+@import "../variables.css";
+
 .wrapper {
   min-height: 95vh;
 }
@@ -22,8 +24,12 @@
 .threeSelections {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
 }
 
-@media
+@media only screen and (min-width: $medium-screen) {
+  .threeSelections {
+    flex-direction: row;
+  }
+}
