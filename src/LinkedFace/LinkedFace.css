@@ -1,24 +1,14 @@
+@import "../variables.css";
+
 .face {
   height: 100%;
   width: 100%;
 }
 
-.hair:hover {
-  cursor: pointer;
-  fill: #bdc3c7;
+.hair, .glasses, .beard, .bowtie {
+  fill: $face-color;
 }
 
-.glasses:hover {
-  cursor: pointer;
-  fill: #bdc3c7;
-}
-
-.beard:hover {
-  cursor: pointer;
-  fill: #bdc3c7;
-}
-
-.bowtie:hover {
-  cursor: pointer;
-  fill: #bdc3c7;
+.hair:hover, .glasses:hover, .beard:hover, .bowtie:hover  {
+  fill: $face-hover-color;
 }
