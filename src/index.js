@@ -6,7 +6,6 @@ import ReactGA from 'react-ga';
 // This files styles - need to import before anything else to get the css first.
 import styles from './index.css';
 
-import AnimatedMatch from './AnimatedMatch';
 // Screens
 import Home from './Home';
 import Copyright from './Copyright';
@@ -95,7 +94,7 @@ render(
     <div className={styles.container}>
       <div className={styles.content}>
         <Match exactly pattern="/" component={Home} />
-        <AnimatedMatch pattern="/Copyright" component={Copyright} />
+        <Match pattern="/Copyright" component={Copyright} />
         <Match pattern="/Now" component={Now} />
         <Match pattern="/Contact" component={Contact} />
         <Match pattern="/Resume" component={Resume} />
