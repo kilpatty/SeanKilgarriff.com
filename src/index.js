@@ -97,7 +97,7 @@ render(
         <Match pattern="/Copyright" component={Copyright} />
         <Match pattern="/Now" component={Now} />
         <Match pattern="/Contact" component={Contact} />
-        <Match pattern="/Resume" component={Resume} />
+        <Match pattern="/Portfolio" component={Portfolio} />
         <Miss component={NotFound} />
       </div>
       <div className={styles.footer}>
