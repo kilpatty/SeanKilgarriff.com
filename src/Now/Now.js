@@ -14,7 +14,7 @@ const Now = () =>
        <main className={styles.container}>
          <div className={styles.content}>
            <p>
-             Hey everyone! Welcome to my now page! This is a pretty cool concept created by Derek
+             Hey everyone! Welcome to my Now page! This is a pretty cool concept created by Derek
              Sivers over at <strong><ReactGA.OutboundLink
                eventLabel="NowNowNow"
                to="nownownow.com"

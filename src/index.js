@@ -14,6 +14,7 @@ import Now from './Now';
 import Footer from './Footer';
 import Contact from './Contact';
 import Portfolio from './Portfolio';
+import About from './About';
 import NotFound from './NotFound';
 
 
@@ -104,6 +105,7 @@ render(
         <Match pattern="/Now" component={Now} />
         <Match pattern="/Contact" component={Contact} />
         <Match pattern="/Portfolio" component={Portfolio} />
+        <Match pattern="/About" component={About} />
         <Miss component={NotFound} />
       </div>
       <div className={styles.footer}>
