@@ -1,3 +1,7 @@
+.wrapper {
+  min-height: 95vh;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -14,3 +18,12 @@
   width: 50%;
   text-align: center;
 }
+
+.threeSelections {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media

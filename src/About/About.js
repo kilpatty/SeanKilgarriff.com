@@ -8,7 +8,7 @@ import Navigation from '../Navigation';
 
 const About = () =>
    (
-     <div>
+     <div className={styles.wrapper}>
        <Navigation />
 
        <main className={styles.container}>
@@ -19,15 +19,23 @@ const About = () =>
              Sean Kilgarriff. For work I primarily design and develop websites,
             but I dabble in a lot of things. I am a coffee fanatic, and I am an
             avid traveler.
-
+          </p>
+           <p>
             This is my personal website. I did not design this like I would a typical website.
             There are a lot of hidden gems, so look around and enjoy the adventure!
-
-            If you want to find out what I am currently up to, then check out my Now page.
-
-            Contact Me
-
+          </p>
+           <div className={styles.threeSelections}>
+             <p>
+             Portfolio
            </p>
+             <p>
+             What I'm up to
+           </p>
+             <p>
+             Contact Me
+            </p>
+           </div>
+
 
          </div>
        </main>
