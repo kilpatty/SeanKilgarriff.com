@@ -39,7 +39,7 @@ module.exports = {
   entry: ['babel-polyfill', './src/index'],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[hash].bundle.js',
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
@@ -59,7 +59,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'public/' },
     ]),
-    new ExtractTextPlugin({ filename: 'style.css', disable: false, allChunks: true }),
+    new ExtractTextPlugin({ filename: 'bundle-[hash].css', disable: false, allChunks: true }),
     new SitemapPlugin('https://seankilgarriff.com', paths, 'sitemap.xml'),
   ],
   module: {
