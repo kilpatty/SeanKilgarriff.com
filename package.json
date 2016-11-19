@@ -141,7 +141,7 @@
       ]
     }
   },
-  "stylelintConfig": {
+  "stylelint": {
   "extends": "stylelint-config-standard"
   }
 }

@@ -5,10 +5,15 @@
   width: 100%;
 }
 
-.hair, .glasses, .beard, .bowtie {
+.hair,
+.glasses,
+.beard,
+.bowtie {
   fill: $face-color;
 }
 
-.hair:hover, .beard:hover, .bowtie:hover  {
+.hair:hover,
+.beard:hover,
+.bowtie:hover {
   fill: $face-hover-color;
 }
