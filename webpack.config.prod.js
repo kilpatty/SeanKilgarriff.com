@@ -39,6 +39,7 @@ module.exports = {
   entry: ['babel-polyfill', './src/index'],
   output: {
     path: path.join(__dirname, 'dist'),
+    publicPath: '/',
     filename: '[hash].bundle.js',
   },
   plugins: [
