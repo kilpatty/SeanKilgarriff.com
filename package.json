@@ -5,6 +5,7 @@
   "description": "Sean Kilgarriff's personal website",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.dev.js",
+    "clean:dist": "rm -rf dist",
     "build": "BABEL_ENV=production NODE_ENV=production webpack --config webpack.config.prod.js",
     "build:dev": "BABEL_ENV=production NODE_ENV=staging webpack --config webpack.config.prod.js",
     "lint": "eslint src",
