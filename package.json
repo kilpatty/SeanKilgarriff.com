@@ -17,6 +17,7 @@
     "history": "^4.4.0",
     "ifvisible.js": "^1.0.6",
     "npm": "^3.10.9",
+    "open-color": "^1.4.0",
     "react": "^15.3.2",
     "react-addons-css-transition-group": "^15.4.0",
     "react-dom": "^15.3.2",

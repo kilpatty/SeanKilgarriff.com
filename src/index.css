@@ -1,6 +1,8 @@
 /*Normalize to reset all css*/
 @import "normalize.css";
 
+@import "open-color/open-color.css";
+
 /* Import Variables */
 @import "./variables.css";
 
@@ -8,7 +10,8 @@ $welcome-font: 'Josefin Slab', serif;
 
 body {
   line-height: 1;
-  color: #292B31;
+  /*color: #292B31;*/
+  color: var(--oc-gray-7);
   font-family: $welcome-font;
   font-size: 100%;
   line-height: $base-line-height;
