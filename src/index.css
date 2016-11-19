@@ -10,7 +10,6 @@ $welcome-font: 'Josefin Slab', serif;
 
 body {
   line-height: 1;
-  /*color: #292B31;*/
   color: var(--oc-gray-7);
   font-family: $welcome-font;
   font-size: 100%;

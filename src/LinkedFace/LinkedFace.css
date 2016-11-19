@@ -9,6 +9,6 @@
   fill: $face-color;
 }
 
-.hair:hover, .glasses:hover, .beard:hover, .bowtie:hover  {
+.hair:hover, .beard:hover, .bowtie:hover  {
   fill: $face-hover-color;
 }
