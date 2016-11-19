@@ -17,7 +17,7 @@ const paths = [
 // Css Loader
 const cssLoaders = [
   {
-    loader: 'css',
+    loader: 'css-loader',
     query: {
       importLoaders: 1,
       modules: true,

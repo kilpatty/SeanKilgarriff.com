@@ -7,5 +7,6 @@ module.exports = {
     // require('css-mqpacker')({}),
     require('precss'),
     require('postcss-reporter')({ clearMessages: true }),
+    require('cssnano'),
   ],
 };
