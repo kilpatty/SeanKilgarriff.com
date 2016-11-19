@@ -13,20 +13,6 @@
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "dependencies": {
-    "heatmap.js": "^2.0.5",
-    "history": "^4.4.0",
-    "ifvisible.js": "^1.0.6",
-    "npm": "^3.10.9",
-    "open-color": "^1.4.0",
-    "react": "^15.3.2",
-    "react-addons-css-transition-group": "^15.4.0",
-    "react-dom": "^15.3.2",
-    "react-fontawesome": "^1.3.1",
-    "react-ga": "^2.1.2",
-    "react-modal": "^1.5.2",
-    "react-motion": "^0.4.5",
-    "react-router": "next",
-    "redux": "^3.6.0",
     "autoprefixer": "^6.5.3",
     "autoprefixer-core": "^6.0.1",
     "babel-core": "^6.17.0",
@@ -63,12 +49,17 @@
     "flow-bin": "^0.33.0",
     "fs-extra": "^0.30.0",
     "gzip-size": "^3.0.0",
+    "heatmap.js": "^2.0.5",
+    "history": "^4.4.0",
     "html-webpack-plugin": "^2.22.0",
     "http-server": "^0.8.5",
+    "ifvisible.js": "^1.0.6",
     "jsdom": "^9.6.0",
     "mocha": "^3.1.0",
     "normalize.css": "^5.0.0",
+    "npm": "^3.10.9",
     "object-assign": "^4.1.0",
+    "open-color": "^1.4.0",
     "postcss-cssnext": "^2.8.0",
     "postcss-loader": "^1.1.1",
     "postcss-reporter": "^2.0.0",
@@ -76,13 +67,24 @@
     "postcss-smart-import": "^0.5.1",
     "precss": "^1.4.0",
     "promise": "^7.1.1",
+    "react": "^15.3.2",
+    "react-addons-css-transition-group": "^15.4.0",
     "react-addons-test-utils": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-fontawesome": "^1.3.1",
+    "react-ga": "^2.1.2",
     "react-hot-loader": "^3.0.0-beta.5",
+    "react-modal": "^1.5.2",
+    "react-motion": "^0.4.5",
+    "react-router": "next",
     "recursive-readdir": "^2.1.0",
+    "redux": "^3.6.0",
     "rimraf": "^2.5.4",
     "sitemap-webpack-plugin": "^0.1.0",
     "strip-ansi": "^3.0.1",
     "style-loader": "^0.13.1",
+    "stylelint": "^7.6.0",
+    "stylelint-config-standard": "^15.0.0",
     "webpack": "^2.1.0-beta.25",
     "webpack-dev-server": "^2.1.0-beta.8"
   },
@@ -138,5 +140,8 @@
         }
       ]
     }
+  },
+  "stylelintConfig": {
+  "extends": "stylelint-config-standard"
   }
 }
