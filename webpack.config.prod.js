@@ -10,8 +10,11 @@ const SitemapPlugin = require('sitemap-webpack-plugin');
 
 // These are the paths that are located on my website.
 const paths = [
-  '/pgp',
-  '/bar/',
+  '/About',
+  '/Contact',
+  '/Copyright',
+  '/Now',
+  '/Portfolio',
 ];
 
 // Css Loader
