@@ -16,7 +16,7 @@ const About = () =>
            <h1>Who I Am</h1>
            <p>
              Hey there! Welcome to my website. Glad to have you! My name is
-             Sean Kilgarriff. For work I primarily design and develop websites,
+             Sean Kilgarriff. For work, I primarily design and develop websites,
             but I dabble in a lot of things. I am a coffee fanatic, and I am an
             avid traveler.
           </p>
