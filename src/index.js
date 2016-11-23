@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { BrowserRouter, Match, Miss } from 'react-router';
 import ReactGA from 'react-ga';
 import ifvisible from 'ifvisible.js';
+import * as ReactUserFocus from 'react-user-focus';
 
 // This files styles - need to import before anything else to get the css first.
 import styles from './index.css';
@@ -27,6 +28,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.GA_ID);
+
+console.log(process.env.GA_ID);
 
 // Log Page View Function
 function logPageView() {
@@ -135,10 +138,21 @@ console.log(`
 
 devtoolsWelcome();
 
+// const MatchWithProps = ({ component: Comp, passProps, ...props }) => (
+//   <Match {...props} render={(matchedProps) => <Comp {...passProps} {...matchedProps} />} />
+// );
+
+// <MatchWithProps pattern="/foo" component={Foo} passProps={{ bar: 1 }} />
+
+function onChange(isHidden) {
+  console.log(isHidden);
+}
+
 render(
   <BrowserRouter onUpdate={logPageView}>
     <div className={styles.container}>
       <div className={styles.content}>
+        <ReactUserFocus />
         <Match exactly pattern="/" component={Home} />
         <Match pattern="/Copyright" component={Copyright} />
         <Match pattern="/Now" component={Now} />
