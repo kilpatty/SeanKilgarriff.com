@@ -144,15 +144,22 @@ devtoolsWelcome();
 
 // <MatchWithProps pattern="/foo" component={Foo} passProps={{ bar: 1 }} />
 
-function onChange(isHidden) {
-  console.log(isHidden);
+function onFocusChange(isHidden) {
+  console.log(`Is hidden?:${isHidden}`);
 }
 
+function onIdleChange(isIdle) {
+  console.log(`Is Idle?:${isIdle}`);
+}
 render(
   <BrowserRouter onUpdate={logPageView}>
     <div className={styles.container}>
       <div className={styles.content}>
-        <ReactUserFocus />
+        <ReactUserFocus
+          onFocusChange={onFocusChange}
+          onIdleChange={onIdleChange}
+          idleTime={2}
+        />
         <Match exactly pattern="/" component={Home} />
         <Match pattern="/Copyright" component={Copyright} />
         <Match pattern="/Now" component={Now} />
