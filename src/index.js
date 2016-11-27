@@ -18,7 +18,7 @@ import About from './About';
 import NotFound from './NotFound';
 
 // Console functions
-import { devtoolsWelcome } from './console.js';
+import { devtoolsWelcome, setWindowFunctions } from './console.js';
 
 
 // Accept hot module reloading during development
@@ -37,58 +37,8 @@ function logPageView() {
   ReactGA.pageview(window.location.pathname);
 }
 
-window.help = function () {
-  console.log('Curious how long you\'ve been browsing? Call howLongHaveIBeenHere()');
-  console.log('Need a breather? Call helpMeRelax()');
-  console.log('Want to check out my Resume? Call resume()');
-  console.log('Want to see the status of this website? Call status()');
-  console.log('Want to see the code on Github? Call letMeSeeThisCode()');
-  console.log('Check out the Heatmap of your current session! Call heatMap()');
-  console.log('Want to say hi? Call sayHi(\'name\', \'email\', \'message\' )');
 
-  return '-----------------------------------------';
-};
-
-window.amIFocused = function () {
-
-};
-
-window.howLongHaveIBeenHere = function () {
-  console.log('Work in Progress!');
-  return '-----------------------------------------';
-};
-
-window.helpMeRelax = function () {
-  console.log('Work in Progress!');
-  return '-----------------------------------------';
-};
-
-window.resume = function () {
-  console.log('Work in Progress!');
-  return '-----------------------------------------';
-};
-
-window.status = function () {
-  console.log('Work in Progress!');
-  return '-----------------------------------------';
-};
-
-window.letMeSeeThisCode = function () {
-  console.log('Work in Progress!');
-  return '-----------------------------------------';
-};
-
-window.heatMap = function () {
-  console.log('Work in Progress!');
-  return '-----------------------------------------';
-};
-
-window.sayHi = function () {
-  console.log('Work in Progress!');
-  return '-----------------------------------------';
-};
-
-
+setWindowFunctions();
 devtoolsWelcome();
 
 // const MatchWithProps = ({ component: Comp, passProps, ...props }) => (
