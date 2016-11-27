@@ -37,6 +37,8 @@ const myLogoASCII = `
   MMMMWk,,:lx0NWMMMMMMMMMMMWNKxl:,,dNMMMMM
 `;
 
+let showFocusVariables = false;
+
 export function devtoolsWelcome() {
   setTimeout(console.log.bind(console, myLogoASCII), 0);
   setTimeout(console.log.bind(console, 'Hey there!'), 0);
@@ -55,12 +57,24 @@ export function setWindowFunctions() {
     console.log('Want to see the code on Github? Call letMeSeeThisCode()');
     console.log('Check out the Heatmap of your current session! Call heatMap()');
     console.log('Want to say hi? Call sayHi(\'name\', \'email\', \'message\' )');
+    console.log('To see whether you are focused or idle, call amIFocused()');
 
     return '-----------------------------------------';
   };
 
+  // See if I can change idle time dynamically. - this will be hard
   window.amIFocused = function () {
-
+    console.log('You have enabled the react-user-focus demo.');
+    console.log('The current idle time is set to 5 seconds.');
+    console.log('Call this function again to disable this feature.');
+    // Flip the variable of showFocusVariables to decide whether
+    // or not to show the user the demo for react-user-focus.
+    if (showFocusVariables === true) {
+      showFocusVariables = false;
+    } else {
+      showFocusVariables = true;
+    }
+    return '-----------------------------------------';
   };
 
   window.howLongHaveIBeenHere = function () {
@@ -97,4 +111,24 @@ export function setWindowFunctions() {
     console.log('Work in Progress!');
     return '-----------------------------------------';
   };
+}
+
+export function onFocusChange(isHidden) {
+  if (showFocusVariables === true) {
+    if (isHidden === true) {
+      console.log('This website is currently hidden!');
+      return;
+    }
+    console.log('Visible!');
+  }
+}
+
+export function onIdleChange(isIdle) {
+  if (showFocusVariables === true) {
+    if (isIdle === true) {
+      console.log('You are currently Idle!');
+      return;
+    }
+    console.log('Active again!');
+  }
 }

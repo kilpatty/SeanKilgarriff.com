@@ -20,7 +20,7 @@ import NotFound from './NotFound';
 import GAMatch from './GAMatch';
 
 // Console functions
-import { devtoolsWelcome, setWindowFunctions } from './console.js';
+import { devtoolsWelcome, setWindowFunctions, onFocusChange, onIdleChange } from './console.js';
 
 
 // Accept hot module reloading during development
@@ -45,13 +45,6 @@ setWindowFunctions();
 // Initiate the welcome message in console.
 devtoolsWelcome();
 
-function onFocusChange(isHidden) {
-  console.log(`Is hidden?:${isHidden}`);
-}
-
-function onIdleChange(isIdle) {
-  console.log(`Is Idle?:${isIdle}`);
-}
 render(
   <BrowserRouter onUpdate={logPageView}>
     <div className={styles.container}>
