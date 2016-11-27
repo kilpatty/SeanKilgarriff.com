@@ -6,6 +6,7 @@ module.exports = {
     // require('autoprefixer')({}),
     // require('css-mqpacker')({}),
     require('precss'),
+    require('autoprefixer')({ /* ...options */ }),
     require('postcss-reporter')({ clearMessages: true }),
     require('cssnano'),
   ],
