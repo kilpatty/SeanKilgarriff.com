@@ -17,3 +17,16 @@
 .bowtie:hover {
   fill: $face-hover-color;
 }
+
+/* This is for accessibility. On tab focus of links, we still show that that element as if it were hovered. */
+.bowtieLink:focus .bowtie {
+  fill: $face-hover-color;
+}
+
+.hairLink:focus .hair {
+  fill: $face-hover-color;
+}
+
+.beardLink:focus .beard {
+  fill: $face-hover-color;
+}

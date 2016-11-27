@@ -1,6 +1,10 @@
 import React from 'react';
 
 import { Link } from 'react-router';
+import ReactGA from 'react-ga';
+import FontAwesome from 'react-fontawesome';
+
+import styles from './Contact.css';
 
 const Contact = () =>
    (
