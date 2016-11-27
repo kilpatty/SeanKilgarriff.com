@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Match, Miss } from 'react-router';
+import { BrowserRouter, Miss } from 'react-router';
 import ReactGA from 'react-ga';
 import ReactUserFocus from 'react-user-focus';
 
@@ -16,6 +16,8 @@ import Contact from './Contact';
 import Portfolio from './Portfolio';
 import About from './About';
 import NotFound from './NotFound';
+
+import GAMatch from './GAMatch';
 
 // Console functions
 import { devtoolsWelcome, setWindowFunctions } from './console.js';
@@ -37,15 +39,11 @@ function logPageView() {
   ReactGA.pageview(window.location.pathname);
 }
 
-
+// Set all console/window functions
 setWindowFunctions();
+
+// Initiate the welcome message in console.
 devtoolsWelcome();
-
-// const MatchWithProps = ({ component: Comp, passProps, ...props }) => (
-//   <Match {...props} render={(matchedProps) => <Comp {...passProps} {...matchedProps} />} />
-// );
-
-// <MatchWithProps pattern="/foo" component={Foo} passProps={{ bar: 1 }} />
 
 function onFocusChange(isHidden) {
   console.log(`Is hidden?:${isHidden}`);
@@ -63,12 +61,12 @@ render(
           onIdleChange={onIdleChange}
           idleTime={2}
         />
-        <Match exactly pattern="/" component={Home} />
-        <Match pattern="/Copyright" component={Copyright} />
-        <Match pattern="/Now" component={Now} />
-        <Match pattern="/Contact" component={Contact} />
-        <Match pattern="/Portfolio" component={Portfolio} />
-        <Match pattern="/About" component={About} />
+        <GAMatch exactly pattern="/" component={Home} />
+        <GAMatch pattern="/Copyright" component={Copyright} />
+        <GAMatch pattern="/Now" component={Now} />
+        <GAMatch pattern="/Contact" component={Contact} />
+        <GAMatch pattern="/Portfolio" component={Portfolio} />
+        <GAMatch pattern="/About" component={About} />
         <Miss component={NotFound} />
       </div>
       <div className={styles.footer}>
