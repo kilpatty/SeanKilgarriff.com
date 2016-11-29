@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Title from 'react-title-component';
 
 
 import styles from './About.css';
@@ -9,6 +10,7 @@ import Navigation from '../Navigation';
 const About = () =>
    (
      <div className={styles.wrapper}>
+       <Title render={previousTitle => `About | ${previousTitle}`} />
        <Navigation />
 
        <main className={styles.container}>

@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { BrowserRouter, Miss } from 'react-router';
 import ReactGA from 'react-ga';
 import ReactUserFocus from 'react-user-focus';
+import Title from 'react-title-component';
 
 // This files styles - need to import before anything else to get the css first.
 import styles from './index.css';
@@ -45,10 +46,12 @@ setWindowFunctions();
 // Initiate the welcome message in console.
 devtoolsWelcome();
 
+
 render(
   <BrowserRouter onUpdate={logPageView}>
     <div className={styles.container}>
       <div className={styles.content}>
+        <Title render="Sean Kilgarriff" />
         <ReactUserFocus
           onFocusChange={onFocusChange}
           onIdleChange={onIdleChange}

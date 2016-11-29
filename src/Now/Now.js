@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactGA from 'react-ga';
+import Title from 'react-title-component';
 
 
 import styles from './Now.css';
@@ -9,6 +10,7 @@ import Navigation from '../Navigation';
 const Now = () =>
    (
      <div>
+       <Title render={previousTitle => `Now | ${previousTitle}`} />
        <Navigation />
 
        <main className={styles.container}>

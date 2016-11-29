@@ -1,6 +1,7 @@
 import React from 'react';
-
 import ReactGA from 'react-ga';
+import Title from 'react-title-component';
+
 import styles from './Copyright.css';
 
 
@@ -9,6 +10,7 @@ import Navigation from '../Navigation';
 const Copyright = () =>
    (
      <div className={styles.wrapper}>
+       <Title render={previousTitle => `Copyright | ${previousTitle}`} />
        <Navigation />
 
        <main className={styles.container}>

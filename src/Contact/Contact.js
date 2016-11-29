@@ -2,6 +2,8 @@ import React from 'react';
 
 import ReactGA from 'react-ga';
 import FontAwesome from 'react-fontawesome';
+import Title from 'react-title-component';
+
 import Navigation from '../Navigation';
 
 
@@ -10,6 +12,7 @@ import styles from './Contact.css';
 const Contact = () =>
    (
      <div className={styles.wrapper}>
+       <Title render={previousTitle => `Contact | ${previousTitle}`} />
        <Navigation />
 
        <main className={styles.container}>
