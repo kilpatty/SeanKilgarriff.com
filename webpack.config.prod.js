@@ -40,7 +40,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[hash].bundle.js',
+    filename: '[name]-[chunkhash].js',
+    chunkFilename: '[name]-[chunkhash].js',
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
@@ -48,6 +49,12 @@ module.exports = {
         warnings: false,
       },
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource),
+    }),
+    // Generate a 'manifest' chunk to be inlined in the HTML template
+    new webpack.optimize.CommonsChunkPlugin('manifest'),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
