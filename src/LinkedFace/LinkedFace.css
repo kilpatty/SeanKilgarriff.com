@@ -14,7 +14,8 @@
 
 .hair:hover,
 .beard:hover,
-.bowtie:hover {
+.bowtie:hover,
+.glasses:hover {
   fill: $face-hover-color;
 }
 
@@ -28,5 +29,9 @@
 }
 
 .beardLink:focus .beard {
+  fill: $face-hover-color;
+}
+
+.glassesLink:focus .glasses {
   fill: $face-hover-color;
 }
