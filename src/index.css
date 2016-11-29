@@ -1,6 +1,7 @@
-/*Normalize to reset all css*/
+/* Normalize to reset all css */
 @import "normalize.css";
 
+/* Open colors */
 @import "open-color/open-color.css";
 
 /* Import Variables */
@@ -9,11 +10,10 @@
 $welcome-font: 'Josefin Slab', serif;
 
 body {
-  line-height: 1;
+  line-height: $base-line-height;
   color: var(--oc-gray-7);
   font-family: $welcome-font;
   font-size: 100%;
-  line-height: $base-line-height;
 }
 
 a {
@@ -24,6 +24,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 a:visited {
   color: inherit;
 }
