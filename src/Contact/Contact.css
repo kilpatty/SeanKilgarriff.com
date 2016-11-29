@@ -1,6 +1,8 @@
+@import "../variables.css";
+
 .wrapper {
   min-height: 95vh;
-  overflow-y:hidden;
+  overflow-y: hidden;
 }
 
 .container {
@@ -21,19 +23,28 @@
 }
 
 .socialLink {
-    color: #323232;
-    cursor: pointer;
+  color: #323232;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .socialLink {
+    padding: 5px;
+  }
+}
+
+.pgp {
+  font-size: 0.7em;
 }
 
 .socialLink:visited {
-    color: #323232;
-    cursor: pointer;
+  color: #323232;
+  cursor: pointer;
 }
 
 .socialLink:hover {
   color: #2574a9;
 }
-
 
 .social {
   font-size: 0.8em;

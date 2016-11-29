@@ -15,9 +15,6 @@ const Contact = () =>
        <main className={styles.container}>
          <div className={styles.content}>
            <h1>Contact Me</h1>
-           <p>
-           Contact me! My PGP Fingerprint: F1E3 83C6 264E 87FF BD96  BD68 AD1E A0DB F797 68BC
-          </p>
            <div className={styles.social}>
              <ReactGA.OutboundLink
                eventLabel="Medium"
@@ -166,6 +163,9 @@ const Contact = () =>
                </FontAwesome>
              </ReactGA.OutboundLink>
            </div>
+           <p className={styles.pgp}>
+           My PGP Fingerprint: F1E3 83C6 264E 87FF BD96  BD68 AD1E A0DB F797 68BC
+          </p>
          </div>
 
        </main>
