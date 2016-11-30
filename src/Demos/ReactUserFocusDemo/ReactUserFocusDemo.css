@@ -27,15 +27,25 @@
   width: 50vw;
 }
 
-.demoFace {
+.faceWrapper {
   height: 100%;
   width: 100%;
+}
+
+.demoFace {
   stroke: $face-color;
   stroke-width: 2;
   stroke-dasharray: 2000;
   stroke-dashoffset: 2000;
-  animation: offset 5s linear forwards, fill-it .8s 5s forwards;
+  animation-play-state: running;
+  animation: offset 5s linear forwards infinite;
 }
+
+.paused {
+  animation-play-state: paused;
+}
+
+/* , fill-it .8s 5s forwards infinite offset 5s linear forwards infinite */
 
 @keyframes offset {
   100% {
