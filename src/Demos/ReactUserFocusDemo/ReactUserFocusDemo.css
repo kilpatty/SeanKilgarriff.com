@@ -51,7 +51,7 @@
   stroke-dasharray: 2000;
   stroke-dashoffset: 2000;
   animation-play-state: running;
-  animation: offset 5s linear forwards infinite;
+  animation: offset 10s linear forwards infinite;
 }
 
 .paused {
