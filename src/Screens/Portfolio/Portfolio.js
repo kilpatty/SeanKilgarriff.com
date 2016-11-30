@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Portfolio.css';
 
-import Navigation from '../Navigation';
+import Navigation from '../../Components/Navigation';
 
 const Portfolio = () =>
    (

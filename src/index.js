@@ -9,19 +9,19 @@ import Title from 'react-title-component';
 import styles from './index.css';
 
 // Screens
-import Home from './Home';
-import Copyright from './Copyright';
-import Now from './Now';
-import Footer from './Footer';
-import Contact from './Contact';
-import Portfolio from './Portfolio';
-import About from './About';
-import NotFound from './NotFound';
+import Home from './Screens/Home';
+import Copyright from './Screens/Copyright';
+import Now from './Screens/Now';
+import Footer from './Components/Footer';
+import Contact from './Screens/Contact';
+import Portfolio from './Screens/Portfolio';
+import About from './Screens/About';
+import NotFound from './Screens/NotFound';
 
 // Demos
 import ReactUserFocusDemo from './Demos/ReactUserFocusDemo';
 
-import GAMatch from './GAMatch';
+import GAMatch from './Components/GAMatch';
 
 // Console functions
 import { devtoolsWelcome, setWindowFunctions, onFocusChange, onIdleChange } from './console.js';

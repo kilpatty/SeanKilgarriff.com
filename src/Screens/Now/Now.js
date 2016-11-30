@@ -5,7 +5,7 @@ import Title from 'react-title-component';
 
 import styles from './Now.css';
 
-import Navigation from '../Navigation';
+import Navigation from '../../Components/Navigation';
 
 const Now = () =>
    (

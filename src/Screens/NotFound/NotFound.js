@@ -5,7 +5,7 @@ import ReactGA from 'react-ga';
 
 import styles from './NotFound.css';
 
-import Navigation from '../Navigation';
+import Navigation from '../../Components/Navigation';
 
 const NotFound = () =>
    (

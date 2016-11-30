@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 import FontAwesome from 'react-fontawesome';
 import Title from 'react-title-component';
 
-import Navigation from '../Navigation';
+import Navigation from '../../Components/Navigation';
 
 
 import styles from './Contact.css';

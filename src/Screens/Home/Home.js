@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import Face from '../Face';
+import Face from '../../Components/Face';
 
 import styles from './Home.css';
 

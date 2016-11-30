@@ -6,7 +6,7 @@ import ReactGA from 'react-ga';
 
 import styles from './ReactUserFocusDemo.css';
 
-import Navigation from '../../Navigation';
+import Navigation from '../../Components/Navigation';
 
 class ReactUserFocusDemo extends React.Component {
 
