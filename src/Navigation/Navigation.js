@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactGA from 'react-ga';
-import { Link } from 'react-router';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import styles from './Navigation.css';
 
@@ -59,36 +58,18 @@ class Navigation extends React.Component {
           <Face
             onClick={this.openModal}
           />
-          <div
-            className={this.state.modelOpen ? styles.openModal : styles.closedModal}
+          <ReactCSSTransitionGroup
+            transitionName={{
+              enter: styles.enter,
+              enterActive: styles.enterActive,
+              leave: styles.leave,
+              leaveActive: styles.leaveActive,
+            }}
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={300}
           >
-            <button onClick={this.closeModal} className={styles.close} />
-
-            <Link
-              className={styles.glassesLink}
-              to="/"
-            >
-              <h1>Home</h1>
-            </Link>
-            <ReactGA.OutboundLink
-              eventLabel="Blog-Face"
-              to="https://blog.seankilgarriff.com"
-            >
-              <h1>Blog</h1>
-            </ReactGA.OutboundLink>
-            <Link
-              className={styles.beardLink}
-              to="/About"
-            >
-              <h1>About</h1>
-            </Link>
-            <Link
-              className={styles.hairLink}
-              to="/Contact"
-            >
-              <h1>Contact</h1>
-            </Link>
-          </div>
+            <img src={props.imageSrc} key={props.imageSrc} />
+          </ReactCSSTransitionGroup>
         </nav>
 
       );
