@@ -26,12 +26,14 @@ const NavigationModal = ({ onClick }) =>
        </ReactGA.OutboundLink>
        <Link
          className={styles.beardLink}
+         activeClassName={styles.active}
          to="/About"
        >
          <h1>About</h1>
        </Link>
        <Link
          className={styles.hairLink}
+         activeClassName={styles.active}
          to="/Contact"
        >
          <h1>Contact</h1>
