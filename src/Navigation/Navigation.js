@@ -62,6 +62,8 @@ class Navigation extends React.Component {
           <div
             className={this.state.modelOpen ? styles.openModal : styles.closedModal}
           >
+            <button onClick={this.closeModal} className={styles.close} />
+
             <Link
               className={styles.glassesLink}
               to="/"
