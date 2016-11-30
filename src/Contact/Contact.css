@@ -47,6 +47,7 @@
 }
 
 .social {
+  z-index: -1;
   font-size: 0.8em;
   display: flex;
   align-items: center;
