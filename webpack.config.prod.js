@@ -15,6 +15,7 @@ const paths = [
   '/Copyright',
   '/Now',
   '/Portfolio',
+  '/ReactUserFocusDemo',
 ];
 
 // Css Loader
