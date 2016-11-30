@@ -6154,7 +6154,7 @@ react-hot-loader@^3.0.0-beta.5:
     redbox-react "^1.2.5"
     source-map "^0.4.4"
 
-react-modal@^1.5.2:
+react-modal:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-1.5.2.tgz#acd60f19ed93ebbc7b09ea51624c7566fc615245"
   dependencies:
@@ -6190,6 +6190,10 @@ react-router@next:
     path-to-regexp "^1.5.3"
     query-string "4.2.3"
     react-broadcast "^0.1.1"
+
+react-sidebar:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-sidebar/-/react-sidebar-2.2.1.tgz#a8faf6a3c62ddc562c70680d5d016fe9741b585f"
 
 react-title-component:
   version "1.0.1"

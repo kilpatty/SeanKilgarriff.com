@@ -2,14 +2,16 @@
 
 import React from 'react';
 
-import LinkedFace from '../LinkedFace';
+import Face from '../Face';
 
 import styles from './Home.css';
 
 const Home = () =>
    (
      <div className={styles.container}>
-       <LinkedFace />
+       <Face
+         linked
+       />
      </div>
     );
 

@@ -5,6 +5,17 @@
   width: 100%;
 }
 
+.unlinkedFace {
+  height: 100%;
+  width: 100%;
+  fill: $face-color;
+}
+
+.unlinkedFace:hover {
+  fill: $face-hover-color;
+  cursor: pointer;
+}
+
 .hair,
 .glasses,
 .beard,
