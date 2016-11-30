@@ -1,20 +1,11 @@
 import React from 'react';
-import Sidebar from 'react-sidebar';
-
+import ReactGA from 'react-ga';
+import { Link } from 'react-router';
 
 import styles from './Navigation.css';
 
 import Face from '../Face';
 
-// const Navigation = () =>
-//    (
-//      <nav className={styles.logo}>
-//        <LinkedFace />
-//      </nav>
-//   )
-// ;
-//
-// export default Navigation;
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -22,10 +13,11 @@ class Navigation extends React.Component {
     this.state = {
       width: 0,
       height: 0,
-      sidebarOpen: false,
+      modelOpen: false,
     };
     this.updateDimensions = this.updateDimensions.bind(this);
-    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
 
@@ -41,8 +33,12 @@ class Navigation extends React.Component {
     window.removeEventListener('resize', this.updateDimensions);
   }
 
-  onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open });
+  openModal() {
+    this.setState({ modelOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ modelOpen: false });
   }
 
   updateDimensions() {
@@ -56,23 +52,46 @@ class Navigation extends React.Component {
     this.setState({ width, height });
   }
 
-  // <Sidebar
-  //   sidebar={sidebarContent}
-  //   open={this.state.sidebarOpen}
-  //   onSetOpen={this.onSetSidebarOpen}
-  // />
-
   render() {
     if (this.state.width < 500) {
       return (
         <nav className={styles.logo}>
           <Face
-            onClick={this.onSetSidebarOpen}
+            onClick={this.openModal}
           />
-
+          <div
+            className={this.state.modelOpen ? styles.openModal : styles.closedModal}
+          >
+            <Link
+              className={styles.glassesLink}
+              to="/"
+            >
+              <h1>Home</h1>
+            </Link>
+            <ReactGA.OutboundLink
+              eventLabel="Blog-Face"
+              to="https://blog.seankilgarriff.com"
+            >
+              <h1>Blog</h1>
+            </ReactGA.OutboundLink>
+            <Link
+              className={styles.beardLink}
+              to="/About"
+            >
+              <h1>About</h1>
+            </Link>
+            <Link
+              className={styles.hairLink}
+              to="/Contact"
+            >
+              <h1>Contact</h1>
+            </Link>
+          </div>
         </nav>
+
       );
     }
+    // Make sure that the modal is always closed if above 500px
     return (
       <nav className={styles.logo}>
         <Face

@@ -5,3 +5,22 @@
   margin-left: 10px;
   position: fixed;
 }
+
+.closedModal {
+  display: none;
+}
+
+.openModal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  flex-direction: column;
+}
