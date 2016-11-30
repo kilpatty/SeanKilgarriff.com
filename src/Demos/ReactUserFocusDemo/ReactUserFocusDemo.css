@@ -1,0 +1,50 @@
+@import "../../variables.css";
+
+.wrapper {
+  min-height: 95vh;
+  overflow-y: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.3em;
+  margin-top: 25vh;
+  width: 50%;
+  text-align: center;
+}
+
+.logoContainer {
+  height: 50vh;
+  width: 50vw;
+}
+
+.demoFace {
+  height: 100%;
+  width: 100%;
+  stroke: $face-color;
+  stroke-width: 2;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: offset 5s linear forwards, fill-it .8s 5s forwards;
+}
+
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-it {
+  100% {
+    fill: $face-color;
+  }
+}

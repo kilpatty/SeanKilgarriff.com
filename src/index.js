@@ -18,6 +18,9 @@ import Portfolio from './Portfolio';
 import About from './About';
 import NotFound from './NotFound';
 
+// Demos
+import ReactUserFocusDemo from './Demos/ReactUserFocusDemo';
+
 import GAMatch from './GAMatch';
 
 // Console functions
@@ -63,6 +66,7 @@ render(
         <GAMatch pattern="/Contact" component={Contact} />
         <GAMatch pattern="/Portfolio" component={Portfolio} />
         <GAMatch pattern="/About" component={About} />
+        <GAMatch pattern="/ReactUserFocusDemo" component={ReactUserFocusDemo} />
         <Miss component={NotFound} />
       </div>
       <div className={styles.footer}>
