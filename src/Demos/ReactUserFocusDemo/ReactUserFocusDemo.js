@@ -2,8 +2,11 @@ import React from 'react';
 import Title from 'react-title-component';
 import classnames from 'classnames';
 import ReactUserFocus from 'react-user-focus';
+import ReactGA from 'react-ga';
 
 import styles from './ReactUserFocusDemo.css';
+
+import Navigation from '../../Navigation';
 
 class ReactUserFocusDemo extends React.Component {
 
@@ -19,12 +22,10 @@ class ReactUserFocusDemo extends React.Component {
 
   onFocusChange(isHidden) {
     this.setState({ focused: !isHidden });
-    console.log(this.state.focused);
   }
 
   onIdleChange(isIdle) {
     this.setState({ idle: isIdle });
-    console.log(this.state.idle);
   }
 
   render() {
@@ -35,6 +36,7 @@ class ReactUserFocusDemo extends React.Component {
     return (
       <div className={styles.wrapper}>
         <Title render={previousTitle => `React User Focus Demo | ${previousTitle}`} />
+        <Navigation />
         <ReactUserFocus
           onFocusChange={this.onFocusChange}
           onIdleChange={this.onIdleChange}
@@ -44,7 +46,6 @@ class ReactUserFocusDemo extends React.Component {
         <main className={styles.container}>
           <div className={styles.content}>
             <h1>React User Focus Demo</h1>
-            <h3>Github for Demo</h3> <h3>Github for this website</h3>
             <div className={styles.logoContainer}>
               <svg className={styles.faceWrapper} viewBox="14 24 348 619" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <desc>Sean Kilgarriff Face Logo</desc>
@@ -57,6 +58,20 @@ class ReactUserFocusDemo extends React.Component {
                   <path d="M60.9,142 C59.5,150.4 58.4,259.9 52.4,268.9 C46.3,277.9 11.9,164.5 17.9,109.2 C18.9,100.2 3.6,112.3 0.6,125.3 C0.6,125.3 -0.6,90.3 27.9,82.2 C27.9,82.2 26.7,40.3 60.2,18.1 C60.2,18.1 58.2,32.1 58.3,40.1 C58.3,40.1 101.9,-5.1 202.9,1.4 C303.9,7.9 347.2,96.6 347.2,96.6 C347.2,96.6 336,85.7 327.8,84.8 C327.8,84.8 303.3,243.8 284.9,263.8 C274.8,274.8 289.6,179.9 277.2,158 C264.8,136.1 121.9,103.8 108.6,106.9 C95.4,109.9 62.9,130 60.9,142 L60.9,142 Z" id="XMLID_6_" />
                 </g>
               </svg>
+            </div>
+            <div className={styles.github}>
+              <strong><ReactGA.OutboundLink
+                eventLabel="RUF - Github"
+                to="https://github.com/Skilgarriff/react-user-focus"
+              >
+                <h3>Github for Demo</h3>
+              </ReactGA.OutboundLink></strong>
+              <strong><ReactGA.OutboundLink
+                eventLabel="RUF Website - Github"
+                to="https://github.com/Skilgarriff/SeanKilgarriff.com"
+              >
+                <h3>Github for this Website</h3>
+              </ReactGA.OutboundLink></strong>
             </div>
           </div>
         </main>
