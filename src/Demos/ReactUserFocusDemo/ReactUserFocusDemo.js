@@ -46,6 +46,7 @@ class ReactUserFocusDemo extends React.Component {
         <main className={styles.container}>
           <div className={styles.content}>
             <h1>React User Focus Demo</h1>
+            <p className={styles.disclaimer}>Idle time set to 2 seconds</p>
             <div className={styles.logoContainer}>
               <svg className={styles.faceWrapper} viewBox="14 24 348 619" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <desc>Sean Kilgarriff Face Logo</desc>
