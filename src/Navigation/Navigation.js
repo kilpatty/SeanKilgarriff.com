@@ -4,6 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import styles from './Navigation.css';
 
 import Face from '../Face';
+import NavigationModal from '../NavigationModal';
 
 
 class Navigation extends React.Component {
@@ -12,7 +13,7 @@ class Navigation extends React.Component {
     this.state = {
       width: 0,
       height: 0,
-      modelOpen: false,
+      modalOpen: false,
     };
     this.updateDimensions = this.updateDimensions.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -33,11 +34,11 @@ class Navigation extends React.Component {
   }
 
   openModal() {
-    this.setState({ modelOpen: true });
+    this.setState({ modalOpen: true });
   }
 
   closeModal() {
-    this.setState({ modelOpen: false });
+    this.setState({ modalOpen: false });
   }
 
   updateDimensions() {
@@ -65,10 +66,10 @@ class Navigation extends React.Component {
               leave: styles.leave,
               leaveActive: styles.leaveActive,
             }}
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={300}
+            transitionEnterTimeout={200}
+            transitionLeaveTimeout={200}
           >
-            <img src={props.imageSrc} key={props.imageSrc} />
+            {this.state.modalOpen ? <NavigationModal onClick={this.closeModal} /> : null}
           </ReactCSSTransitionGroup>
         </nav>
 
