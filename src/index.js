@@ -17,6 +17,7 @@ import Contact from './Screens/Contact';
 import Portfolio from './Screens/Portfolio';
 import About from './Screens/About';
 import NotFound from './Screens/NotFound';
+import Newsletter from './Screens/Newsletter';
 
 // Demos
 import ReactUserFocusDemo from './Demos/ReactUserFocusDemo';
@@ -66,6 +67,7 @@ render(
         <GAMatch pattern="/Contact" component={Contact} />
         <GAMatch pattern="/Portfolio" component={Portfolio} />
         <GAMatch pattern="/About" component={About} />
+        <GAMatch pattern="/Newsletter" component={Newsletter} />
         <GAMatch pattern="/ReactUserFocusDemo" component={ReactUserFocusDemo} />
         <Miss component={NotFound} />
       </div>
