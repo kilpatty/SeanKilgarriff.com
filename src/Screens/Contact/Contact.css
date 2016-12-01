@@ -23,7 +23,7 @@
 }
 
 .socialLink {
-  color: #323232;
+  color: $face-color;
   cursor: pointer;
 }
 
@@ -38,12 +38,12 @@
 }
 
 .socialLink:visited {
-  color: #323232;
+  color: $face-color;
   cursor: pointer;
 }
 
 .socialLink:hover {
-  color: #2574a9;
+  color: social-link-hover;
 }
 
 .social {
