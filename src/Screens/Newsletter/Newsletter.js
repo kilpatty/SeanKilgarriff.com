@@ -10,7 +10,7 @@ import Navigation from '../../Components/Navigation';
 const Copyright = () =>
    (
      <div className={styles.wrapper}>
-       <Title render={previousTitle => `Newsletter | ${previousTitle}`} />
+       <Title render="Newsletter | Sean Kilgarriff" />
        <Navigation />
 
        <main className={styles.container}>

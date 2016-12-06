@@ -10,7 +10,7 @@ import Navigation from '../../Components/Navigation';
 const NotFound = () =>
    (
      <div className={styles.wrapper}>
-       <Title render={previousTitle => `404 | ${previousTitle}`} />
+       <Title render="404 | Sean Kilgarriff" />
        <Navigation />
 
        <main className={styles.container}>

@@ -10,7 +10,7 @@ import Navigation from '../../Components/Navigation';
 const Now = () =>
    (
      <div>
-       <Title render={previousTitle => `Now | ${previousTitle}`} />
+       <Title render="Now | Sean Kilgarriff" />
        <Navigation />
 
        <main className={styles.container}>

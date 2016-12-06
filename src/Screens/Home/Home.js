@@ -8,10 +8,12 @@ import styles from './Home.css';
 
 const Home = () =>
    (
-     <div className={styles.container}>
-       <Face
-         linked
-       />
+     <div>
+       <div className={styles.container}>
+         <Face
+           linked
+         />
+       </div>
      </div>
     );
 

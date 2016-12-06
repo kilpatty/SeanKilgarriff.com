@@ -43,11 +43,11 @@
 }
 
 .socialLink:hover {
-  color: social-link-hover;
+  color: $social-link-hover;
 }
 
 .social {
-  z-index: -1;
+  z-index: 1;
   font-size: 0.8em;
   display: flex;
   align-items: center;

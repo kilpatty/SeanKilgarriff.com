@@ -10,7 +10,7 @@ import Navigation from '../../Components/Navigation';
 const About = () =>
    (
      <div className={styles.wrapper}>
-       <Title render={previousTitle => `About | ${previousTitle}`} />
+       <Title render="About | Sean Kilgarriff" />
        <Navigation />
 
        <main className={styles.container}>

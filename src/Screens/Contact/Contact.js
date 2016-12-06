@@ -12,7 +12,7 @@ import styles from './Contact.css';
 const Contact = () =>
    (
      <div className={styles.wrapper}>
-       <Title render={previousTitle => `Contact | ${previousTitle}`} />
+       <Title render="Contact | Sean Kilgarriff" />
        <Navigation />
 
        <main className={styles.container}>

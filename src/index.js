@@ -4,6 +4,8 @@ import { BrowserRouter, Miss } from 'react-router';
 import ReactGA from 'react-ga';
 import ReactUserFocus from 'react-user-focus';
 import Title from 'react-title-component';
+import ReactHeatmap from 'react-heatmapjs';
+
 
 // This files styles - need to import before anything else to get the css first.
 import styles from './index.css';
@@ -38,12 +40,6 @@ if (process.env.NODE_ENV !== 'production') {
 // Initialize Google Analytics
 ReactGA.initialize(process.env.GA_ID);
 
-// Log Page View Function
-function logPageView() {
-  ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname);
-}
-
 // Set all console/window functions
 setWindowFunctions();
 
@@ -52,7 +48,7 @@ devtoolsWelcome();
 
 
 render(
-  <BrowserRouter onUpdate={logPageView}>
+  <BrowserRouter>
     <div className={styles.container}>
       <div className={styles.content}>
         <Title render="Sean Kilgarriff" />
@@ -60,6 +56,10 @@ render(
           onFocusChange={onFocusChange}
           onIdleChange={onIdleChange}
           idleTime={2}
+        />
+        <ReactHeatmap
+          className={styles.heatmap}
+          global
         />
         <GAMatch exactly pattern="/" component={Home} />
         <GAMatch pattern="/Copyright" component={Copyright} />
