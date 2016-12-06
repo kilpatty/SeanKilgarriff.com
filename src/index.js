@@ -59,10 +59,6 @@ render(
           onIdleChange={onIdleChange}
           idleTime={2}
         />
-        <ReactHeatmap
-          className={styles.heatmap}
-          global
-        />
         <GAMatch exactly pattern="/" component={Home} />
         <GAMatch pattern="/Copyright" component={Copyright} />
         <GAMatch pattern="/Now" component={Now} />

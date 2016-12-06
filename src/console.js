@@ -43,7 +43,7 @@ const myLogoASCII = `
 let showFocusVariables = false;
 let userFingerprint;
 let userFPComponents;
-
+let timerID;
 export function devtoolsWelcome() {
   setTimeout(console.log.bind(console, myLogoASCII), 0);
   setTimeout(console.log.bind(console, 'Hey there!'), 0);
@@ -103,8 +103,28 @@ export function setWindowFunctions() {
     return '-----------------------------------------';
   };
 
+  function countdown() {
+    let count = 10;
+    timerID = setInterval(() => {
+      console.log(count);
+      count -= 1;
+      if (count === 0) {
+        window.location.href = 'https://github.com/Skilgarriff/SeanKilgarriff.com';
+      }
+    }, 1000);
+  }
+
   window.letMeSeeThisCode = function () {
-    console.log('Work in Progress!');
+    console.log('My code is available on Github at https://github.com/Skilgarriff/SeanKilgarriff.com');
+    console.log('I will now redirect you there in 10 seconds');
+    console.log('Press any key to cancel');
+    console.log('Click outside of the console for keypresses to be recognized.');
+    countdown();
+    document.onkeypress = function () {
+      window.clearInterval(timerID);
+      console.log('Redirection canceled!');
+    };
+
     return '-----------------------------------------';
   };
 
