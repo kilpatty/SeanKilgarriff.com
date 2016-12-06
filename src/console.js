@@ -1,3 +1,6 @@
+import ReactGA from 'react-ga';
+import Fingerprint2 from 'fingerprintjs2';
+
 const myLogoASCII = `
   MMMMMMMMMWNKOdl:;,''''''';:lx0NWMMMMMMMM
   MMMMN0KXOdc;'...............',:oOXWMMMMM
@@ -38,6 +41,8 @@ const myLogoASCII = `
 `;
 
 let showFocusVariables = false;
+let userFingerprint;
+let userFPComponents;
 
 export function devtoolsWelcome() {
   setTimeout(console.log.bind(console, myLogoASCII), 0);
@@ -58,6 +63,7 @@ export function setWindowFunctions() {
     console.log('Check out the Heatmap of your current session! Call heatMap()');
     console.log('Want to say hi? Call sayHi(\'name\', \'email\', \'message\' )');
     console.log('To see whether you are focused or idle, call amIFocused()');
+    console.log('Like to see your device fingerprint? call myFingerprint()');
 
     return '-----------------------------------------';
   };
@@ -111,6 +117,16 @@ export function setWindowFunctions() {
     console.log('Work in Progress!');
     return '-----------------------------------------';
   };
+
+  window.myFingerprint = function () {
+    if (userFingerprint == null) {
+      console.log('Your fingerprint has not yet been calculated. Try again in a few seconds.');
+    } else {
+      console.log(`Your fingerprint is ${userFingerprint}`);
+      console.log('This finger print is made up of these components:');
+      console.log(userFPComponents);
+    }
+  };
 }
 
 export function onFocusChange(isHidden) {
@@ -131,4 +147,12 @@ export function onIdleChange(isIdle) {
     }
     console.log('Active again!');
   }
+}
+
+export function fingerPrintUser() {
+  new Fingerprint2().get((result, components) => {
+    userFingerprint = result;
+    userFPComponents = components;
+    ReactGA.set({ userId: result });
+  });
 }

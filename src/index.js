@@ -27,7 +27,7 @@ import ReactUserFocusDemo from './Demos/ReactUserFocusDemo';
 import GAMatch from './Components/GAMatch';
 
 // Console functions
-import { devtoolsWelcome, setWindowFunctions, onFocusChange, onIdleChange } from './console.js';
+import { devtoolsWelcome, setWindowFunctions, onFocusChange, onIdleChange, fingerPrintUser } from './console.js';
 
 
 // Accept hot module reloading during development
@@ -39,6 +39,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.GA_ID);
+
+fingerPrintUser();
 
 // Set all console/window functions
 setWindowFunctions();
