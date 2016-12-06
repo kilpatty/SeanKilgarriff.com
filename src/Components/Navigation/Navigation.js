@@ -55,10 +55,12 @@ class Navigation extends React.Component {
   render() {
     if (this.state.width < 500) {
       return (
-        <nav className={styles.logo}>
-          <Face
-            onClick={this.openModal}
-          />
+        <div>
+          <nav className={styles.logo}>
+            <Face
+              onClick={this.openModal}
+            />
+          </nav>
           <ReactCSSTransitionGroup
             transitionName={{
               enter: styles.enter,
@@ -71,7 +73,7 @@ class Navigation extends React.Component {
           >
             {this.state.modalOpen ? <NavigationModal onClick={this.closeModal} /> : null}
           </ReactCSSTransitionGroup>
-        </nav>
+        </div>
 
       );
     }

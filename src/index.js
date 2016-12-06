@@ -4,7 +4,6 @@ import { BrowserRouter, Miss } from 'react-router';
 import ReactGA from 'react-ga';
 import ReactUserFocus from 'react-user-focus';
 import Title from 'react-title-component';
-import ReactHeatmap from 'react-heatmapjs';
 
 
 // This files styles - need to import before anything else to get the css first.
