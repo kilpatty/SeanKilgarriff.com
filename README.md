@@ -24,11 +24,11 @@ Then access http://localhost:8080 on a browser!
 
 Whenever I develop some new code, I usually put a demo on my website for users (or myself) to test out. Here are the current demos available now:
 
-* [React-User-Focus](https://seankilgarriff.com/ReactUserFocus)
+* [React-User-Focus](https://seankilgarriff.com/ReactUserFocusDemo)
 
 ##Contact
 
-If you would like to contact me, see my [Contact Page](https://seankilgarriff/Contact) for my most up to date contact information.
+If you would like to contact me, see my [Contact Page](https://seankilgarriff.com/Contact) for my most up to date contact information.
 
 
 ## Copyright & License
