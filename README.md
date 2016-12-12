@@ -18,6 +18,8 @@ or for those of you still using npm
 npm start
 ```
 
+Then access http://localhost:8080 on a browser!
+
 ##Demos
 
 Whenever I develop some new code, I usually put a demo on my website for users (or myself) to test out. Here are the current demos available now:
