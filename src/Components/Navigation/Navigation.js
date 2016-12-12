@@ -15,9 +15,6 @@ class Navigation extends React.Component {
       height: 0,
       modalOpen: false,
     };
-    this.updateDimensions = this.updateDimensions.bind(this);
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
   }
 
 
@@ -33,15 +30,15 @@ class Navigation extends React.Component {
     window.removeEventListener('resize', this.updateDimensions);
   }
 
-  openModal() {
+  openModal = () => {
     this.setState({ modalOpen: true });
   }
 
-  closeModal() {
+  closeModal = () => {
     this.setState({ modalOpen: false });
   }
 
-  updateDimensions() {
+  updateDimensions = () => {
     const w = window;
     const d = document;
     const documentElement = d.documentElement;

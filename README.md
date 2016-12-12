@@ -1,8 +1,10 @@
 # Sean Kilgarriff's Website
 
 Hey everyone, welcome to the code of my website. Everything that exists on my site can be found here.
+<!-- Once I write that article about why I open source include it into here. -->
 
 ##Development/Contributing
+<!-- Put in here the pipeline, and the various linters that I use. -->
 
 Everyone has typos. If you spot something on my site that you think should be fixed, open a pull request! I would greatly appreciate it.
 

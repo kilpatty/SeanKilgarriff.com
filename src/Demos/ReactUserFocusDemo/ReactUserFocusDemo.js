@@ -16,15 +16,13 @@ class ReactUserFocusDemo extends React.Component {
       focused: true,
       idle: false,
     };
-    this.onFocusChange = this.onFocusChange.bind(this);
-    this.onIdleChange = this.onIdleChange.bind(this);
   }
 
-  onFocusChange(isHidden) {
+  onFocusChange = (isHidden) => {
     this.setState({ focused: !isHidden });
   }
 
-  onIdleChange(isIdle) {
+  onIdleChange = (isIdle) => {
     this.setState({ idle: isIdle });
   }
 
