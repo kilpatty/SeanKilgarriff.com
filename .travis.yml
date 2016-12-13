@@ -4,9 +4,8 @@ node_js:
   - "6.0"
 install:
   - npm install -g codecov
-  - npm install -g yarn
-  - yarn install
+  - npm install
 script:
-- yarn lint
-- yarn coverage
+- npm run lint
+- npm run coverage
 - codecov
