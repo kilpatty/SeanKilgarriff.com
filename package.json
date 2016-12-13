@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.dev.js",
     "clean:dist": "rm -rf dist",
-    "build": "BABEL_ENV=production NODE_ENV=production webpack --config webpack.config.prod.js",
-    "build:dev": "BABEL_ENV=production NODE_ENV=staging webpack --config webpack.config.prod.js",
+    "build": "BABEL_ENV=production NODE_ENV=production webpack",
+    "build:dev": "BABEL_ENV=production NODE_ENV=staging webpack",
     "lint": "eslint src",
     "test": "mocha \"src/**/*.spec.js\" --require test/setup.js --compilers js:babel-register",
     "test:watch": "npm run test -- --reporter min --watch",
