@@ -11,9 +11,9 @@
     "lint:js": "eslint src",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint": "npm run lint:js && npm run lint:css",
-    "test": "mocha \"src/**/*.spec.js\"",
     "test:watch": "npm run test -- --reporter min --watch",
-    "coverage": "babel-node ./node_modules/.bin/isparta --include-all-sources true cover _mocha -- \"src/**/*.spec.js\"",
+    "test": "NODE_ENV=test nyc --reporter=lcov --reporter=text-lcov mocha \"src/**/*.spec.js\"",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "dependencies": {
@@ -24,6 +24,7 @@
     "babel-eslint": "^7.0.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-istanbul": "^3.0.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-flow-strip-types": "^6.14.0",
     "babel-polyfill": "^6.16.0",
@@ -68,6 +69,7 @@
     "mocha": "^3.1.0",
     "normalize.css": "^5.0.0",
     "npm": "^3.10.9",
+    "nyc": "next",
     "object-assign": "^4.1.0",
     "open-color": "^1.4.0",
     "postcss-cssnext": "^2.8.0",
@@ -116,7 +118,9 @@
     ],
     "env": {
       "test": {
-        "sourceMaps": "both"
+        "plugins": [
+          "istanbul"
+        ]
       },
       "development": {
         "presets": [
@@ -155,6 +159,14 @@
         }
       ]
     }
+  },
+  "nyc": {
+    "include": [
+			"src/**/*.js"
+		],
+    "all": true,
+    "sourceMap": false,
+    "instrument": false
   },
   "stylelint": {
     "extends": "stylelint-config-standard"

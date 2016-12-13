@@ -8,3 +8,5 @@ dist
 
 #No need for coverage reports
 /coverage
+coverage.lcov
+.nyc_output
