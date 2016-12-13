@@ -5,11 +5,7 @@
 
     <Sean Kilgarriff> -- <Creator> -- <@SeanKilgarriff>
 
-# THANKS
-
-    <name>
-
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5, JavaScript
-    React, Flux, SuperAgent
+    React
