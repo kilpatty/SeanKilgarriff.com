@@ -5,3 +5,6 @@ node_modules
 
 #Don't push up the distribution file
 dist
+
+#No need for coverage reports
+/coverage
