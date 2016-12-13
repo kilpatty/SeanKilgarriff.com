@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { expect } from 'chai';
-import { shallow } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import Footer from './Footer';
 
 describe('Footer', () => {
@@ -15,8 +15,13 @@ describe('Footer', () => {
     expect(footer.find('footer')).to.have.length(1);
   });
 
-  it('Should render the proper copyright text', () => {
-    const footer = shallow(<Footer />);
-    expect(footer.contains(<Link to="/Copyright"> Sean Kilgarriff Original &copy; 2016</Link>)).to.equal(true);
+  it('Should contain my name in the text', () => {
+    const footer = render(<Footer />);
+    expect(footer.text()).to.contain('Sean Kilgarriff');
+  });
+
+  it('Should contain a link to the copyright page', () => {
+    const footer = render(<Footer />);
+    expect(footer.find('a').prop('href')).to.equal('/Copyright');
   });
 });
