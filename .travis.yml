@@ -1,5 +1,9 @@
-services:
-- docker
+language: node_js
+install:
+  - npm install -g codecov
+  - npm install -g yarn
+  - yarn install
 script:
-- docker build -f deploy/Dockerfile -t testingcontiner .
-- docker run --rm testingcontiner yarn lint
+- yarn lint
+- yarn coverage
+- codecov
