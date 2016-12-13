@@ -25,7 +25,7 @@ Then access http://localhost:8080 on a browser!
 ###Linting
 
 This website uses [Eslint](http://eslint.org/) for Javascript and [Stylelint](https://github.com/stylelint/stylelint) for css.
-The configuration for both of those can be found in the [package.json](/package.json)
+The configuration for both of those can be found in the [package.json](/package.json).
 
 If you make a contribution to this project, I would greatly appreciate it if it passed the linters!
 
