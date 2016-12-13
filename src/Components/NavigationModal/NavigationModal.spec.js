@@ -6,7 +6,7 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import NavigationModal from './NavigationModal';
 
-describe('Footer', () => {
+describe('Navigation Modal', () => {
   it('Should have an exit button', () => {
     const modal = shallow(<NavigationModal />);
     expect(modal.find('button')).to.have.length(1);
@@ -14,6 +14,6 @@ describe('Footer', () => {
 
   it('Should have an onClick property', () => {
     const modal = shallow(<NavigationModal />);
-    expect(modal.props().onClick).to.be.defined;
+    expect(modal.prop('onClick')).to.be.defined;
   });
 });
