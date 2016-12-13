@@ -128,6 +128,7 @@
     "rules": {
       "arrow-parens": "off",
       "generator-star-spacing": "off",
+      "no-console": "off",
       "import/extensions": "off",
       "import/no-extraneous-dependencies": "off",
       "react/forbid-prop-types": "off",
