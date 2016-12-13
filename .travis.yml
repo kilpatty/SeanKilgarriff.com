@@ -1,4 +1,5 @@
 services:
 - docker
 script:
-- docker version
+- docker build -f deploy/Dockerfile -t testingContiner .
+- docker run --rm testingContiner yarn lint
