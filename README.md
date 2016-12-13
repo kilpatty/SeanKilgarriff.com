@@ -1,4 +1,5 @@
 # Sean Kilgarriff's Website
+[![codecov](https://codecov.io/gh/Skilgarriff/SeanKilgarriff.com/branch/master/graph/badge.svg)](https://codecov.io/gh/Skilgarriff/SeanKilgarriff.com)
 
 Hey everyone, welcome to the code of my website. Everything that exists on my site can be found here.
 <!-- Once I write that article about why I open source include it into here. -->

@@ -13,7 +13,7 @@
     "lint": "npm run lint:js && npm run lint:css",
     "test": "mocha \"src/**/*.spec.js\"",
     "test:watch": "npm run test -- --reporter min --watch",
-    "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha -- \"src/**/*.spec.js\"",
+    "coverage": "babel-node ./node_modules/.bin/isparta --include-all-sources true cover _mocha -- \"src/**/*.spec.js\"",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "dependencies": {
