@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Match } from 'react-router';
 import ReactGA from 'react-ga';
 
@@ -11,6 +11,7 @@ const GAMatch = ({ component: Comp, passProps, ...props }) => {
 
 export default GAMatch;
 
-GAMatch.PropTypes = {
+GAMatch.propTypes = {
   component: React.PropTypes.node,
+  passProps: React.PropTypes.object,
 };

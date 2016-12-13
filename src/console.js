@@ -1,3 +1,4 @@
+/* eslint func-names: "off"*/
 import ReactGA from 'react-ga';
 import Fingerprint2 from 'fingerprintjs2';
 
