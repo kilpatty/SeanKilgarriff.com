@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, MemoryRouter } from 'react-router';
 import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 import Footer from './Footer';
@@ -16,14 +16,18 @@ describe('Footer', () => {
   });
 
   it('Should contain my name in the text', () => {
-    const context = { router: { } };
-    const footer = mount(<Footer />, context);
-    console.log(footer);
+    const footer = mount(
+      <MemoryRouter location="/">
+        <Footer />
+      </MemoryRouter>);
     expect(footer.text()).to.contain('Sean Kilgarriff');
   });
 
   it('Should contain a link to the copyright page', () => {
-    const footer = mount(<Footer />);
+    const footer = mount(
+      <MemoryRouter location="/">
+        <Footer />
+      </MemoryRouter>);
     expect(footer.find('a').prop('href')).to.equal('/Copyright');
   });
 });
