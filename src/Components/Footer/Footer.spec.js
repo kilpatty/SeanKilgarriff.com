@@ -16,7 +16,9 @@ describe('Footer', () => {
   });
 
   it('Should contain my name in the text', () => {
-    const footer = mount(<Footer />);
+    const context = { router: { } };
+    const footer = mount(<Footer />, context);
+    console.log(footer);
     expect(footer.text()).to.contain('Sean Kilgarriff');
   });
 
