@@ -11,8 +11,8 @@
     "lint:js": "eslint src",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint": "npm run lint:js && npm run lint:css",
-    "test:watch": "npm run test -- --reporter min --watch",
     "test": "NODE_ENV=test nyc mocha \"src/**/*.spec.js\"",
+    "test:watch": "npm run test -- --reporter min --watch",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
