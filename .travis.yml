@@ -10,3 +10,5 @@ script:
 - npm run test
 - npm run coverage
 - codecov
+notifications:
+  email: false
