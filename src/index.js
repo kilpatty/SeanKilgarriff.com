@@ -73,5 +73,5 @@ render(
       </div>
     </div>
   </BrowserRouter>,
-document.getElementById('app')
+document.getElementById('app'),
 );
