@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: `${__dirname}/src`,
-  devtool: 'cheap-eval-source-map',
+  devtool: 'eval-source-map',
   entry: [
     'babel-polyfill',
     'webpack-dev-server/client?http://localhost:8080',
