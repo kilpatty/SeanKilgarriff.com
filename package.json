@@ -46,26 +46,21 @@
     "detect-port": "^1.0.1",
     "dotenv": "^2.0.0",
     "enzyme": "^2.6.0",
-    "eslint": "^3.7.0",
-    "eslint-config-airbnb": "^12.0.0",
-    "eslint-loader": "1.5.0",
-    "eslint-plugin-flowtype": "2.18.1",
-    "eslint-plugin-import": "^1.16.0",
-    "eslint-plugin-jsx-a11y": "2.2.2",
-    "eslint-plugin-react": "^6.3.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.8.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "fingerprintjs2": "^1.4.1",
-    "heatmap.js": "^2.0.5",
-    "html-webpack-plugin": "^2.22.0",
-    "isparta": "^4.0.0",
+    "html-webpack-plugin": "^2.24.1",
     "istanbul": "1.0.0-alpha.2",
-    "jsdom": "^9.6.0",
-    "mocha": "^3.1.0",
+    "jsdom": "^9.8.3",
+    "mocha": "^3.2.0",
     "normalize.css": "^5.0.0",
     "nyc": "next",
     "open-color": "^1.4.0",
-    "postcss-cssnext": "^2.8.0",
-    "postcss-loader": "^1.1.1",
+    "postcss-loader": "^1.2.1",
     "postcss-reporter": "^3.0.0",
     "postcss-smart-import": "^0.6.3",
     "precss": "^1.4.0",
@@ -114,37 +109,6 @@
           "react-hmre"
         ]
       }
-    }
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": "airbnb",
-    "env": {
-      "browser": true,
-      "mocha": true
-    },
-    "rules": {
-      "arrow-parens": "off",
-      "generator-star-spacing": "off",
-      "no-console": "off",
-      "import/extensions": "off",
-      "import/no-extraneous-dependencies": "off",
-      "react/forbid-prop-types": "off",
-      "react/jsx-filename-extension": "off",
-      "react/no-danger": "off",
-      "react/no-unused-prop-types": "off",
-      "react/sort-comp": [
-        2,
-        {
-          "order": [
-            "type-annotations",
-            "static-methods",
-            "lifecycle",
-            "everything-else",
-            "render"
-          ]
-        }
-      ]
     }
   },
   "nyc": {

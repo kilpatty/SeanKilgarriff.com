@@ -12,6 +12,6 @@ const GAMatch = ({ component: Comp, passProps, ...props }) => {
 export default GAMatch;
 
 GAMatch.propTypes = {
-  component: React.PropTypes.node,
+  component: React.PropTypes.element,
   passProps: React.PropTypes.object,
 };
