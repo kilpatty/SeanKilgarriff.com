@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ],
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    "transform-flow-strip-types",
+    "react-hot-loader/babel"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "istanbul",
+        "transform-es2015-modules-commonjs"
+      ]
+    },
+    "development": {
+      "presets": [
+        "react-hmre"
+      ]
+    }
+  }
+}
