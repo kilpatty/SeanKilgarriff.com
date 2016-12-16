@@ -70,37 +70,8 @@
     "style-loader": "^0.13.1",
     "stylelint": "^7.6.0",
     "stylelint-config-standard": "^15.0.0",
-    "webpack": "beta",
+    "webpack": "v2.2.0-rc.0",
     "webpack-dev-server": "v2.2.0-rc.0"
-  },
-  "babel": {
-    "presets": [
-      [
-        "es2015",
-        {
-          "modules": false
-        }
-      ],
-      "react",
-      "stage-0"
-    ],
-    "plugins": [
-      "react-hot-loader/babel",
-      "add-module-exports"
-    ],
-    "env": {
-      "test": {
-        "plugins": [
-          "istanbul",
-          "transform-es2015-modules-commonjs"
-        ]
-      },
-      "development": {
-        "presets": [
-          "react-hmre"
-        ]
-      }
-    }
   },
   "eslintConfig": {
     "parser": "babel-eslint",
