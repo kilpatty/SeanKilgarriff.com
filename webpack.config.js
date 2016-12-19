@@ -32,10 +32,6 @@ const cssLoaders = [
   'postcss',
 ];
 
-
-// Get the environment of staging vs production in here.
-// Then assign the urls based off of that.
-
 module.exports = {
   devtool: 'source-map',
   entry: ['babel-polyfill', './src/index'],
