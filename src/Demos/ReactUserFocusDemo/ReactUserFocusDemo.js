@@ -28,8 +28,7 @@ class ReactUserFocusDemo extends React.Component {
 
   render() {
     const classes = classnames(styles.demoFace,
-(this.state.idle || !this.state.focused) ? styles.paused : null
-    );
+(this.state.idle || !this.state.focused) ? styles.paused : null);
 
     return (
       <div className={styles.wrapper}>

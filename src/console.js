@@ -56,6 +56,10 @@ export function devtoolsWelcome() {
 
 export function setWindowFunctions() {
   window.help = function () {
+    ReactGA.event({
+      category: 'ConsoleCommands',
+      action: 'Help',
+    });
     console.log('Curious how long you\'ve been browsing? Call howLongHaveIBeenHere()');
     console.log('Need a breather? Call helpMeRelax()');
     console.log('Want to check out my Resume? Call resume()');
@@ -71,6 +75,10 @@ export function setWindowFunctions() {
 
   // See if I can change idle time dynamically. - this will be hard
   window.amIFocused = function () {
+    ReactGA.event({
+      category: 'ConsoleCommands',
+      action: 'amIFocused',
+    });
     console.log('You have enabled the react-user-focus demo.');
     console.log('The current idle time is set to 5 seconds.');
     console.log('Call this function again to disable this feature.');
@@ -85,21 +93,37 @@ export function setWindowFunctions() {
   };
 
   window.howLongHaveIBeenHere = function () {
+    ReactGA.event({
+      category: 'ConsoleCommands',
+      action: 'howLongHaveIBeenHere',
+    });
     console.log('Work in Progress!');
     return '-----------------------------------------';
   };
 
   window.helpMeRelax = function () {
+    ReactGA.event({
+      category: 'ConsoleCommands',
+      action: 'helpMeRelax',
+    });
     console.log('Work in Progress!');
     return '-----------------------------------------';
   };
 
   window.resume = function () {
+    ReactGA.event({
+      category: 'ConsoleCommands',
+      action: 'resume',
+    });
     console.log('Work in Progress!');
     return '-----------------------------------------';
   };
 
   window.status = function () {
+    ReactGA.event({
+      category: 'ConsoleCommands',
+      action: 'status',
+    });
     console.log('Work in Progress!');
     return '-----------------------------------------';
   };
@@ -116,6 +140,10 @@ export function setWindowFunctions() {
   }
 
   window.letMeSeeThisCode = function () {
+    ReactGA.event({
+      category: 'ConsoleCommands',
+      action: 'letMeSeeThisCode',
+    });
     console.log('My code is available on Github at https://github.com/Skilgarriff/SeanKilgarriff.com');
     console.log('I will now redirect you there in 10 seconds');
     console.log('Press any key to cancel');
@@ -130,16 +158,28 @@ export function setWindowFunctions() {
   };
 
   window.heatMap = function () {
+    ReactGA.event({
+      category: 'ConsoleCommands',
+      action: 'heatMap',
+    });
     console.log('Work in Progress!');
     return '-----------------------------------------';
   };
 
   window.sayHi = function () {
+    ReactGA.event({
+      category: 'ConsoleCommands',
+      action: 'sayHi',
+    });
     console.log('Work in Progress!');
     return '-----------------------------------------';
   };
 
   window.myFingerprint = function () {
+    ReactGA.event({
+      category: 'ConsoleCommands',
+      action: 'myFingerprint',
+    });
     if (userFingerprint == null) {
       console.log('Your fingerprint has not yet been calculated. Try again in a few seconds.');
     } else {

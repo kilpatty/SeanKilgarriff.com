@@ -1,5 +1,5 @@
-  {
-    "presets": [
+{
+  "presets": [
     [
       "es2015",
       {
@@ -10,8 +10,8 @@
     "stage-0"
   ],
   "plugins": [
-    "react-hot-loader/babel",
-    "add-module-exports"
+    "transform-flow-strip-types",
+    "react-hot-loader/babel"
   ],
   "env": {
     "test": {
