@@ -4,7 +4,6 @@ import ReactGA from 'react-ga';
 
 
 const GAMatch = ({ component: Comp, passProps, ...props }) => {
-  console.log(typeof Comp)
   ReactGA.set({ page: window.location.pathname });
   ReactGA.pageview(window.location.pathname);
   return <Match {...props} render={(matchedProps) => <Comp {...passProps} {...matchedProps} />} />;
