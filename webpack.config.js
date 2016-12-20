@@ -29,7 +29,7 @@ const cssLoaders = [
       localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
     },
   },
-  'postcss',
+  'postcss-loader',
 ];
 
 module.exports = {
@@ -53,8 +53,23 @@ module.exports = {
     }),
     // Generate a 'manifest' chunk to be inlined in the HTML template
     new webpack.optimize.CommonsChunkPlugin('manifest'),
+
+    new webpack.optimize.DedupePlugin(),
+
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
     }),
     new webpack.DefinePlugin({
       'process.env': {
