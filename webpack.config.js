@@ -54,8 +54,6 @@ module.exports = {
     // Generate a 'manifest' chunk to be inlined in the HTML template
     new webpack.optimize.CommonsChunkPlugin('manifest'),
 
-    new webpack.optimize.DedupePlugin(),
-
     new HtmlWebpackPlugin({
       template: './src/index.html',
       minify: {
@@ -88,6 +86,7 @@ module.exports = {
       {
         test: /\.js$/,
         use: ['babel-loader'],
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
