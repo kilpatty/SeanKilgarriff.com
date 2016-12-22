@@ -10,7 +10,6 @@ module.exports = {
   context: `${__dirname}/src`,
   devtool: 'eval-source-map',
   entry: [
-    'babel-polyfill',
     'webpack-dev-server/client?http://localhost:8080',
     // 'webpack/hot/dev-server',
     './index',
@@ -25,6 +24,7 @@ module.exports = {
       {
         test: /\.js$/,
         use: ['babel-loader'],
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,

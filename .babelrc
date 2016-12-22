@@ -10,7 +10,7 @@
     "stage-0"
   ],
   "plugins": [
-    "transform-flow-strip-types",
+    "transform-runtime",
     "react-hot-loader/babel"
   ],
   "env": {

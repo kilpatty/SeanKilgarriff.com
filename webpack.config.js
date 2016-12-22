@@ -34,7 +34,7 @@ const cssLoaders = [
 
 module.exports = {
   devtool: 'source-map',
-  entry: ['babel-polyfill', './src/index'],
+  entry: ['./src/index'],
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
