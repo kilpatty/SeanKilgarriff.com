@@ -6,7 +6,18 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 /* Typography */
-$welcome-font: 'Josefin Slab', serif;
+$base-font:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Oxygen",
+  "Ubuntu",
+  "Cantarell",
+  "Fira Sans",
+  "Droid Sans",
+  "Helvetica Neue",
+  sans-serif;
 
 /* Font Sizes */
 $base-font-size: 1em;

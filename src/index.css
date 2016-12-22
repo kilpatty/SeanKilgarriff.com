@@ -7,8 +7,11 @@
 body {
   line-height: $base-line-height;
   color: $base-font-color;
-  font-family: $welcome-font;
-  font-size: 100%;
+  font-family: $base-font;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.02em;
 }
 
 a {
