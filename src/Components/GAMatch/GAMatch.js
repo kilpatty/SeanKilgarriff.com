@@ -3,11 +3,14 @@ import { Match } from 'react-router';
 import ReactGA from 'react-ga';
 
 
-const GAMatch = ({ component: Comp, passProps, ...props }) => {
-  ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname);
-  return <Match {...props} render={(matchedProps) => <Comp {...passProps} {...matchedProps} />} />;
-};
+const GAMatch = ({ component: Comp, passProps, ...props }) =>
+  <Match
+    {...props} render={(matchedProps) => {
+      ReactGA.set({ page: window.location.pathname });
+      ReactGA.pageview(window.location.pathname);
+      return <Comp {...passProps} {...matchedProps} />;
+    }}
+  />;
 
 export default GAMatch;
 
