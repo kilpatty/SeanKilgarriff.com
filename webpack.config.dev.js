@@ -61,4 +61,11 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
   },
+  resolve: {
+    alias: {
+      react: 'preact-compat',
+      'react-dom': 'preact-compat',
+      'react-addons-css-transition-group': 'rc-animate',
+    },
+  },
 };

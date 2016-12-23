@@ -4,6 +4,7 @@ import { BrowserRouter, Miss } from 'react-router';
 import ReactGA from 'react-ga';
 import ReactUserFocus from 'react-user-focus';
 import Title from 'react-title-component';
+import Perf from 'react-addons-perf';
 
 
 // This files styles - need to import before anything else to get the css first.
@@ -28,6 +29,9 @@ import GAMatch from './Components/GAMatch';
 // Console functions
 import { devtoolsWelcome, setWindowFunctions, onFocusChange, onIdleChange, fingerPrintUser } from './console.js';
 
+window.Perf = Perf;
+
+Perf.start();
 
 // Accept hot module reloading during development
 if (process.env.NODE_ENV !== 'production') {
