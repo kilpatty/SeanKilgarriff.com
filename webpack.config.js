@@ -7,6 +7,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SitemapPlugin = require('sitemap-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const BrotliPlugin = require('brotli-webpack-plugin');
 
 // These are the paths that are located on my website.
 const paths = [
@@ -42,6 +44,15 @@ module.exports = {
     chunkFilename: '[name]-[chunkhash].js',
   },
   plugins: [
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      minRatio: 0.8,
+    }),
+    new BrotliPlugin({
+      asset: '[path].br[query]',
+      minRatio: 0.8,
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         warnings: false,
