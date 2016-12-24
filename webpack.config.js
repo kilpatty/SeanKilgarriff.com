@@ -7,6 +7,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SitemapPlugin = require('sitemap-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const BrotliPlugin = require('brotli-webpack-plugin');
 
 // These are the paths that are located on my website.
 const paths = [
@@ -29,12 +31,12 @@ const cssLoaders = [
       localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
     },
   },
-  'postcss',
+  'postcss-loader',
 ];
 
 module.exports = {
   devtool: 'source-map',
-  entry: ['babel-polyfill', './src/index'],
+  entry: ['./src/index'],
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
@@ -42,6 +44,15 @@ module.exports = {
     chunkFilename: '[name]-[chunkhash].js',
   },
   plugins: [
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      minRatio: 0.8,
+    }),
+    new BrotliPlugin({
+      asset: '[path].br[query]',
+      minRatio: 0.8,
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         warnings: false,
@@ -53,8 +64,21 @@ module.exports = {
     }),
     // Generate a 'manifest' chunk to be inlined in the HTML template
     new webpack.optimize.CommonsChunkPlugin('manifest'),
+
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
     }),
     new webpack.DefinePlugin({
       'process.env': {
@@ -73,6 +97,10 @@ module.exports = {
       {
         test: /\.js$/,
         use: ['babel-loader'],
+        include: [
+          path.resolve('src'),
+          path.resolve('node_modules/preact-compat/src'),
+        ],
       },
       {
         test: /\.css$/,

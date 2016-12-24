@@ -6,7 +6,18 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 /* Typography */
-$welcome-font: 'Josefin Slab', serif;
+$base-font:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Oxygen",
+  "Ubuntu",
+  "Cantarell",
+  "Fira Sans",
+  "Droid Sans",
+  "Helvetica Neue",
+  sans-serif;
 
 /* Font Sizes */
 $base-font-size: 1em;
@@ -23,3 +34,6 @@ $face-color: #323232;
 $face-hover-color: #bdc3c7;
 $contrast-red: var(--oc-red-7);
 $social-link-hover: #2574a9;
+
+$logo-background-color: var(--oc-gray-7);
+$logo-color: #ffffff;

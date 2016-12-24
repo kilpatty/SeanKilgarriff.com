@@ -8,10 +8,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: `${__dirname}/src`,
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   entry: [
-    'babel-polyfill',
-    'webpack-dev-server/client?http://localhost:8080',
     // 'webpack/hot/dev-server',
     './index',
   ],
@@ -23,8 +21,24 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader',
+        exclude: /src/,
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        include: /src/,
+      },
+      {
         test: /\.js$/,
         use: ['babel-loader'],
+        include: [
+          path.resolve('src'),
+          path.resolve('node_modules/preact-compat/src'),
+        ],
       },
       {
         test: /\.css$/,
@@ -40,6 +54,10 @@ module.exports = {
           },
           'postcss-loader',
         ],
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
       },
     ],
   },

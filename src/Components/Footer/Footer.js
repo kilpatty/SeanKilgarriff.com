@@ -7,7 +7,7 @@ import styles from './Footer.css';
 const Footer = () =>
   (
     <footer className={styles.footer}>
-      <Link to="/Copyright"> Sean Kilgarriff Original &copy; 2016</Link>
+      <Link to="/Copyright"> Sean Kilgarriff &copy; 2016</Link>
     </footer>
   );
 

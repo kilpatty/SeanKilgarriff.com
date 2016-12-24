@@ -10,3 +10,4 @@ dist
 /coverage
 coverage.lcov
 .nyc_output
+stats.json

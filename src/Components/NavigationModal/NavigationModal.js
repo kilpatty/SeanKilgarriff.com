@@ -13,7 +13,6 @@ const NavigationModal = ({ onClick }) =>
        <button onClick={onClick} className={styles.close} />
 
        <Link
-         className={styles.glassesLink}
          to="/"
        >
          <h1>Home</h1>
@@ -25,14 +24,12 @@ const NavigationModal = ({ onClick }) =>
          <h1>Blog</h1>
        </ReactGA.OutboundLink>
        <Link
-         className={styles.beardLink}
          activeClassName={styles.active}
          to="/About"
        >
          <h1>About</h1>
        </Link>
        <Link
-         className={styles.hairLink}
          activeClassName={styles.active}
          to="/Contact"
        >

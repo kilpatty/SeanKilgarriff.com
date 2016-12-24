@@ -28,7 +28,6 @@ import GAMatch from './Components/GAMatch';
 // Console functions
 import { devtoolsWelcome, setWindowFunctions, onFocusChange, onIdleChange, fingerPrintUser } from './console.js';
 
-
 // Accept hot module reloading during development
 if (process.env.NODE_ENV !== 'production') {
   if (module.hot) {

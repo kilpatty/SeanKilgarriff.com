@@ -1,16 +1,14 @@
 {
+  "sourceMaps": true,
   "presets": [
     [
       "es2015",
-      {
-        "modules": false
-      }
     ],
     "react",
     "stage-0"
   ],
   "plugins": [
-    "transform-flow-strip-types",
+    "transform-runtime",
     "react-hot-loader/babel"
   ],
   "env": {
@@ -23,6 +21,11 @@
     "development": {
       "presets": [
         "react-hmre"
+      ]
+    },
+    "production": {
+      "presets": [
+        "react-optimize"
       ]
     }
   }

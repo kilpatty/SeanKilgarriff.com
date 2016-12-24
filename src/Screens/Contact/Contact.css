@@ -23,13 +23,31 @@
 }
 
 .socialLink {
-  color: $face-color;
   cursor: pointer;
 }
 
+.socialLogo {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+}
+
+.socialLogo .circle {
+  fill: $logo-background-color;
+}
+
+.socialLogo .logo {
+  fill: $logo-color;
+}
+
+.socialLogo:hover .circle {
+  fill: $social-link-hover;
+}
+
 @media only screen and (min-width: $medium-screen) {
-  .socialLink {
-    padding: 5px;
+  .socialLogo {
+    height: 50px;
+    width: 50px;
   }
 }
 
@@ -37,17 +55,7 @@
   font-size: 0.7em;
 }
 
-.socialLink:visited {
-  color: $face-color;
-  cursor: pointer;
-}
-
-.socialLink:hover {
-  color: $social-link-hover;
-}
-
 .social {
-  font-size: 0.8em;
   display: flex;
   align-items: center;
   justify-content: space-between;
