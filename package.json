@@ -53,6 +53,7 @@
     "mocha": "^3.2.0",
     "normalize.css": "^5.0.0",
     "nyc": "next",
+    "offline-plugin": "^4.5.3",
     "open-color": "^1.4.0",
     "postcss-loader": "^1.2.1",
     "postcss-reporter": "^3.0.0",

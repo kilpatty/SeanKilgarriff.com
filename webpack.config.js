@@ -9,6 +9,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SitemapPlugin = require('sitemap-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 // These are the paths that are located on my website.
 const paths = [
@@ -89,6 +90,20 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'public/' },
     ]),
+    new OfflinePlugin({
+      relativePaths: false,
+      publicPath: '/',
+      updateStrategy: 'all',
+      preferOnline: true,
+      safeToUseOptionalCaches: true,
+      caches: 'all',
+      version: 'SPK[hash]',
+      ServiceWorker: {
+        navigateFallbackURL: '/',
+        events: true,
+      },
+      AppCache: false,
+    }),
     new ExtractTextPlugin({ filename: 'bundle-[hash].css', disable: false, allChunks: true }),
     new SitemapPlugin('https://seankilgarriff.com', paths, 'sitemap.xml'),
   ],
