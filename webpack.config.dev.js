@@ -8,9 +8,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: `${__dirname}/src`,
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
     // 'webpack/hot/dev-server',
     './index',
   ],
@@ -22,9 +21,24 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader',
+        exclude: /src/,
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        include: /src/,
+      },
+      {
         test: /\.js$/,
         use: ['babel-loader'],
-        exclude: /node_modules/,
+        include: [
+          path.resolve('src'),
+          path.resolve('node_modules/preact-compat/src'),
+        ],
       },
       {
         test: /\.css$/,
@@ -40,6 +54,10 @@ module.exports = {
           },
           'postcss-loader',
         ],
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
       },
     ],
   },
@@ -60,12 +78,5 @@ module.exports = {
     contentBase: './dist',
     hot: true,
     historyApiFallback: true,
-  },
-  resolve: {
-    alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat',
-      'react-addons-css-transition-group': 'rc-animate',
-    },
   },
 };

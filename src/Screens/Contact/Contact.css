@@ -23,31 +23,41 @@
 }
 
 .socialLink {
-  color: $face-color;
+  fill: $face-color;
   cursor: pointer;
+  height: 30px;
+  width: 30px;
 }
 
-@media only screen and (min-width: $medium-screen) {
+.socialLogo {
+  height: 100%;
+  width: 100%;
+}
+
+.socialLogo:hover {
+  fill: $social-link-hover;
+}
+
+/* @media only screen and (min-width: $medium-screen) {
   .socialLink {
     padding: 5px;
   }
-}
+} */
 
 .pgp {
   font-size: 0.7em;
 }
 
 .socialLink:visited {
-  color: $face-color;
+  fill: $face-color;
   cursor: pointer;
 }
 
 .socialLink:hover {
-  color: $social-link-hover;
+  fill: $social-link-hover;
 }
 
 .social {
-  font-size: 0.8em;
   display: flex;
   align-items: center;
   justify-content: space-between;
