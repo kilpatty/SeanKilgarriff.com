@@ -18,7 +18,8 @@ const Contact = () =>
          <div className={styles.content}>
            <h1>Contact Me</h1>
            <div className={styles.social}>
-             <svg viewBox="-11 -6 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" className={styles.socialLogo}>
+             <svg role="img" viewBox="-11 -6 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" className={styles.socialLogo}>
+               <title>Link To Medium</title>
                <desc>Medium Logo Icon</desc>
                <ReactGA.OutboundLink
                  eventLabel="Medium"
@@ -32,6 +33,7 @@ const Contact = () =>
                </ReactGA.OutboundLink>
              </svg>
              <svg viewBox="-11 -6 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" className={styles.socialLogo}>
+               <title>Link To Facebook</title>
                <desc>Facebook Logo Icon</desc>
                <ReactGA.OutboundLink
                  eventLabel="Facebook"
@@ -45,6 +47,7 @@ const Contact = () =>
                </ReactGA.OutboundLink>
              </svg>
              <svg viewBox="-11 -6 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" className={styles.socialLogo}>
+               <title>Link To Twitter</title>
                <desc>Twitter Logo Icon</desc>
                <ReactGA.OutboundLink
                  eventLabel="Twitter"
@@ -58,6 +61,7 @@ const Contact = () =>
                </ReactGA.OutboundLink>
              </svg>
              <svg viewBox="-11 -6 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" className={styles.socialLogo}>
+               <title>Link To Mail</title>
                <desc>Mail Icon</desc>
                <a
                  href="mailto:sean@zzrot.com"
@@ -71,6 +75,7 @@ const Contact = () =>
              </svg>
 
              <svg viewBox="-11 -6 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" className={styles.socialLogo}>
+               <title>Link To Github</title>
                <desc>Github Logo Icon</desc>
                <ReactGA.OutboundLink
                  eventLabel="Github"
@@ -84,6 +89,7 @@ const Contact = () =>
                </ReactGA.OutboundLink>
              </svg>
              <svg viewBox="-11 -6 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" className={styles.socialLogo}>
+               <title>Link To LinkedIn</title>
                <desc>LinkedIn Logo Icon</desc>
                <ReactGA.OutboundLink
                  eventLabel="LinkedIn"
@@ -98,6 +104,7 @@ const Contact = () =>
              </svg>
 
              <svg viewBox="-11 -6 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" className={styles.socialLogo}>
+               <title>Link To Instagram</title>
                <desc>Instagram Logo Icon</desc>
                <ReactGA.OutboundLink
                  eventLabel="Instagram"
