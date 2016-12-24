@@ -23,15 +23,13 @@
 }
 
 .socialLink {
-  fill: $face-color;
   cursor: pointer;
-  height: 30px;
-  width: 30px;
 }
 
 .socialLogo {
-  height: 100%;
-  width: 100%;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
 }
 
 .socialLogo .circle {
@@ -46,11 +44,12 @@
   fill: $social-link-hover;
 }
 
-/* @media only screen and (min-width: $medium-screen) {
-  .socialLink {
-    padding: 5px;
+@media only screen and (min-width: $medium-screen) {
+  .socialLogo {
+    height: 50px;
+    width: 50px;
   }
-} */
+}
 
 .pgp {
   font-size: 0.7em;
