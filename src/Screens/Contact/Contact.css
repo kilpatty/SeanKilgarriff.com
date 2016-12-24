@@ -34,7 +34,15 @@
   width: 100%;
 }
 
-.socialLogo:hover {
+.socialLogo .circle {
+  fill: $logo-background-color;
+}
+
+.socialLogo .logo {
+  fill: $logo-color;
+}
+
+.socialLogo:hover .circle {
   fill: $social-link-hover;
 }
 
