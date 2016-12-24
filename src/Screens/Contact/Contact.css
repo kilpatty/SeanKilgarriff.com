@@ -55,15 +55,6 @@
   font-size: 0.7em;
 }
 
-.socialLink:visited {
-  fill: $face-color;
-  cursor: pointer;
-}
-
-.socialLink:hover {
-  fill: $social-link-hover;
-}
-
 .social {
   display: flex;
   align-items: center;
