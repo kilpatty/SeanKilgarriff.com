@@ -35,6 +35,9 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
+// Require Offline Plugin for service workers
+require('offline-plugin/runtime').install();
+
 // Initialize Google Analytics
 ReactGA.initialize(process.env.GA_ID);
 
