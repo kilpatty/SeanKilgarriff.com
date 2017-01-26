@@ -9,7 +9,12 @@
   ],
   "plugins": [
     "transform-runtime",
-    "react-hot-loader/babel"
+    [
+      "react-intl", {
+        "messagesDir": "./build/messages",
+        "enforceDescriptions": false
+      }
+    ]
   ],
   "env": {
     "test": {
@@ -20,7 +25,8 @@
     },
     "development": {
       "presets": [
-        "react-hmre"
+        "react-hmre",
+        "react-hot-loader/babel",
       ]
     },
     "production": {
