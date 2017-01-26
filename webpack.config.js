@@ -22,19 +22,6 @@ const paths = [
   '/ReactUserFocusDemo',
 ];
 
-// Css Loader
-const cssLoaders = [
-  {
-    loader: 'css-loader',
-    query: {
-      importLoaders: 1,
-      modules: true,
-      localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
-    },
-  },
-  'postcss-loader',
-];
-
 module.exports = {
   devtool: 'source-map',
   entry: ['./src/index'],
@@ -121,7 +108,17 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
-          loader: cssLoaders,
+          loader: [
+            {
+              loader: 'css-loader',
+              query: {
+                importLoaders: 1,
+                modules: true,
+                localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
+              },
+            },
+            'postcss-loader',
+          ],
         }),
       },
     ],
