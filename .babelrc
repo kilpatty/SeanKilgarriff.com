@@ -8,8 +8,7 @@
     "stage-0"
   ],
   "plugins": [
-    "transform-runtime",
-    "react-hot-loader/babel"
+    "transform-runtime"
   ],
   "env": {
     "test": {
@@ -20,7 +19,7 @@
     },
     "development": {
       "presets": [
-        "react-hmre"
+        "react-hmre",
       ]
     },
     "production": {

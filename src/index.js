@@ -6,6 +6,11 @@ import ReactUserFocus from 'react-user-focus';
 import Title from 'react-title-component';
 
 
+// import { IntlProvider, addLocaleData } from 'react-intl';
+// import en from 'react-intl/locale-data/en';
+// import de from 'react-intl/locale-data/de';
+
+
 // This files styles - need to import before anything else to get the css first.
 import styles from './index.css';
 
