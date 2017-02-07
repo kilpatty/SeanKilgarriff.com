@@ -106,12 +106,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: [
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
             {
               loader: 'css-loader',
-              query: {
+              options: {
                 importLoaders: 1,
                 modules: true,
                 localIdentName: '[path]___[name]__[local]___[hash:base64:5]',

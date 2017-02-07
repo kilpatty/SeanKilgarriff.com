@@ -46,7 +46,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "v2.2.3",
     "eslint-plugin-react": "^6.8.0",
-    "extract-text-webpack-plugin": "2.0.0-rc.0",
+    "extract-text-webpack-plugin": "2.0.0-rc.3",
     "fingerprintjs2": "^1.4.1",
     "html-webpack-plugin": "^2.24.1",
     "istanbul": "1.0.0-alpha.2",
@@ -76,7 +76,7 @@
     "style-loader": "^0.13.1",
     "stylelint": "^7.6.0",
     "stylelint-config-standard": "^15.0.0",
-    "webpack": "2.2.0",
+    "webpack": "2.2.1",
     "webpack-dev-server": "v2.2.0-rc.0"
   },
   "nyc": {
