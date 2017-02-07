@@ -6,9 +6,9 @@ import ReactUserFocus from 'react-user-focus';
 import Title from 'react-title-component';
 
 
-import { IntlProvider, addLocaleData } from 'react-intl';
-import en from 'react-intl/locale-data/en';
-import de from 'react-intl/locale-data/de';
+// import { IntlProvider, addLocaleData } from 'react-intl';
+// import en from 'react-intl/locale-data/en';
+// import de from 'react-intl/locale-data/de';
 
 
 // This files styles - need to import before anything else to get the css first.
@@ -32,9 +32,6 @@ import GAMatch from './Components/GAMatch';
 
 // Console functions
 import { devtoolsWelcome, setWindowFunctions, onFocusChange, onIdleChange, fingerPrintUser } from './console.js';
-
-// Add the local data
-addLocaleData([...en, ...de]);
 
 // Accept hot module reloading during development
 if (process.env.NODE_ENV !== 'production') {

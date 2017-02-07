@@ -8,13 +8,7 @@
     "stage-0"
   ],
   "plugins": [
-    "transform-runtime",
-    [
-      "react-intl", {
-        "messagesDir": "./build/messages",
-        "enforceDescriptions": false
-      }
-    ]
+    "transform-runtime"
   ],
   "env": {
     "test": {
@@ -26,7 +20,6 @@
     "development": {
       "presets": [
         "react-hmre",
-        "react-hot-loader/babel",
       ]
     },
     "production": {
