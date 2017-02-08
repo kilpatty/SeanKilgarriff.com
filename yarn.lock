@@ -62,16 +62,9 @@ ajv-keywords@^1.0.0, ajv-keywords@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.2.0.tgz#676c4f087bfe1e8b12dca6fda2f3c74f417b099c"
 
-ajv@^4.11.2:
+ajv@^4.11.2, ajv@^4.7.0:
   version "4.11.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.2.tgz#f166c3c11cbc6cb9dcc102a5bcfe5b72c95287e6"
-  dependencies:
-    co "^4.6.0"
-    json-stable-stringify "^1.0.1"
-
-ajv@^4.7.0:
-  version "4.10.0"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.10.0.tgz#7ae6169180eb199192a8b9a19fd0f47fc9ac8764"
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
@@ -5644,9 +5637,9 @@ react-dom@15.4.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
-react-dom@^15.4.1:
-  version "15.4.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.1.tgz#d54c913261aaedb17adc20410d029dcc18a1344a"
+react-dom@^15.4.2:
+  version "15.4.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
   dependencies:
     fbjs "^0.8.1"
     loose-envify "^1.1.0"
@@ -5768,9 +5761,9 @@ react@15.4.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
-react@^15.4.1:
-  version "15.4.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-15.4.1.tgz#498e918602677a3983cd0fd206dfe700389a0dd6"
+react@^15.4.2:
+  version "15.4.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:
     fbjs "^0.8.4"
     loose-envify "^1.1.0"
