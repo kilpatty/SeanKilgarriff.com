@@ -1,108 +1,73 @@
-/* eslint global-require: 0*/
+var path = require('path');
+var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
+var precss = require('precss');
+var functions = require('postcss-functions');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-// webpack.config.prod.js
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const SitemapPlugin = require('sitemap-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
-const BrotliPlugin = require('brotli-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
 
-// These are the paths that are located on my website.
-const paths = [
-  '/About',
-  '/Contact',
-  '/Copyright',
-  '/Now',
-  '/Portfolio',
-  '/Newsletter',
-  '/ReactUserFocusDemo',
-];
+// var plugins = [
+//     new webpack.NoErrorsPlugin(),
+// ];
+
+// if (process.env.NODE_ENV === 'production') {
+//   plugins = plugins.concat([
+//     new webpack.DefinePlugin({
+//       'process.env': {NODE_ENV: JSON.stringify('production')}
+//     })
+//   ]);
+
+// };
+
+// var config  = {
+  
+ 
+//   plugins: plugins,
+//   resolve: {
+//     extensions: ['', '.js', '.jsx', '.css'],
+//     alias: {
+//       '#app': path.join(__dirname, 'client'),
+//       Components: path.join(__dirname, 'client/components'),
+//       '#css': path.join(__dirname, 'client/css')
+//     }
+//   },
+//   svgo1: {
+//     multipass: true,
+//     plugins: [
+//       // by default enabled
+//       {mergePaths: false},
+//       {convertTransform: false},
+//       {convertShapeToPath: false},
+//       {cleanupIDs: false},
+//       {collapseGroups: false},
+//       {transformsWithOnePath: false},
+//       {cleanupNumericValues: false},
+//       {convertPathData: false},
+//       {moveGroupAttrsToElems: false},
+//       // by default disabled
+//       {removeTitle: true},
+//       {removeDesc: true}
+//     ]
+//   },
+// };
 
 module.exports = {
-  devtool: 'source-map',
-  entry: ['./src/index'],
-  output: {
-    path: path.join(__dirname, 'dist'),
-    publicPath: '/',
-    filename: '[name]-[chunkhash].js',
-    chunkFilename: '[name]-[chunkhash].js',
+  context: `${__dirname}/src`,
+  devtool: 'inline-source-map',
+  entry: {
+    bundle: path.join(__dirname, 'client/index.js')
   },
-  plugins: [
-    new CompressionPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      minRatio: 0.8,
-    }),
-    new BrotliPlugin({
-      asset: '[path].br[query]',
-      minRatio: 0.8,
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false,
-      },
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: ({ resource }) => /node_modules/.test(resource),
-    }),
-    // Generate a 'manifest' chunk to be inlined in the HTML template
-    new webpack.optimize.CommonsChunkPlugin('manifest'),
-
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: true,
-        minifyJS: true,
-        minifyCSS: true,
-        minifyURLs: true,
-      },
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-        GA_ID: JSON.stringify('UA-46649481-3'),
-      },
-    }),
-    new CopyWebpackPlugin([
-      { from: 'public/' },
-    ]),
-    new OfflinePlugin({
-      relativePaths: false,
-      publicPath: '/',
-      updateStrategy: 'all',
-      preferOnline: true,
-      safeToUseOptionalCaches: true,
-      caches: 'all',
-      version: 'SPK[hash]',
-      ServiceWorker: {
-        navigateFallbackURL: '/',
-        events: true,
-      },
-      AppCache: false,
-    }),
-    new ExtractTextPlugin({ filename: 'bundle-[hash].css', disable: false, allChunks: true }),
-    new SitemapPlugin('https://seankilgarriff.com', paths, 'sitemap.xml'),
-  ],
+  output: {
+    path: path.join(__dirname, 'server/data/static/build'),
+    filename: '[name].js',
+    publicPath: "/static/build/"
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
         use: ['babel-loader'],
-        include: [
-          path.resolve('src'),
-          path.resolve('node_modules/preact-compat/src'),
-        ],
+        include: path.join(__dirname, 'client'),
       },
       {
         test: /\.css$/,
@@ -121,6 +86,27 @@ module.exports = {
           ],
         }),
       },
-    ],
+
+
+      {test: /\.(png|gif)$/, loader: 'url-loader?name=[name]@[hash].[ext]&limit=5000'},
+      {test: /\.svg$/, loader: 'url-loader?name=[name]@[hash].[ext]&limit=5000!svgo-loader?useConfig=svgo1'},
+      {test: /\.(pdf|ico|jpg|eot|otf|woff|ttf|mp4|webm)$/, loader: 'file-loader?name=[name]@[hash].[ext]'},
+    ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.css'],
+    alias: {
+      '#app': path.join(__dirname, 'client'),
+      Components: path.join(__dirname, 'client/components'),
+      '#css': path.join(__dirname, 'client/css')
+    }
+  },
+  plugins: [
+    new ExtractTextPlugin({ filename: 'bundle.css', disable: false, allChunks: true }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false,
+      },
+    }),
+  ]
 };

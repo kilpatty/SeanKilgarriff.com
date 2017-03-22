@@ -1,14 +1,20 @@
-language: node_js
-sudo: false
-node_js:
-  - "7.2"
-install:
-  - npm install -g codecov
-  - npm install
+sudo: required
+services:
+- docker
 script:
-- npm run lint
-- npm run test
-- npm run coverage
-- codecov
+- export REPO=skilgarriff/gazelle
+- export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH;
+  fi`
+- docker build -t gazelle-compile -f ci/Dockerfile.build .
+- docker run --name appBuilder gazelle-compile /bin/sh -c "make lint;"
+- docker cp appBuilder:/go/bin/app .
+- docker build -t $REPO -f ci/Dockerfile .
+after_success:
+- docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+- docker tag $REPO $REPO:$TAG
+- docker push $REPO
 notifications:
   email: false
+  slack:
+    rooms:
+      secure: QC/BMx1l/bqVMQJkZo0dZSMFq7SfJxfhAad6+0/AdmprvFV9++/zKfiVliHTp5+mJhHNAZvHA3NqcOb91oruHVxNs5zjrT4/Gq6InZ8TYj+lq2Mp17ZhQn3JYrE9dV+mG1NmtjfSogF8/oKQ3RtORaWw2jhNL8sKMzwGgaTX73Zol2P8zTeFNJdq9FlBONsGhTup9Ga8yBZ/rlCCzXLBXi5jVqeXz6fw6ocDgHdxtG9w3nOMoxmbZSNEIvEF9yMKmZeB4wAn2huKzm/6BKGGJ2AelHnzUy+mgnuJjLx9yRmbI786dXtbiD9g3zyvLTvec/Z/0WmEqdtGdZnZ+91tS8JKVuy/PB/kYjSAXBVan8p9DHAUsJ0wrhu36PVFqAS+2PrvJVOx0g5ganOn3IVA9bV3wjiZAJwEOJhw9x8HDRT5WXj9dWbM6rM2a2DC3hYbYbA+OoJp6AFzZRLZoawSUFLOYHd9hwaNyiOcYgXvsu+HwXeeCHkoCcNRgFetLwq/BedoTCxfCdni6HKv+gyQU2j/Nz/ZczQU6m7/EVD2TYvzjwqoX8wTfuJvF055E6bt5kdqpM5neovqcBifQPyniFyzK9oWSO0PVq91rpX+B3TGouY0fF+ztyo7Bx+wzwnuaX3JsnKYmOWW5Jnn8J46Cv7KVIC31UYAGKPt9k52HfU=

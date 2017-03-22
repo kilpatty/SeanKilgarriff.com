@@ -1,0 +1,59 @@
+._-client-components-homepage-___styles__example___1UOlo {
+  color: $mainColor;
+  font-size: px(40);
+  font-weight: 500;
+  max-width: px(500);
+  margin: 0 auto;
+}
+
+._-client-components-homepage-___styles__link___3ZV-l {
+  color: $yellow;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    height: px(2);
+    bottom: px(0);
+    background-color: $yellow;
+    right: px(-1);
+    left: @right;
+  }
+
+  &:hover {
+    color: $red;
+    &:before {
+      background-color: $red;
+    }
+  }
+}
+
+._-client-components-homepage-___styles__p___1yaZi {
+  color: $mainColor;
+}
+
+._-client-components-homepage-___styles__button___7KxHR {
+  margin-top: px(50);
+  width: px(50);
+  height: @width;
+  color: #333;
+  font-size: px(30);
+  text-align: center;
+  background-color: $mainColor;
+  display: inline-block;
+  border-radius: px(3);
+}
+._-client-components-not-found-___styles__notFound___2_1fp {
+  color: $mainColor;
+  font-size: px(40);
+}
+._-client-components-usage-___styles__todo___1Qery {
+  width: px(400);
+  margin: 0 auto;
+  text-align: left;
+  display: block;
+  padding-top: px(26);
+  color: #bbb;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJidW5kbGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
